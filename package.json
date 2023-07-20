@@ -1,0 +1,14 @@
+{
+  "name": "windi-ui",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Build Accessible Apps 10x faster",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "1.0.0-beta.5"
+  }
+}
