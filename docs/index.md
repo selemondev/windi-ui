@@ -3,23 +3,42 @@
 layout: home
 
 hero:
-  name: "windi-ui"
-  text: "Build your web applications 10x faster"
-  tagline: My great project tagline
+  name: "Windi UI"
+  text: "Build Accessible Apps 10x faster"
+  tagline: Beautiful and professionally crafted Windi UI components and templates.
+  image:
+    - src: ''
   actions:
     - theme: brand
-      text: Markdown Examples
+      text: Get Started
       link: /markdown-examples
     - theme: alt
-      text: API Examples
+      text: View Components
       link: /api-examples
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - icon: 🦾
+    title: TypeScript Support
+    details: Built with TypeScript in mind and from the ground up.
+    link: "#"
+  - icon: 🔥
+    title: Icon
+    details: Use any icon in your project from your favourite icon library.
+    link: "#"
+  - icon: 🌈
+    title: Component design
+    details: Windi UI offers a range of UI components that are sleek and easily customizable.
+    link: "#"
+  - icon: 📦
+    title: Diverse Component Selection
+    details: Create your application effortlessly with our expansive collection of 50+ UI components.
+    link: "#"
+  - icon: ⚡️
+    title: Powerful Tools
+    details: Windi UI is built on top of powerful tools such as UnoCSS, VueUse, Headless UI etc.
+    link: "#"
+  - icon: 🎨
+    title: Themeable
+    details: Customize any part of our beautiful components to match your needs.
+    link: "#"
 ---
-
