@@ -1,14 +1,14 @@
 // https://vitepress.dev/guide/custom-theme
 import { h, watch } from 'vue'
 import Theme from 'vitepress/theme'
-import './style.css'
+// import './style.css'
 import './overrides.css'
 import "./rainbow.css"
-// import './vars.css'
+import './vars.css'
 import 'uno.css'
 let homePageStyle: HTMLStyleElement | undefined
 export default {
-  ...Theme,
+  extend: Theme,
   Layout: () => {
     return h(Theme.Layout, null, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots

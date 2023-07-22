@@ -23,7 +23,7 @@ features:
     link: "#"
   - icon: 🔥
     title: Icon
-    details: Use any icon in your project from your favourite icon library.
+    details: Use any icon in your project from your favourite icon set.
     link: "#"
   - icon: 🌈
     title: Component design
@@ -35,10 +35,10 @@ features:
     link: "#"
   - icon: ⚡️
     title: Powerful Tools
-    details: Windi UI is built on top of powerful tools such as UnoCSS, VueUse, Headless UI etc.
+    details: Windi UI is built on top of powerful tools such as TailwindCss, VueUse, Headless UI etc.
     link: "#"
   - icon: 🎨
     title: Themeable
-    details: Customize any part of our beautiful components to match your needs.
+    details: Customize any part of our beautiful components to match your style.
     link: "#"
 ---
