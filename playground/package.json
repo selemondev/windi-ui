@@ -1,0 +1,37 @@
+{
+  "name": "@windi-ui/playground",
+  "version": "0.0.0",
+  "description": "Windi UI playground",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/selemondev/windi-ui.git"
+  },
+  "keywords": [
+    "tailwindcss",
+    "windi-ui",
+    "playground",
+    "repl"
+  ],
+  "author": "Selemondev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/selemondev/windi-ui/issues"
+  },
+  "homepage": "https://github.com/selemondev/windi-ui#readme",
+  "dependencies": {
+    "@vue/repl": "^1.4.1",
+    "compare-versions": "^4.1.4",
+    "ohmyfetch": "^0.4.21"
+  },
+  "devDependencies": {
+    "@types/prettier": "^2.7.2",
+    "@unocss/reset": "^0.44.7",
+    "execa": "^4.1.0",
+    "prettier": "^2.8.8"
+  }
+}
