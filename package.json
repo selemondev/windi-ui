@@ -1,21 +1,67 @@
 {
-  "name": "windi-ui",
+  "name": "@windi-ui/monorepo",
   "version": "0.0.0",
   "private": true,
   "description": "Build Accessible Apps 10x faster",
   "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:dev": "vitepress dev docs/docs",
+    "docs:build": "vitepress build docs/docs",
+    "docs:preview": "vitepress preview docs/docs",
+    "build": "rimraf packages/*/{dist,es,lib} && nr -r -F \"./packages/{windi-ui}\" build",
+    "play": "run-s build play:run",
+    "play:run": "run-p dev play:dev",
+    "play:dev": "npm -C playground run dev",
+    "play:build": "npm -C playground run build",
+    "lint": "eslint .",
+    "lint:fix": "nr lint --fix",
+    "clean": "rimraf packages/*/{dist,es,lib}",
+    "postinstall": "npx simple-git-hooks",
+    "major": "taze minor -wIr"
+  },
+  "dependencies": {
+    "vue-ui-next": "^0.0.0"
   },
   "devDependencies": {
-    "vitepress": "1.0.0-beta.5",
-    "flexsearch": "^0.7.31",
-    "typescript": "^5.1.6",
-    "unocss": "^0.53.5",
-    "vite": "^4.4.6",
-    "vitepress-plugin-search": "1.0.4-alpha.20",
+    "@antfu/eslint-config": "^0.39.8",
+    "@iconify/vue": "^4.1.1",
+    "@types/node": "^20.4.4",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vitest/coverage-c8": "^0.33.0",
+    "@vitest/ui": "^0.33.0",
+    "@vue/test-utils": "^2.4.1",
+    "@vueuse/core": "^10.2.1",
+    "autoprefixer": "^10.4.14",
+    "bumpp": "^9.1.1",
     "eslint": "8.45.0",
-    "vue": "^3.3.4"
+    "flexsearch": "^0.7.31",
+    "jsdom": "^22.1.0",
+    "lint-staged": "^13.2.3",
+    "postcss": "^8.4.27",
+    "rimraf": "^5.0.1",
+    "sass": "^1.64.1",
+    "simple-git-hooks": "^2.9.0",
+    "tailwindcss": "^3.3.3",
+    "taze": "^0.11.2",
+    "typescript": "^5.1.6",
+    "unbuild": "^1.2.1",
+    "unocss": "^0.53.6",
+    "unplugin-auto-import": "^0.16.6",
+    "unplugin-vue-components": "^0.25.1",
+    "vite": "^4.4.7",
+    "vite-plugin-dts": "^3.3.1",
+    "vitepress": "1.0.0-beta.6",
+    "vitepress-plugin-search": "1.0.4-alpha.20",
+    "vitest": "^0.33.0",
+    "vue": "^3.3.4",
+    "vue-tsc": "^1.8.6",
+    "windi-ui": "workspace:*"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,vue,md}": [
+      "pnpm lint:fix"
+    ]
   }
 }

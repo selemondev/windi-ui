@@ -1,1 +1,20 @@
+.cache
+.DS_Store
+.idea
+.nuxt
+.output
+.temp
+*.local
+*.log
+*.vsix
+.temp
+.eslintcache
+
+coverage
+dist
 node_modules
+
+# style copy with components build
+packages/onu-ui/*.css
+docs/.vitepress/cache/
+docs/public/play

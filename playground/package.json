@@ -24,13 +24,14 @@
   },
   "homepage": "https://github.com/selemondev/windi-ui#readme",
   "dependencies": {
-    "@vue/repl": "^1.4.1",
+    "@vue/repl": "^1.5.0",
     "compare-versions": "^4.1.4",
-    "ohmyfetch": "^0.4.21"
+    "ohmyfetch": "^0.4.21",
+    "windi-ui": "workspace:*"
   },
   "devDependencies": {
-    "@types/prettier": "^2.7.2",
-    "@unocss/reset": "^0.44.7",
+    "@types/prettier": "^2.7.3",
+    "@unocss/reset": "^0.53.6",
     "execa": "^4.1.0",
     "prettier": "^2.8.8"
   }

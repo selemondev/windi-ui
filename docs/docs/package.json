@@ -1,0 +1,15 @@
+{
+    "name": "@windi-ui/docs",
+    "version": "0.0.0",
+    "private": true,
+    "description": "Windi-UI docs",
+    "keywords": [
+      "windi-ui",
+      "docs"
+    ],
+    "scripts": {
+      "dev": "vitepress dev --port 5555 --open --host",
+      "build": "vitepress build",
+      "serve": "vitepress serve"
+    }
+  }

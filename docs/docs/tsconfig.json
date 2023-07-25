@@ -1,0 +1,23 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "guide": [
+                "./guide/*"
+            ]
+        },
+        "types": [
+            "./auto-imports"
+        ]
+    },
+    "exclude": [
+        "**/dist/**"
+    ],
+    "include": [
+        "**/*.ts",
+        "**/*.d.ts",
+        "**/*.vue",
+        ".vitepress/env.d.ts"
+    ]
+}
