@@ -8,8 +8,8 @@ export function libInstall() {
   if (installed)
     return
   const instance = getCurrentInstance()
-  // 安装组件库到vue
-  instance.appContext.app.use(ui)
+  
+  // instance.appContext.app.use(ui)
   installed = true
 }
 

@@ -1,7 +1,6 @@
 <script setup lang="ts">
-// import { OMessage as message } from 'onu-ui'
 import { Repl } from '@vue/repl'
-// import type { OMessageProps } from 'onu-ui'
+import { Icon } from "@iconify/vue";
 import playConfig from '../playground.config'
 import Header from '~/components/Header.vue'
 import { useStore } from '~/composables/store'
@@ -69,9 +68,10 @@ window.addEventListener(
             :show-import-map="store.userOptions.value.showHidden || false"
             @keydown="(event) => handleKeydown(event, store)" />
         <div v-if="loading" class="loading-wrapper" flex items-center justify-center flex-col>
-            <p text-lg>
-                loading the playground...... 🤣
-            </p>
+            <div flex items-center space-x-3>
+                <Icon icon="ph:spinner" class="text-2xl animate-spin" />
+                <p class="text-xl">Loading Windi UI playground</p>
+            </div>
         </div>
     </div>
 </template>

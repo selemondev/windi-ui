@@ -1,8 +1,10 @@
 <script setup lang="ts">
 // import { OMessage as message } from 'onu-ui'
 import type { ComputedRef } from 'vue'
-// import type { OMessageProps } from 'onu-ui'
+import { UPopover, UIcon } from 'vue-ui-next'
+import Logo from "../public/windi.png";
 import { Icon } from "@iconify/vue";
+// import type { OMessageProps } from 'onu-ui'
 import playConfig from '../../playground.config'
 import { getSupportVersions } from '~/utils/versions'
 import type { ReplStore, VersionKey } from '~/composables/store'
@@ -17,7 +19,7 @@ interface Version {
     active: string
 }
 
-// 黑暗模式配置
+
 const appDark = useDark({
     selector: 'body',
     attribute: `${playConfig.compLibShort}-theme`,
@@ -51,7 +53,7 @@ const versions = reactive<Record<VersionKey, Version>>({
 })
 
 async function handleSetVersion(key: VersionKey, v: any) {
-    versions[key].active = 'loading...'
+    versions[key].active = 'Loading versions...'
     await store.setVersion(key, v, store.versions, store.compiler, store.state)
     versions[key].active = v
 }
@@ -68,7 +70,9 @@ async function copyLink() {
 
 <template>
     <nav class="header-nav" border-b-cyan-500 border-b shadow>
-        <a flex items-center m-2 cursor-pointer :href="domain">
+        <a flex items-center cursor-pointer :href="domain">
+            <Icon icon="ri:windy-fill" class="text-2xl text-[#059FFF] mx-2"/>
+            <!-- <img :src="Logo" alt="Windi UI Logo" px-2> -->
             <span text-lg font-bold dark-text-gray-100>{{ playConfig.title }}</span>
             <div ml-12px dark-text-gray-300>
                 Playground
@@ -76,15 +80,30 @@ async function copyLink() {
         </a>
 
         <div flex items-center justify-around m-2>
-            <div v-for="(v, key) of versions" :key="key" flex mx-10 items-center>
+            <div v-for="(v, key) of versions" :key="key" flex mx-6 items-center>
                 <span dark-text-gray-300 font-bold text-base>{{ v.text }} Version:</span>
+                <UPopover>
+                    <div px-12px text-lg cursor-pointer text-stone-600 dark-text-gray-100 flex items-center>
+                        <span text-base>{{ v.active }}</span>
+                        <UIcon name="material-symbols:keyboard-arrow-down" ml-2 />
+                    </div>
+                    <template #panel>
+                        <div h-50 class="version-content">
+                            <p v-for="(ver, index) of v.published" :key="index" cursor-pointer px="4" h-30px border-none leading-loose
+                                text-baseText
+                                @click="handleSetVersion(key, ver)">
+                                {{ ver }}
+                            </p>
+                        </div>
+                    </template>
+                </UPopover>
             </div>
 
-            <a href="https://staging-cn.vuejs.org/" target="_blank" class="header-a">
+            <a href="https://vuejs.org/" target="_blank" class="header-a">
                 <Icon h-5 w-5 mx-2 icon="logos:vue" />
             </a>
 
-            <a href="https://github.com/unocss/unocss" target="_blank" class="header-a">
+            <a href="https://tailwindcss.com" target="_blank" class="header-a">
                 <Icon h-5 w-5 mx-2 icon="logos:tailwindcss-icon" />
             </a>
 
