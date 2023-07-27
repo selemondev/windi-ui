@@ -1,4 +1,44 @@
 export default {
+  WAvatar: {
+    base: {
+      'root': 'relative cursor-pointer inline-flex items-center justify-center bg-gray-100 rounded-full',
+      'rounded': 'rounded-full',
+      'placeholderClass': 'font-medium cursor-pointer text-gray-600 upperCase',
+      'xs': 'h-6 w-6 text-[11px]',
+      'sm': 'h-8 w-8 text-xs',
+      'md': 'h-10 w-10 text-sm',
+      'lg': 'h-12 w-12 text-base',
+      'xl': 'h-14 w-14 text-lg',
+      '2xl': 'h-16 w-16 text-xl',
+      '3xl': 'h-20 w-20 text-2xl',
+      'avatarChipClass': 'flex justify-center items-center absolute rounded-full !text-white cursor-pointer ring-1 !ring-white dark:ring-gray-600 text-white dark:text-gray-900',
+      'avatarChipPosition': {
+        'top-right': 'top-0 right-0',
+        'bottom-right': 'bottom-0 right-0',
+        'top-left': 'top-0 left-0',
+        'bottom-left': 'bottom-0 left-0',
+      },
+      'avatarChipSize': {
+        'xs': 'h-1.5 min-w-[0.375rem] text-[6px] p-px',
+        'sm': 'h-2 min-w-[0.5rem] text-[7px] p-0.5',
+        'md': 'h-2.5 min-w-[0.625rem] text-[8px] p-0.5',
+        'lg': 'h-3 min-w-[0.75rem] text-[10px] p-0.5',
+        'xl': 'h-3.5 min-w-[0.875rem] text-[11px] p-1',
+        '2xl': 'h-4 min-w-[1rem] text-[12px] p-1',
+        '3xl': 'h-5 min-w-[1.25rem] text-[14px] p-1',
+      },
+
+    },
+
+    variants: {
+      default: {
+        root: 'relative cursor-pointer inline-flex items-center justify-center bg-gray-100 rounded-full',
+        rounded: 'rounded-full',
+        placeholderClass: 'font-medium cursor-pointer text-gray-600 upperCase',
+      },
+    },
+
+  },
     WAlert: {
       base: {
         root: 'relative space-y-1 p-4 max-h-lg w-full cursor-pointer rounded-md space-x-3 block',
