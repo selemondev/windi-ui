@@ -9,6 +9,8 @@ export interface WAlert extends WComponentRoot {
   closeButtonClass?: string
   flexBetween?: string
   body?: string
+  isLeading?: string
+  isNotLeading?: string
   closeIcon?: string
   trailingClass?: string
   leadingClass?: string
@@ -18,4 +20,19 @@ export interface WIcon extends WComponentRoot {
   size?: string
 }
 
+export interface WAvatar extends WComponentRoot {
+  wrapper?: string
+  chipClass?: string
+  avatarSize?: string
+  rounded?: string
+  avatarClass?: string
+  avatarChipSize?: string
+  avatarChipPosition?: string
+  placeholderClass?: string
+}
+
 export type WAlertVariants = WithVariantProps<WAlert>
+
+export type WAvatarVariants = WithVariantProps<WAvatar>
+
+export type WIconVariants = WithVariantProps<WIcon>
