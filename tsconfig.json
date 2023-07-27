@@ -18,6 +18,11 @@
       "@windi-ui/docs": ["./docs/*"]
     }
   },
+  "references": [
+    {
+      "path": "./example"
+    }
+  ],
   "exclude": [
     "**/dist/**",
     "**/node_modules/**",

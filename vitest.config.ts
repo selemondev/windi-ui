@@ -17,7 +17,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      'windi-ui': r('./packages/onu-ui'),
+      'windi-ui': r('./packages/windi'),
     },
   },
 })
