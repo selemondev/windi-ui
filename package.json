@@ -15,10 +15,16 @@
     "lint": "eslint .",
     "lint:fix": "nr lint --fix",
     "clean": "rimraf packages/*/{dist,es,lib}",
+    "example": "pnpm --filter @windi-ui/example",
+    "test": "vitest",
+    "test:update": "vitest -u",
+    "test:coverage": "vitest --coverage",
+    "windi-ui": "pnpm --filter windi-ui",
     "postinstall": "npx simple-git-hooks",
     "major": "taze minor -wIr"
   },
   "dependencies": {
+    "fs": "0.0.1-security",
     "vue-ui-next": "^0.0.0"
   },
   "devDependencies": {
@@ -54,7 +60,7 @@
     "vitest": "^0.33.0",
     "vue": "^3.3.4",
     "vue-tsc": "^1.8.8",
-    "windi": "workspace*"
+    "windi-ui": "workspace:*"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"

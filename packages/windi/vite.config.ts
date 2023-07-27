@@ -5,15 +5,17 @@ import { defineConfig } from 'vite'
 // https://github.com/qmhc/vite-plugin-dts
 import dtsPlugin from 'vite-plugin-dts'
 
-import * as pkg from './package.json'
+// import * as pkg from './package.json'
 
-const externals = [
-  ...Object.keys(pkg.peerDependencies || {}),
-]
+// const externals = [
+//   ...Object.keys(pkg.peerDependencies || {}),
+// ]
 export default defineConfig({
   plugins: [
     Vue(),
-    dtsPlugin(),
+    dtsPlugin({
+      insertTypesEntry: true,
+    }),
   ],
   resolve: {
     alias: {
@@ -23,12 +25,12 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
-      formats: ['es', 'umd'],
+      formats: ['es', 'umd', 'cjs'],
       name: 'windi-ui',
       fileName: format => `index.${format}.js`,
     },
     rollupOptions: {
-      external: externals,
+      external: ['vue'],
       output: {
         format: 'esm',
       },
