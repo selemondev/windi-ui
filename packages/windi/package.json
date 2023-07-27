@@ -44,10 +44,7 @@
     "prepublishOnly": "pnpm run build",
     "release": "pnpm build && bumpp --commit --push --tag && pnpm publish",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "test": "vitest",
-    "test:watch": "vitest --watch",
-    "coverage": "vitest run --coverage"
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@heroicons/vue": "^2.0.18",
