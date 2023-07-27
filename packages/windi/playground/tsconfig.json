@@ -5,6 +5,9 @@
     "lib": ["esnext", "dom"],
     "moduleResolution": "node",
     "esModuleInterop": true,
+    "declaration": false,
+    "composite": false,
+    "outDir": "./dist",
     "strict": true,
     "noImplicitAny": false,
     "strictNullChecks": true,
@@ -24,6 +27,14 @@
     "**/test/dts/**",
     "**/playground/**",
     "**/example/**",
-    "**/packages/components/**"
+    "**/packages/components/**",
+    "**/dist/**",
+    "./tailwind.config.ts"
+  ],
+  "include": [
+    "**/*.ts",
+    "**/*.d.ts",
+    "**/*.vue",
+    "**/*.tsx"
   ]
 }
