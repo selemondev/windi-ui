@@ -15,6 +15,6 @@ dist
 node_modules
 
 # style copy with components build
-packages/onu-ui/*.css
+packages/windi/*.css
 docs/.vitepress/cache/
 docs/public/play

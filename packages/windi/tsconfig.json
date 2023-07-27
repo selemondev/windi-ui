@@ -1,11 +1,18 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    },
-    {
-      "path": "./tsconfig.app.json"
-    }
-  ]
+  "extends": "../../tsconfig.json",
+  "exclude": [
+    "**/dist/**",
+    "./tailwindcss.config.ts"
+  ],
+  "include": [
+    "**/*.ts",
+    "**/*.d.ts",
+    "**/*.vue",
+    "**/*.tsx"
+  ],
+  "compilerOptions": {
+    "declaration": false,
+    "composite": false,
+    "outDir": "./dist"
+  }
 }
