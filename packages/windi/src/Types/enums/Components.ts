@@ -4,4 +4,5 @@ export enum Components {
   WIcon = 'WIcon',
   WAvatar = 'WAvatar',
   WAvatarGroup = 'WAvatarGroup',
+  WBadge = 'WBadge',
 }

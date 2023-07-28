@@ -36,6 +36,14 @@ export interface WAvatarGroup extends WComponentRoot {
   reverse?: string
 }
 
+export interface WBadge extends WComponentRoot {
+  default?: string
+  body?: string
+  chip?: string
+  badgePosition?: string
+  square?: string
+}
+
 export type WAlertVariants = WithVariantProps<WAlert>
 
 export type WAvatarVariants = WithVariantProps<WAvatar>
@@ -43,3 +51,5 @@ export type WAvatarVariants = WithVariantProps<WAvatar>
 export type WIconVariants = WithVariantProps<WIcon>
 
 export type WAvatarGroupVariants = WithVariantProps<WAvatarGroup>
+
+export type WBadgeVariants = WithVariantProps<WBadge>
