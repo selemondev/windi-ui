@@ -5,4 +5,5 @@ export enum Components {
   WAvatar = 'WAvatar',
   WAvatarGroup = 'WAvatarGroup',
   WBadge = 'WBadge',
+  WButton = 'WButton',
 }

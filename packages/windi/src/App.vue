@@ -9,6 +9,9 @@ function handleClose() {
 </script>
 
 <template>
+  <div class="grid place-items-center w-full min-h-screen">
+    <WButton icon="ph:sun" :trailing="false" disabled variant="danger-disabled" label="Button" size="xl" type="button" />
+  </div>
   <div>
     <WAvatarGroup :max="2" size="md">
       <WAvatar src="https://github.com/selemondev.png" name="Selemon" initials="SB" />
@@ -17,13 +20,13 @@ function handleClose() {
     </WAvatarGroup>
   </div>
 
-  <div class="grid place-items-center w-full min-h-screen">
+  <!-- <div class="grid place-items-center w-full min-h-screen">
     <WBadge position="top-right" value="100" :max-value="99" variant="primary">
       <WIcon name="ph:bell" size="3xl" />
     </WBadge>
-  </div>
+  </div> -->
   <div class="mt-48 p-4 space-y-2">
-    <WAlert :is-visible="show" icon="ph:sun" :trailing="false" variant="danger-light" transition="slideRight" title="Alert" closable @close="handleClose">
+    <WAlert :is-visible="show" icon="ph:sun" :trailing="false" variant="danger-light" transition="slideLeft" title="Alert" closable @close="handleClose">
       <WAlertDescription>
         Hello from alert
       </WAlertDescription>

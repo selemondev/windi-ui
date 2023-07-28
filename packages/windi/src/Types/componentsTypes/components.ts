@@ -44,6 +44,19 @@ export interface WBadge extends WComponentRoot {
   square?: string
 }
 
+export interface WButton extends WComponentRoot {
+  full?: string
+  buttonLabel?: string
+  disabled?: string
+  loading?: string
+  buttonSize?: string
+  buttonPill?: string
+  buttonGap?: string
+  buttonPadding?: string
+  buttonFlex?: string
+  buttonLoadingIcon?: string
+}
+
 export type WAlertVariants = WithVariantProps<WAlert>
 
 export type WAvatarVariants = WithVariantProps<WAvatar>
@@ -53,3 +66,5 @@ export type WIconVariants = WithVariantProps<WIcon>
 export type WAvatarGroupVariants = WithVariantProps<WAvatarGroup>
 
 export type WBadgeVariants = WithVariantProps<WBadge>
+
+export type WButtonVariants = WithVariantProps<WButton>
