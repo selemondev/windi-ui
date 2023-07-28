@@ -379,6 +379,21 @@ export default {
       },
     },
   },
+
+  // chatgpt 😜
+  WButtonGroup: {
+    base: {
+      root: 'flex [&>:not(:first-child):not(:last-child)]:rounded-none',
+    },
+    variants: {
+      horizontal: {
+        root: '[&>:first-child]:rounded-r-none [&>:last-child]:rounded-l-none [&>*+*]:border-l-0',
+      },
+      vertical: {
+        root: 'flex-col [&>:first-child]:rounded-b-none [&>:last-child]:rounded-t-none [&>*+*]:border-t-0 [&>:not(:last-child):not(:focus-visible)]:!shadow-none',
+      },
+    },
+  },
   transitions: {
     scale: {
       'enter-active-class': 'duration-200 ease-[cubic-bezier(0.175,0.885,0.32,1.475)]',
