@@ -1,5 +1,5 @@
 import type { Components } from './enums/Components'
-import type { WAlertVariants, WAvatarGroup, WAvatarVariants, WIconVariants } from './componentsTypes/components'
+import type { WAlertVariants, WAvatarGroup, WAvatarVariants, WBadgeVariants, WIconVariants } from './componentsTypes/components'
 
 export declare interface CSSClassKeyValuePair {
   [key: string]: any
@@ -34,5 +34,6 @@ export interface WindiUIConfiguration {
   [Components.WAvatar]?: WAvatarVariants
   [Components.WIcon]?: WIconVariants
   [Components.WAvatarGroup]?: WAvatarGroup
+  [Components.WBadge]?: WBadgeVariants
 
 }

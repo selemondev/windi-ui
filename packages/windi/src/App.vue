@@ -16,6 +16,12 @@ function handleClose() {
       <WAvatar src="https://github.cm/selemondev.png" name="Selemon" initials="SB" />
     </WAvatarGroup>
   </div>
+
+  <div class="grid place-items-center w-full min-h-screen">
+    <WBadge position="top-right" value="100" :max-value="99" variant="primary">
+      <WIcon name="ph:bell" size="3xl" />
+    </WBadge>
+  </div>
   <div class="mt-48 p-4 space-y-2">
     <WAlert :is-visible="show" icon="ph:sun" :trailing="false" variant="danger-light" transition="slideRight" title="Alert" closable @close="handleClose">
       <WAlertDescription>
