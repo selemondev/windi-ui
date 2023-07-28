@@ -5,6 +5,7 @@ import AlertDescription from './components/Alert/WAlertDescription.vue'
 import Avatar from './components/Avatar/WAvatar.vue'
 import Icon from './components/Icon/WIcon.vue'
 import type { WindiUIConfiguration } from './Types/variant'
+import AvatarGroup from './components/Avatar/WAvatarGroup.vue'
 import windiTheme from './theme/windiTheme'
 
 const components: Record<string, ReturnType<typeof defineComponent>> = {
@@ -12,6 +13,7 @@ const components: Record<string, ReturnType<typeof defineComponent>> = {
   AlertDescription,
   Icon,
   Avatar,
+  AvatarGroup,
 }
 
 function install(app: App, configuration: WindiUIConfiguration) {
@@ -26,3 +28,4 @@ export { default as Alert } from './components/Alert'
 export { default as AlertDescription } from './components/Alert'
 export { default as Icon } from './components/Icon'
 export { default as Avatar } from './components/Avatar'
+export { default as AvatarGroup } from './components/Avatar'

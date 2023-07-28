@@ -113,6 +113,17 @@ export default {
       },
     },
   },
+  WAvatarGroup: {
+    base: {
+      root: 'flex flex-row-reverse',
+      margin: '-mx-2.5',
+    },
+
+    variants: {
+      root: 'flex flex-row-reverse',
+      margin: '-mx-2.5',
+    },
+  },
   WIcon: {
     base: {
       'root': 'w-6 h-6 block',

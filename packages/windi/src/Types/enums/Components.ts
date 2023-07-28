@@ -3,4 +3,5 @@ export enum Components {
   WAlertDescription = 'WAlertDescription',
   WIcon = 'WIcon',
   WAvatar = 'WAvatar',
+  WAvatarGroup = 'WAvatarGroup',
 }
