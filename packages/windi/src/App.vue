@@ -10,7 +10,12 @@ function handleClose() {
 
 <template>
   <div class="grid place-items-center w-full min-h-screen">
-    <WButton icon="ph:sun" :trailing="false" disabled variant="danger-disabled" label="Button" size="xl" type="button" />
+    <WButton icon="ph:sun" variant="primary" size="xl" type="button" />
+    <WButtonGroup>
+      <WButton icon="ph:sun" variant="primary" size="xl" type="button" />
+      <WButton icon="ph:sun" variant="primary" size="xl" type="button" />
+      <WButton icon="ph:sun" variant="primary" size="xl" type="button" />
+    </WButtonGroup>
   </div>
   <div>
     <WAvatarGroup :max="2" size="md">

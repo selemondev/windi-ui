@@ -8,6 +8,7 @@ import type { WindiUIConfiguration } from './Types/variant'
 import AvatarGroup from './components/Avatar/WAvatarGroup.vue'
 import Badge from './components/Badge/WBadge.vue'
 import Button from './components/Button/WButton.vue'
+import ButtonGroup from './components/Button/WButtonGroup.vue'
 import windiTheme from './theme/windiTheme'
 
 const components: Record<string, ReturnType<typeof defineComponent>> = {
@@ -18,6 +19,7 @@ const components: Record<string, ReturnType<typeof defineComponent>> = {
   AvatarGroup,
   Badge,
   Button,
+  ButtonGroup,
 }
 
 function install(app: App, configuration: WindiUIConfiguration) {
@@ -35,3 +37,4 @@ export { default as Avatar } from './components/Avatar'
 export { default as AvatarGroup } from './components/Avatar'
 export { default as Badge } from './components/Badge'
 export { default as Button } from './components/Button'
+export { default as ButtonGroup } from './components/Button'

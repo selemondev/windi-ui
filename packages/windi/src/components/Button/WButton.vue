@@ -84,14 +84,14 @@ const leadingIcon = computed(() => {
   if (props.loading)
     return props.loadingIcon
 
-  return props.leadingIcon || props.icon
+  return props.icon
 })
 
 const trailingIcon = computed(() => {
   if (props.loading && !isLeading.value)
     return props.loadingIcon
 
-  return props.trailingIcon || props.icon
+  return props.icon
 })
 
 const isTrailing = computed(() => {

@@ -6,4 +6,5 @@ export enum Components {
   WAvatarGroup = 'WAvatarGroup',
   WBadge = 'WBadge',
   WButton = 'WButton',
+  WButtonGroup = 'WButtonGroup',
 }
