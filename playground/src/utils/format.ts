@@ -4,7 +4,7 @@ import type { ReplStore } from '~/composables/store'
 
 export const formatCode = async (loadedFormat: boolean, store: ReplStore) => {
   let close: Fn | undefined
-  // 加载依赖
+
   const [format, parserHtml, parserTypeScript, parserBabel, parserPostcss]
     = await Promise.all([
       import('prettier/standalone').then(r => r.format),

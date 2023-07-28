@@ -1,3 +1,3 @@
-import { ui } from 'vue-ui-next'
-export * from 'vue-ui-next'
-export default ui
+import install from 'windi-ui'
+export * from 'windi-ui'
+export default install

@@ -31,8 +31,15 @@ export interface WAvatar extends WComponentRoot {
   placeholderClass?: string
 }
 
+export interface WAvatarGroup extends WComponentRoot {
+  margin?: string
+  reverse?: string
+}
+
 export type WAlertVariants = WithVariantProps<WAlert>
 
 export type WAvatarVariants = WithVariantProps<WAvatar>
 
 export type WIconVariants = WithVariantProps<WIcon>
+
+export type WAvatarGroupVariants = WithVariantProps<WAvatarGroup>

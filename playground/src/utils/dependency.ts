@@ -24,7 +24,7 @@ export const genCDNLink = (
   return `${cdnUrl}${pkg}${version}${path}`
 }
 
-// 生成 vue 依赖配置
+
 export const genVueLink = (version: string) => {
   const compilerSfc = genCDNLink(
     '@vue/compiler-sfc',
@@ -44,13 +44,12 @@ export const genVueLink = (version: string) => {
   }
 }
 
-// 生成构建依赖对象
-// （包括 vue、ui组件库，将在store中与用户依赖合并传递给 vue-repl）
+
 export const genImportMap = ({
   vue,
   [playConfig.compLibShort]: lib,
 }: Partial<Versions> = {}): ImportMap => {
-  // 指定组件库依赖路径，用于去cdn加载 组件库
+
   const deps: Record<string, Dependency> = {
     ...playConfig.coreDeps,
   }

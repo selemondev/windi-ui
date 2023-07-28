@@ -1,6 +1,6 @@
 import { getCurrentInstance } from 'vue'
 // import UnoUI from 'onu-ui'
-import { ui } from "vue-ui-next";
+import install from 'windi-ui'
 
 let installed = false
 
@@ -9,7 +9,7 @@ export function libInstall() {
     return
   const instance = getCurrentInstance()
   
-  // instance.appContext.app.use(ui)
+  instance.appContext.app.use(install)
   installed = true
 }
 
@@ -40,13 +40,13 @@ export function createInjectUnocss() {
   })
 }
 
-// 发送dom信息到 父页面
+
 export function sendHtml() {
   const div = document.querySelector('#app').innerHTML
   top.postMessage(div, location.ancestorOrigins[0])
 }
 
-// 收父页面传来到 css
+
 export function getUnocssCompileRes() {
   window.addEventListener('message', (event) => {
     const styleElm = document.querySelector('#unocss_style')
