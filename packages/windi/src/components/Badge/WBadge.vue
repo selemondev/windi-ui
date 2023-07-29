@@ -3,6 +3,7 @@ import { computed, defineComponent, useSlots } from 'vue'
 import classNames from 'classnames'
 import { Positions } from '../../Types/enums/Positions'
 import { Components } from '../../Types/enums/Components'
+import type { VariantJSWithClassesListProps } from '../../utils/getVariantProps'
 import { getVariantPropsWithClassesList } from '../../utils/getVariantProps'
 import type { WBadge } from '../../Types/componentsTypes/components'
 import { useVariants } from '../../composables/useVariants'
@@ -31,8 +32,17 @@ const props = defineProps({
     default: null,
   },
 })
+const variant = computed(() => {
+  const customProps = {
+    ...props,
+    variant: props.variant,
+  }
+  return useVariants<WBadge>(
+    Components.WBadge,
+    customProps as VariantJSWithClassesListProps<WBadge>,
+  )
+})
 
-const variant = useVariants<WBadge>(Components.WBadge, props)
 const slots = useSlots()
 const badgeValue = computed(() => {
   if (props.chip || !props.value)
@@ -53,13 +63,13 @@ const badgePosition = computed(() => {
 
 const badgeChip = computed(() => {
   return classNames(
-    props.chip && variant.chip,
+    props.chip && variant.value.chip,
   )
 })
 
 const badgeSquare = computed(() => {
   return classNames(
-    props.square && variant.square,
+    props.square && variant.value.square,
   )
 })
 </script>

@@ -2,6 +2,7 @@
 import type { PropType } from 'vue'
 import { computed, defineComponent, ref, watchEffect } from 'vue'
 import classNames from 'classnames'
+import type { VariantJSWithClassesListProps } from '../../utils/getVariantProps'
 import { getVariantPropsWithClassesList } from '../../utils/getVariantProps'
 import type { WAvatar } from '../../Types/componentsTypes/components'
 import { Components } from '../../Types/enums/Components'
@@ -68,12 +69,21 @@ const fallback = computed(() => {
   return props.initials || props.name.charAt(0) || '?'
 })
 
-const variant = useVariants<WAvatar>(Components.WAvatar, props)
+const variant = computed(() => {
+  const customProps = {
+    ...props,
+    variant: props.variant,
+  }
+  return useVariants<WAvatar>(
+    Components.WAvatar,
+    customProps as VariantJSWithClassesListProps<WAvatar>,
+  )
+})
 
 const avatarWrapperClasses = computed<string>(() => {
   return classNames(
-    variant.root,
-    variant.avatarSize && variant[props.size],
+    variant.value.root,
+    variant.value.avatarSize && variant.value[props.size],
   )
 })
 const avatarClasses = computed(() => {
@@ -83,8 +93,8 @@ const avatarClasses = computed(() => {
     return props.size
   }
   else {
-    sizeClass += variant[props.size] || ''
-    return classNames(variant.rounded, sizeClass, variant.root)
+    sizeClass += variant.value[props.size] || ''
+    return classNames(variant.value.rounded, sizeClass, variant.value.root)
   }
 })
 
@@ -102,7 +112,7 @@ const avatarChipSize = computed(() => {
 
 const avatarChipClass = computed(() => {
   return classNames(
-    variant.avatarChipClass,
+    variant.value.avatarChipClass,
     windiTheme.WAvatar.base.avatarChipPosition[props.chipPosition],
   )
 })

@@ -3,6 +3,7 @@ import { computed, defineComponent, useAttrs } from 'vue'
 import type { PropType } from 'vue'
 import classNames from 'classnames'
 import { Icon } from '@iconify/vue'
+import type { VariantJSWithClassesListProps } from '../../utils/getVariantProps'
 import { getVariantPropsWithClassesList } from '../../utils/getVariantProps'
 import type { WButton } from '../../Types/componentsTypes/components'
 import { Components } from '../../Types/enums/Components'
@@ -74,7 +75,16 @@ const props = defineProps({
 })
 const bind = Object.assign({}, useAttrs(), props.to ? { href: props.to } : {})
 
-const variant = useVariants<WButton>(Components.WButton, props)
+const variant = computed(() => {
+  const customProps = {
+    ...props,
+    variant: props.variant,
+  }
+  return useVariants<WButton>(
+    Components.WButton,
+    customProps as VariantJSWithClassesListProps<WButton>,
+  )
+})
 
 const isLeading = computed(() => {
   return (props.icon && props.leading) || (props.icon && !props.trailing) || (props.loading && !props.trailing)
@@ -99,20 +109,20 @@ const isTrailing = computed(() => {
 })
 
 const buttonBlock = computed(() => {
-  return props.full && variant.full
+  return props.full && variant.value.full
 })
 
 const buttonWrapperClass = computed(() => {
   return classNames(
-    variant.root,
-    variant.buttonFlex,
+    variant.value.root,
+    variant.value.buttonFlex,
     windiTheme.WButton.base.buttonSize[props.size],
     windiTheme.WButton.base.buttonGap[props.size],
     windiTheme.WButton.base.buttonPadding[props.size],
     buttonBlock.value,
-    props.pill && variant.buttonPill,
-    props.disabled && variant.disabled,
-    (props.loading) && variant.loading,
+    props.pill && variant.value.buttonPill,
+    props.disabled && variant.value.disabled,
+    (props.loading) && variant.value.loading,
   )
 })
 
