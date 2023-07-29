@@ -6,6 +6,7 @@ import type { PropType } from 'vue'
 import { computed, defineComponent } from 'vue'
 import { Icon } from '@iconify/vue'
 import type { WAlert } from '../../Types/componentsTypes/components'
+import type { VariantJSWithClassesListProps } from '../../utils/getVariantProps'
 import { getVariantPropsWithClassesList } from '../../utils/getVariantProps'
 import { useVariants } from '../../composables/useVariants'
 import { Components } from '../../Types/enums/Components'
@@ -71,7 +72,16 @@ const emit = defineEmits<{
   (event: 'close'): void
 }>()
 
-const variant = useVariants<WAlert>(Components.WAlert, props)
+const variant = computed(() => {
+  const customProps = {
+    ...props,
+    variant: props.variant,
+  }
+  return useVariants<WAlert>(
+    Components.WAlert,
+    customProps as VariantJSWithClassesListProps<WAlert>,
+  )
+})
 
 const leadingIconName = computed(() => {
   return props.leadingIcon || props.icon
@@ -90,7 +100,7 @@ const isTrailing = computed(() => {
 })
 
 const transition = computed(() => {
-  return props.transition === 'scale' ? variant.transitions?.scale : props.transition === 'fade' ? variant.transitions?.fade : props.transition === 'slideLeft' ? variant.transitions?.slideLeft : variant.transitions?.slideRight
+  return props.transition === 'scale' ? variant.value.transitions?.scale : props.transition === 'fade' ? variant.value.transitions?.fade : props.transition === 'slideLeft' ? variant.value.transitions?.slideLeft : variant.value.transitions?.slideRight
 })
 
 function onDismiss() {
@@ -108,7 +118,10 @@ export default defineComponent({
   <Transition v-bind="transition" mode="out-in">
     <div v-if="props.isVisible" :class="variant.root">
       <div :class="variant.flexBetween">
-        <div :class="[$slots.leading || isLeading ? variant.isLeading : variant.isNotLeading]" class="flex items-center">
+        <div
+          :class="[$slots.leading || isLeading ? variant.isLeading : variant.isNotLeading]"
+          class="flex items-center"
+        >
           <div class="shrink-0">
             <span v-if="(isLeading && leadingIconName) || $slots.leading" class="px-2">
               <slot name="leading">
@@ -128,15 +141,15 @@ export default defineComponent({
         <div>
           <div class="shrink-0">
             <button
-              v-if="props.closable && !isTrailing && !$slots.trailing" :title="dismissLabel" :aria-label="dismissLabel"
-              :class="variant.closeButtonClass" @click="onDismiss()"
+              v-if="props.closable && !isTrailing && !$slots.trailing" :title="dismissLabel"
+              :aria-label="dismissLabel" :class="variant.closeButtonClass" @click="onDismiss()"
             >
               <XMarkIcon class="w-6 h-6 hover:text-white" :class="variant.closeIcon" />
             </button>
 
             <button
-              v-if="props.trailing || isTrailing || $slots.trailing" :title="dismissLabel" :aria-label="dismissLabel" :class="variant.trailingClass"
-              @click="onDismiss()"
+              v-if="props.trailing || isTrailing || $slots.trailing" :title="dismissLabel"
+              :aria-label="dismissLabel" :class="variant.trailingClass" @click="onDismiss()"
             >
               <span v-if="(isTrailing && trailingIconName) || $slots.trailing">
                 <slot name="trailing">

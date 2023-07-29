@@ -14,7 +14,7 @@ export default {
     },
     variants: {
       'default': {
-        root: 'bg-yellow-500 text-white',
+        root: 'bg-yellow-500 text-white w-full',
         outline: 'border border-yellow-500 !text-yellow-800',
         light: 'border border-yellow-500 bg-yellow-100 text-yellow-800',
       },
