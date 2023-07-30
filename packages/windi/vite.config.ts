@@ -33,6 +33,9 @@ export default defineConfig({
       external: ['vue'],
       output: {
         format: 'esm',
+        globals: {
+          vue: 'Vue',
+        },
       },
     },
   },
