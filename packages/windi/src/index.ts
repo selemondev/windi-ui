@@ -9,9 +9,13 @@ import AvatarGroup from './components/Avatar/WAvatarGroup.vue'
 import Badge from './components/Badge/WBadge.vue'
 import Button from './components/Button/WButton.vue'
 import ButtonGroup from './components/Button/WButtonGroup.vue'
+import Accordion from './components/Accordion/WAccordion.vue'
+import AccordionItem from './components/Accordion/WAccordionItem.vue'
 import windiTheme from './theme/windiTheme'
 
 const components: Record<string, ReturnType<typeof defineComponent>> = {
+  Accordion,
+  AccordionItem,
   Alert,
   AlertDescription,
   Icon,
@@ -38,3 +42,5 @@ export { default as AvatarGroup } from './components/Avatar'
 export { default as Badge } from './components/Badge'
 export { default as Button } from './components/Button'
 export { default as ButtonGroup } from './components/Button'
+export { default as Accordion } from './components/Accordion'
+export { default as AccordionItem } from './components/Accordion'

@@ -1,12 +1,12 @@
 export default {
   WAlert: {
     base: {
-      root: 'w-full relative overflow-hidden rounded-md px-4',
+      root: 'w-full relative overflow-hidden rounded-md px-3 py-2.5',
       title: 'text-lg font-semibold',
       flexBetween: 'flex justify-between items-center w-full',
       body: 'text-sm leading-none mt-2.5',
       closeIcon: 'w-6 h-6 block',
-      isLeading: 'space-x-4',
+      isLeading: 'space-x-2.5',
       isNotLeading: 'space-x-2',
       closeButtonClass: 'p-0.5 rounded-md -m-1 block transition duration-200 ease-in',
       leadingClass: 'absolute left-2.5 cursor-pointer flex items-center overflow-hidden',
@@ -15,6 +15,7 @@ export default {
     variants: {
       'default': {
         root: 'bg-yellow-500 text-white w-full',
+        closeButtonClass: 'text-white py-1 px-1 hover:bg-yellow-800',
       },
       'default-light': {
         root: [
@@ -433,6 +434,46 @@ export default {
       },
       vertical: {
         root: 'flex-col [&>:first-child]:rounded-b-none [&>:last-child]:rounded-t-none [&>*+*]:border-t-0 [&>:not(:last-child):not(:focus-visible)]:!shadow-none',
+      },
+    },
+  },
+
+  WAccordion: {
+    base: {
+      root: 'w-full flex flex-col',
+    },
+
+    variants: {},
+  },
+  WAccordionItem: {
+    base: {
+      root: 'bg-white border-t border-b last:border-b-0 border-gray-300 transition duration-100 hover:bg-gray-100',
+      accordionItemActiveBackgroundColor: 'bg-gray-200',
+      accordionItemRounded: 'first:rounded-t-lg last:rounded-b-lg',
+      accordionItemTitle: 'font-medium text-black',
+      accordionItemIcon: 'relative ml-auto h-5 w-5 text-black transition-transform duration-500 md:h-6 md:w-6',
+      accordionItemButton: 'flex justify-between items-center cursor-pointer p-2',
+      isLeading: 'space-x-2.5',
+      isNotLeading: 'space-x-2',
+      leadingClass: 'absolute left-2.5 cursor-pointer flex items-center overflow-hidden',
+      trailingClass: 'absolute right-4 inset-y-0 cursor-pointer flex items-center overflow-hidden',
+      accordionItembody: 'overflow-hidden px-5 transition-[height] duration-500 text-black will-change-[height] md:px-6',
+      accordionItemContent: 'py-2 font-light leading-relaxed tracking-wide text-black',
+    },
+    variants: {
+      default: {
+        root: 'bg-white border-t border-b last:border-b-0 border-gray-300 transition duration-100 hover:bg-gray-100',
+        accordionItemActiveBackgroundColor: 'bg-gray-200',
+        accordionItemRounded: 'first:rounded-t-lg last:rounded-b-lg',
+        accordionItemTitle: 'font-medium text-black',
+        accordionItemIcon: 'relative ml-auto',
+        isLeading: 'space-x-2.5',
+        isNotLeading: 'space-x-2',
+        accordionItemButton: 'flex justify-between items-center cursor-pointer p-2',
+        leadingClass: 'absolute left-2.5 cursor-pointer flex items-center overflow-hidden',
+        trailingClass: 'absolute right-4 inset-y-0 cursor-pointer flex items-center overflow-hidden',
+        accordionItembody: 'overflow-hidden px-5 transition-[height] duration-500 text-black will-change-[height] md:px-6',
+        accordionItemContent: 'py-2 font-light leading-relaxed tracking-wide text-black',
       },
     },
   },

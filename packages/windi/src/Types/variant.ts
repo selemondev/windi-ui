@@ -1,5 +1,5 @@
 import type { Components } from './enums/Components'
-import type { WAlertVariants, WAvatarGroup, WAvatarVariants, WBadgeVariants, WButtonGroupVariants, WButtonVariants, WIconVariants } from './componentsTypes/components'
+import type { WAccordionItemVariants, WAccordionVariants, WAlertVariants, WAvatarGroup, WAvatarVariants, WBadgeVariants, WButtonGroupVariants, WButtonVariants, WIconVariants } from './componentsTypes/components'
 
 export declare interface CSSClassKeyValuePair {
   [key: string]: any
@@ -30,6 +30,8 @@ export interface Variants<P> {
 
 export interface WindiUIConfiguration {
   transitions: Record<string, Record<string, string>>
+  [Components.WAccordion]?: WAccordionVariants
+  [Components.WAccordionItem]?: WAccordionItemVariants
   [Components.WAlert]?: WAlertVariants
   [Components.WAvatar]?: WAvatarVariants
   [Components.WIcon]?: WIconVariants

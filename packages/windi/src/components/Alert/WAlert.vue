@@ -118,10 +118,7 @@ export default defineComponent({
   <Transition v-bind="transition" mode="out-in">
     <div v-if="props.isVisible" :class="variant.root">
       <div :class="variant.flexBetween">
-        <div
-          :class="[$slots.leading || isLeading ? variant.isLeading : variant.isNotLeading]"
-          class="flex items-center"
-        >
+        <div :class="[$slots.leading || isLeading ? variant.isLeading : variant.isNotLeading]" class="flex items-center">
           <div class="shrink-0">
             <span v-if="(isLeading && leadingIconName) || $slots.leading" class="px-2">
               <slot name="leading">
@@ -129,7 +126,7 @@ export default defineComponent({
               </slot>
             </span>
           </div>
-          <div class="space-y-1">
+          <div>
             <h2 v-if="props.title" :class="variant.title">
               {{ props.title }}
             </h2>
@@ -138,6 +135,7 @@ export default defineComponent({
             </div>
           </div>
         </div>
+
         <div>
           <div class="shrink-0">
             <button

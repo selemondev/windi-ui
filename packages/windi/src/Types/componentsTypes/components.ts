@@ -61,6 +61,19 @@ export interface WButtonGroup extends WComponentRoot {
   buttonGroupRound?: string
 }
 
+export interface WAccordion extends WComponentRoot {}
+
+export interface WAccordionItem extends WComponentRoot {
+  body?: string
+  icon?: string
+  expanded?: string
+  activator?: string
+}
+
+export type WAccordionVariant = WithVariantProps<WAccordion>
+
+export type WAccordionItemVariants = WithVariantProps<WAccordionItem>
+
 export type WAlertVariants = WithVariantProps<WAlert>
 
 export type WAvatarVariants = WithVariantProps<WAvatar>
@@ -74,3 +87,5 @@ export type WBadgeVariants = WithVariantProps<WBadge>
 export type WButtonVariants = WithVariantProps<WButton>
 
 export type WButtonGroupVariants = WithVariantProps<WButtonGroup>
+
+export type WAccordionVariants = WithVariantProps<WAccordion>

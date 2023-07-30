@@ -1,4 +1,6 @@
 export enum Components {
+  WAccordion = 'WAccordion',
+  WAccordionItem = 'WAccordionItem',
   WAlert = 'WAlert',
   WAlertDescription = 'WAlertDescription',
   WIcon = 'WIcon',
