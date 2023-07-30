@@ -23,6 +23,10 @@ const props = defineProps({
     type: String,
     default: Positions.TR,
   },
+  color: {
+    type: String,
+    default: 'purple',
+  },
   maxValue: {
     type: Number,
     default: null,

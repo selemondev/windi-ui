@@ -64,10 +64,25 @@ export interface WButtonGroup extends WComponentRoot {
 export interface WAccordion extends WComponentRoot {}
 
 export interface WAccordionItem extends WComponentRoot {
-  body?: string
-  icon?: string
-  expanded?: string
-  activator?: string
+  accordionItemActiveBackgroundColor?: string
+  accordionItemRounded?: string
+  accordionItemTitle?: string
+  accordionItemIcon?: string
+  accordionItemButton?: string
+  isLeading?: string
+  isNotLeading?: string
+  leadingClass?: string
+  trailingClass?: string
+  accordionItemBody?: string
+  accordionItemContent?: string
+}
+
+export interface WKbd extends WComponentRoot {
+  KbdRounded?: string
+  KbdFont?: string
+  KbdBackground?: string
+  KbdRing?: string
+  KbdSize?: string
 }
 
 export type WAccordionVariant = WithVariantProps<WAccordion>
@@ -89,3 +104,5 @@ export type WButtonVariants = WithVariantProps<WButton>
 export type WButtonGroupVariants = WithVariantProps<WButtonGroup>
 
 export type WAccordionVariants = WithVariantProps<WAccordion>
+
+export type WKbdVariants = WithVariantProps<WKbd>

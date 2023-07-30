@@ -9,4 +9,5 @@ export enum Components {
   WBadge = 'WBadge',
   WButton = 'WButton',
   WButtonGroup = 'WButtonGroup',
+  WKbd = 'WKbd',
 }

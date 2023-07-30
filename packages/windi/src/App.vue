@@ -3,7 +3,12 @@
 
 <template>
   <div class="grid place-items-center w-full min-h-screen">
-    <div class="w-96">
+    <WKbd>M</WKbd>
+    <WKbd>B</WKbd>
+    <!-- <WBadge position="top-right" value="100" :max-value="99" color="lime">
+      <WIcon name="ph:bell" size="3xl" />
+    </WBadge> -->
+    <!-- <div class="w-96">
       <WAccordion>
         <WAccordionItem title="Title 1">
           Reacting against a rich and affluent Britain of the 1960s, it tried to
@@ -30,7 +35,7 @@
           process.
         </WAccordionItem>
       </WAccordion>
-    </div>
+    </div> -->
     <!-- <div class="w-96">
       <WAlert :is-visible="show" variant="warning-light" transition="fade" title="Alert" closable @close="handleClose">
         <template #leading>
