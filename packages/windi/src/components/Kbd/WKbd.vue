@@ -2,6 +2,7 @@
 import { computed, defineComponent } from 'vue'
 import classNames from 'classnames'
 import { Components } from '../../Types/enums/Components'
+import type { VariantJSWithClassesListProps } from '../../utils/getVariantProps'
 import { getVariantPropsWithClassesList } from '../../utils/getVariantProps'
 import type { WKbd } from '../../Types/componentsTypes/components'
 import { useVariants } from '../../composables/useVariants.ts'
@@ -20,14 +21,23 @@ const props = defineProps({
   },
 })
 
-const variant = useVariants<WKbd>(Components.WKbd, props)
+const variant = computed(() => {
+  const customProps = {
+    ...props,
+  }
+  return useVariants<WKbd>(
+    Components.WKbd,
+    customProps as VariantJSWithClassesListProps<WKbd>,
+  )
+})
+// const variant = useVariants<WKbd>(Components.WKbd, props)
 const kbdWrapperClass = computed(() => {
   return classNames(
-    variant.root,
-    variant.KbdRounded,
-    variant.KbdFont,
-    variant.KbdBackground,
-    variant.KbdRing,
+    variant.value.root,
+    variant.value.KbdRounded,
+    variant.value.KbdFont,
+    variant.value.KbdBackground,
+    variant.value.KbdRing,
     windiTheme.WKbd.base.KbdSize[props.size],
   )
 })

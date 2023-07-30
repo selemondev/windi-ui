@@ -494,11 +494,13 @@ export default {
     },
 
     variants: {
-      root: 'inline-flex items-center justify-center text-gray-900 px-1 dark:text-white',
-      KbdRounded: 'rounded',
-      KbdFont: 'font-medium',
-      KbdBackground: 'bg-gray-100 dark:bg-gray-800',
-      KbdRing: 'ring-1 ring-gray-300 ring-inset dark:ring-gray-700',
+      default: {
+        root: 'inline-flex items-center justify-center text-gray-900 px-1 dark:text-white',
+        KbdRounded: 'rounded',
+        KbdFont: 'font-medium',
+        KbdBackground: 'bg-gray-100 dark:bg-gray-800',
+        KbdRing: 'ring-1 ring-gray-300 ring-inset dark:ring-gray-700',
+      },
     },
   },
   transitions: {
