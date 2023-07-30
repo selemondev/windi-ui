@@ -1,33 +1,15 @@
 <script setup lang='ts'>
-import { ref } from 'vue'
-
-const show = ref(true)
-
-function handleClose() {
-  return show.value = false
-}
 </script>
 
 <template>
-  <div class="mt-48 p-4 space-y-2">
-    <WAvatar src="https://github.cm/selemondev.png" name="Selemon" chip-position="top-right" initials="SB" chip-color="red" />
-
-    <WAlert :is-visible="show" icon="ph:sun" :trailing="false" variant="success-light" transition="slideRight" title="Alert" closable @close="handleClose">
-      <WAlertDescription>
-        Hello from alert
-      </WAlertDescription>
-    </WAlert>
-
-    <WAlert variant="primary" transition="fade" title="Alert" closable>
-      <WAlertDescription>
-        Hello from alert
-      </WAlertDescription>
-    </WAlert>
-
-    <WAlert variant="primary-dashed" transition="slideLeft" title="Alert" closable>
-      <WAlertDescription>
-        Hello from alert
-      </WAlertDescription>
-    </WAlert>
+  <div class="grid place-items-center w-full min-h-screen">
+    <div class="space-y-2">
+      <WButton icon="ph:reddit-logo" :trailing="false" label="Reddit" variant="outline" size="lg" />
+      <!-- <WButtonGroup >
+        <WButton icon="bxl:meta" :trailing="false" variant="primary" size="lg" />
+        <WButton icon="ic:round-play-arrow" :trailing="false" variant="danger" size="lg" />
+        <WButton icon="ph:reddit-logo" :trailing="false" variant="warning" size="lg" />
+      </WButtonGroup> -->
+    </div>
   </div>
 </template>

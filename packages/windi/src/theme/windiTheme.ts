@@ -1,7 +1,7 @@
 export default {
   WAlert: {
     base: {
-      root: 'relative overflow-hidden space-y-1 p-4 w-full cursor-pointer rounded-md space-x-3 block',
+      root: 'w-full relative overflow-hidden rounded-md px-4',
       title: 'text-lg font-semibold',
       flexBetween: 'flex justify-between items-center w-full',
       body: 'text-sm leading-none mt-2.5',
@@ -9,14 +9,30 @@ export default {
       isLeading: 'space-x-4',
       isNotLeading: 'space-x-2',
       closeButtonClass: 'p-0.5 rounded-md -m-1 block transition duration-200 ease-in',
-      leadingClass: 'absolute left-2.5 inset-y-0 cursor-pointer flex items-center overflow-hidden',
+      leadingClass: 'absolute left-2.5 cursor-pointer flex items-center overflow-hidden',
       trailingClass: 'absolute right-4 inset-y-0 cursor-pointer flex items-center overflow-hidden',
     },
     variants: {
       'default': {
         root: 'bg-yellow-500 text-white w-full',
-        outline: 'border border-yellow-500 !text-yellow-800',
-        light: 'border border-yellow-500 bg-yellow-100 text-yellow-800',
+      },
+      'default-light': {
+        root: [
+          'border border-yellow-500 bg-yellow-100 text-yellow-800 hover:bg-yellow-800 hover:text-white duration-200 ease-in',
+        ],
+        closeButtonClass: 'hover:text-white py-1 px-1 hover:bg-yellow-900 !active:text-white',
+      },
+      'default-dashed': {
+        root: [
+          'border border-dashed border-yellow-500 text-yellow-800 hover:bg-yellow-800 hover:text-white duration-200 ease-in',
+        ],
+        closeButtonClass: '!active:text-white hover:text-white py-1 px-1 hover:bg-yellow-900',
+      },
+      'default-outline': {
+        root: [
+          'border border-yellow-500 text-yellow-800 hover:bg-yellow-800 hover:text-white duration-200 ease-in',
+        ],
+        closeButtonClass: '!active:text-white hover:text-white py-1 px-1 hover:bg-yellow-900',
       },
       'primary': {
         root: 'bg-blue-500 text-white',
@@ -231,7 +247,7 @@ export default {
       buttonFlex: 'flex items-center',
       buttonLoadingIcon: 'svg-spinners:bars-rotate-fade',
       buttonPill: '!rounded-full',
-      loading: 'bg-opacity-50 inline-flex items-center',
+      loading: '!bg-opacity-50 !hover:bg-opacity-50 inline-flex items-center',
       full: 'w-full flex justify-center items-center',
       disabled: '!shadow-none !cursor-not-allowed bg-transparent',
       buttonSize: {
@@ -263,10 +279,31 @@ export default {
     variants: {
       'default': {
         root: 'bg-yellow-500 hover:bg-yellow-600',
-        outline: 'border border-yellow-500 !text-yellow-800',
-        light: 'border border-yellow-500 bg-yellow-100 text-yellow-800',
-        // disabled: '!shadow-none !cursor-not-allowed bg-transparent',
-        ghost: 'text-yellow-500 hover:bg-yellow-100',
+      },
+      'default-outline': {
+        root: [
+          'border border-yellow-500 text-yellow-800 hover:bg-yellow-800 hover:text-white duration-200 ease-in',
+        ],
+      },
+      'default-light': {
+        root: [
+          'border border-yellow-500 bg-yellow-100 text-yellow-800 hover:bg-yellow-800 hover:text-white duration-200 ease-in',
+        ],
+      },
+      'default-dashed': {
+        root: [
+          'border border-dashed border-yellow-500 text-yellow-800 hover:bg-yellow-800 hover:text-white duration-200 ease-in',
+        ],
+      },
+      'default-ghost': {
+        root: [
+          'text-yellow-500 hover:bg-yellow-100',
+        ],
+      },
+      'default-disabled': {
+        root: [
+          '!shadow-none !cursor-not-allowed !border-yellow-300 !text-gray-300 !bg-yellow-100 dark:!text-white dark:!border-neutral-700 active:!border-yellow-300 active:!bg-yellow-300 peer-checked:!border-yellow-300 hover:!border-yellow-300 !bg-yellow-300',
+        ],
       },
       'primary': {
         root: 'bg-blue-500 hover:bg-blue-600 !disabled:hover:bg-blue-100',
@@ -274,6 +311,11 @@ export default {
       'primary-light': {
         root: [
           'border border-blue-500 bg-blue-100 text-blue-800 hover:bg-blue-800 hover:text-white duration-200 ease-in',
+        ],
+      },
+      'primary-loading': {
+        root: [
+          '!shadow-none !cursor-not-allowed bg-blue-100',
         ],
       },
 
