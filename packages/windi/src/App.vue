@@ -29,14 +29,6 @@
           reaffirmed the belief that design is not a neutral, value-free
           process.
         </WAccordionItem>
-        <!-- <WAccordionItem rounded title="Title 3">
-          Reacting against a rich and affluent Britain of the 1960s, it tried to
-          re-radicalise a design industry which the signatories felt had become
-          lazy and uncritical. Drawing on ideas shared by critical theory, the
-          Frankfurt School, and the counter-culture of the time, it explicitly
-          reaffirmed the belief that design is not a neutral, value-free
-          process.
-        </WAccordionItem> -->
       </WAccordion>
     </div>
     <!-- <div class="w-96">
