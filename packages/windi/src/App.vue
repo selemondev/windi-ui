@@ -4,6 +4,7 @@
 <template>
   <div class="grid place-items-center w-full min-h-screen">
     <WKbd>M</WKbd>
+    <WKbd>B</WKbd>
     <!-- <WBadge position="top-right" value="100" :max-value="99" color="lime">
       <WIcon name="ph:bell" size="3xl" />
     </WBadge> -->
