@@ -477,6 +477,30 @@ export default {
       },
     },
   },
+  WKbd: {
+    base: {
+      root: 'inline-flex items-center justify-center text-gray-900 px-1 dark:text-white',
+      KbdRounded: 'rounded',
+      KbdFont: 'font-medium',
+      KbdBackground: 'bg-gray-100 dark:bg-gray-800',
+      KbdRing: 'ring-1 ring-gray-300 ring-inset dark:ring-gray-700',
+      KbdSize: {
+        xs: 'h-4 min-w-[16px] text-[10px]',
+        sm: 'h-5 min-w-[20px] text-[11px]',
+        md: 'h-6 min-w-[24px] text-[12px]',
+        lg: 'h-7 min-w-[28px] text-[13px]',
+        xl: 'h-8 min-w-[32px] text-[14px]',
+      },
+    },
+
+    variants: {
+      root: 'inline-flex items-center justify-center text-gray-900 px-1 dark:text-white',
+      KbdRounded: 'rounded',
+      KbdFont: 'font-medium',
+      KbdBackground: 'bg-gray-100 dark:bg-gray-800',
+      KbdRing: 'ring-1 ring-gray-300 ring-inset dark:ring-gray-700',
+    },
+  },
   transitions: {
     scale: {
       'enter-active-class': 'duration-200 ease-[cubic-bezier(0.175,0.885,0.32,1.475)]',

@@ -11,6 +11,7 @@ import Button from './components/Button/WButton.vue'
 import ButtonGroup from './components/Button/WButtonGroup.vue'
 import Accordion from './components/Accordion/WAccordion.vue'
 import AccordionItem from './components/Accordion/WAccordionItem.vue'
+import Kbd from './components/Kbd/WKbd.vue'
 import windiTheme from './theme/windiTheme'
 
 const components: Record<string, ReturnType<typeof defineComponent>> = {
@@ -24,6 +25,7 @@ const components: Record<string, ReturnType<typeof defineComponent>> = {
   Badge,
   Button,
   ButtonGroup,
+  Kbd,
 }
 
 function install(app: App, configuration: WindiUIConfiguration) {
@@ -44,3 +46,4 @@ export { default as Button } from './components/Button'
 export { default as ButtonGroup } from './components/Button'
 export { default as Accordion } from './components/Accordion'
 export { default as AccordionItem } from './components/Accordion'
+export { default as Kbd } from './components/Kbd'
