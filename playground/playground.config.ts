@@ -32,22 +32,22 @@ export default {
       path: '/dist/shared.esm-bundler.js',
       source: 'jsdelivr',
     },
-    '@selemondev/windi-ui': {
-      pkg: '@selemondev/windi-ui',
-      version: 'latest',
-      path: '/dist/@selemondev/windi-ui.js',
-      source: 'jsdelivr',
-      cssPath: '@selemondev/windi-ui/dist/theme/windiTheme',
-    }
+    // '@selemondev/windi-ui': {
+    //   pkg: '@selemondev/windi-ui',
+    //   version: 'latest',
+    //   path: '/dist/@selemondev/windi-ui.js',
+    //   source: 'jsdelivr',
+    //   cssPath: '@selemondev/windi-ui/dist/theme/windiTheme',
+    // }
   } as Record<string, Dependency>,
   cdnUrl: {
     skypack: 'https://cdn.skypack.dev/',
     jsdelivr: 'https://cdn.jsdelivr.net/npm/',
   },
   devDeps: {
-    '@selemondev/windi-ui': {
-      path: `${location.origin}/play/src/vue-ui-next-dev-proxy`,
-    },
+    // '@selemondev/windi-ui': {
+    //   path: `${location.origin}/play/src/vue-ui-next-dev-proxy`,
+    // },
     'vue': {
       path: `${location.origin}/play/src/vue-dev-proxy`,
     },

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 // import { OMessage as message } from 'onu-ui'
 import type { ComputedRef } from 'vue'
-import { UPopover, UIcon } from 'vue-ui-next'
 import Logo from "../public/windi.png";
 import { Icon } from "@iconify/vue";
 // import type { OMessageProps } from 'onu-ui'
@@ -82,7 +81,7 @@ async function copyLink() {
         <div flex items-center justify-around m-2>
             <div v-for="(v, key) of versions" :key="key" flex mx-6 items-center>
                 <span dark-text-gray-300 font-bold text-base>{{ v.text }} Version:</span>
-                <UPopover>
+                <!-- <UPopover>
                     <div px-12px text-lg cursor-pointer text-stone-600 dark-text-gray-100 flex items-center>
                         <span text-base>{{ v.active }}</span>
                         <UIcon name="material-symbols:keyboard-arrow-down" ml-2 />
@@ -96,10 +95,10 @@ async function copyLink() {
                             </p>
                         </div>
                     </template>
-                </UPopover>
+                </UPopover> -->
             </div>
 
-            <a href="https://vuejs.org/" target="_blank" class="header-a">
+            <!-- <a href="https://vuejs.org/" target="_blank" class="header-a">
                 <Icon h-5 w-5 mx-2 icon="logos:vue" />
             </a>
 
@@ -114,11 +113,11 @@ async function copyLink() {
             <a class="header-a" cursor-pointer @click.prevent="toggleTheme()">
                 <Icon v-if="appDark" h-5 w-5 mx-2 dark-text-white o="gray" icon="ph:moon" />
                 <Icon v-else h-5 w-5 mx-2 dark-text-white o="gray" icon="ph:sun" />
-            </a>
+            </a> -->
 
-            <a class="header-a" cursor-pointer @click.prevent="copyLink">
+            <!-- <a class="header-a" cursor-pointer @click.prevent="copyLink">
                 <Icon h-5 w-5 mx-2 dark-text-white o="gray" icon="ph:share-network" />
-            </a>
+            </a> -->
         </div>
     </nav>
 </template>
