@@ -45,10 +45,9 @@ export interface WBadge extends WComponentRoot {
 }
 
 export interface WButton extends WComponentRoot {
-  full?: string
-  buttonLabel?: string
-  disabled?: string
-  loading?: string
+  buttonFull?: string
+  buttonDisabled?: string
+  buttonLoading?: string
   buttonSize?: string
   buttonPill?: string
   buttonGap?: string

@@ -2,6 +2,7 @@
 import { computed, defineComponent, useAttrs } from 'vue'
 import type { PropType } from 'vue'
 import classNames from 'classnames'
+import type { RouteLocationRaw } from 'vue-router'
 import { Icon } from '@iconify/vue'
 import type { VariantJSWithClassesListProps } from '../../utils/getVariantProps'
 import { getVariantPropsWithClassesList } from '../../utils/getVariantProps'
@@ -14,8 +15,13 @@ export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl'
 const props = defineProps({
   ...getVariantPropsWithClassesList<WButton>(),
 
-  to: {
+  type: {
     type: String,
+    default: 'button',
+  },
+
+  to: {
+    type: [String, Object] as PropType<string | RouteLocationRaw>,
     default: null,
   },
   size: {
@@ -109,11 +115,12 @@ const isTrailing = computed(() => {
 })
 
 const buttonBlock = computed(() => {
-  return props.full && variant.value.full
+  return props.full && variant.value.buttonFull
 })
 
 const buttonWrapperClass = computed(() => {
   return classNames(
+    (props.to) && 'hover:underline',
     variant.value.root,
     variant.value.buttonFlex,
     windiTheme.WButton.base.buttonSize[props.size],
@@ -121,8 +128,8 @@ const buttonWrapperClass = computed(() => {
     windiTheme.WButton.base.buttonPadding[props.size],
     buttonBlock.value,
     props.pill && variant.value.buttonPill,
-    props.disabled && variant.value.disabled,
-    (props.loading) && variant.value.loading,
+    props.disabled && variant.value.buttonDisabled,
+    (props.loading) && variant.value.buttonLoading,
   )
 })
 
@@ -145,7 +152,7 @@ export default defineComponent({
     </slot>
 
     <slot>
-      <span v-if="label" :class="variant.buttonLabel">
+      <span v-if="label">
         {{ label }}
       </span>
     </slot>
