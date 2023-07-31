@@ -54,6 +54,7 @@ export interface WButton extends WComponentRoot {
   buttonPadding?: string
   buttonFlex?: string
   buttonLoadingIcon?: string
+  buttonLink?: string
 }
 
 export interface WButtonGroup extends WComponentRoot {
@@ -84,6 +85,27 @@ export interface WKbd extends WComponentRoot {
   KbdSize?: string
 }
 
+export interface WInput extends WComponentRoot {
+  inputWrapper?: string
+  inputPlaceholder?: string
+  inputSize?: string
+  inputGap?: string
+  inputPadding?: string
+  inputLeadingPadding?: string
+  inputTrailingPadding?: string
+  inputIcon?: string
+  inputIconSize?: string
+  inputIconLeading?: string
+  inputIconLeadingPadding?: string
+  inputIconTrailing?: string
+  inputIconTrailingPadding?: string
+  inputLoadingIcon?: string
+  inputLabel?: string
+  inputHelp?: string
+  inputRequiredDisplay?: string
+  inputRequired?: string
+}
+
 export type WAccordionVariant = WithVariantProps<WAccordion>
 
 export type WAccordionItemVariants = WithVariantProps<WAccordionItem>
@@ -105,3 +127,5 @@ export type WButtonGroupVariants = WithVariantProps<WButtonGroup>
 export type WAccordionVariants = WithVariantProps<WAccordion>
 
 export type WKbdVariants = WithVariantProps<WKbd>
+
+export type WInputVariants = WithVariantProps<WInput>

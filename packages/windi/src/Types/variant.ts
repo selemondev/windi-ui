@@ -1,5 +1,5 @@
 import type { Components } from './enums/Components'
-import type { WAccordionItemVariants, WAccordionVariants, WAlertVariants, WAvatarGroup, WAvatarVariants, WBadgeVariants, WButtonGroupVariants, WButtonVariants, WIconVariants, WKbdVariants } from './componentsTypes/components'
+import type { WAccordionItemVariants, WAccordionVariants, WAlertVariants, WAvatarGroup, WAvatarVariants, WBadgeVariants, WButtonGroupVariants, WButtonVariants, WIconVariants, WInputVariants, WKbdVariants } from './componentsTypes/components'
 
 export declare interface CSSClassKeyValuePair {
   [key: string]: any
@@ -40,4 +40,5 @@ export interface WindiUIConfiguration {
   [Components.WButton]?: WButtonVariants
   [Components.WButtonGroup]?: WButtonGroupVariants
   [Components.WKbd]?: WKbdVariants
+  [Components.WInput]?: WInputVariants
 }
