@@ -106,6 +106,14 @@ export interface WInput extends WComponentRoot {
   inputRequired?: string
 }
 
+export interface WCheckbox extends WComponentRoot {
+  checkboxWrapper?: string
+  checkboxLabel?: string
+  checkboxRequired?: string
+  checkboxHelp?: string
+  checkIcon?: string
+  checkIconActive?: string
+}
 export type WAccordionVariant = WithVariantProps<WAccordion>
 
 export type WAccordionItemVariants = WithVariantProps<WAccordionItem>
@@ -129,3 +137,5 @@ export type WAccordionVariants = WithVariantProps<WAccordion>
 export type WKbdVariants = WithVariantProps<WKbd>
 
 export type WInputVariants = WithVariantProps<WInput>
+
+export type WCheckboxVariants = WithVariantProps<WCheckbox>

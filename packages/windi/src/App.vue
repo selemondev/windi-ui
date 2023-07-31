@@ -6,6 +6,7 @@ const value = ref('')
 
 <template>
   <div class="grid place-items-center w-full min-h-screen">
+    <!-- <WCheckbox v-model="value" name="notifications" label="Notifications" required help="Please check this box" /> -->
     <!-- <div class="w-96">
       <WAlert
         :is-visible="true" :variant="['warning-light']" transition="fade" title="Alert" closable
@@ -21,11 +22,11 @@ const value = ref('')
     <!-- <WButton link @click="handle()">
       <WIcon name="ph:x" />
     </WButton> -->
-    <div class="w-96">
+    <!-- <div class="w-96">
       <WInput
         v-model="value" label="Email" type="email" help="You have to enter your email to proceed" placeholder="Search" size="xl" :variant="['my-variant']"
       />
-    </div>
+    </div> -->
     <!-- <button @click="handle()">
       Button
     </button> -->
@@ -34,34 +35,25 @@ const value = ref('')
     <!-- <WBadge position="top-right" value="100" :max-value="99" color="lime">
       <WIcon name="ph:bell" size="3xl" />
     </WBadge> -->
-    <!-- <div class="w-96">
-      <WAccordion>
-        <WAccordionItem title="Title 1">
-          Reacting against a rich and affluent Britain of the 1960s, it tried to
-          re-radicalise a design industry which the signatories felt had become
-          lazy and uncritical. Drawing on ideas shared by critical theory, the
-          Frankfurt School, and the counter-culture of the time, it explicitly
-          reaffirmed the belief that design is not a neutral, value-free
-          process.
+    <div class="max-w-md">
+      <WAccordion class="grid gap-3">
+        <WAccordionItem rounded title="1. How do I host Supabase?">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad error distinctio beatae odio natus unde ratione,
+          veniam assumenda dolor inventore cum architecto velit, ducimus ab debitis aut. Deserunt, atque enim vel
+          consectetur tenetur qui illo.
         </WAccordionItem>
-        <WAccordionItem title="Title 2">
-          Reacting against a rich and affluent Britain of the 1960s, it tried to
-          re-radicalise a design industry which the signatories felt had become
-          lazy and uncritical. Drawing on ideas shared by critical theory, the
-          Frankfurt School, and the counter-culture of the time, it explicitly
-          reaffirmed the belief that design is not a neutral, value-free
-          process.
+        <WAccordionItem rounded title="2. Do you support only PostgreSQL?">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad error distinctio beatae odio natus unde ratione,
+          veniam assumenda dolor inventore cum architecto velit, ducimus ab debitis aut. Deserunt, atque enim vel
+          consectetur tenetur qui illo.
         </WAccordionItem>
-        <WAccordionItem title="Title 3">
-          Reacting against a rich and affluent Britain of the 1960s, it tried to
-          re-radicalise a design industry which the signatories felt had become
-          lazy and uncritical. Drawing on ideas shared by critical theory, the
-          Frankfurt School, and the counter-culture of the time, it explicitly
-          reaffirmed the belief that design is not a neutral, value-free
-          process.
+        <WAccordionItem rounded title="3. Do you have a library for JavaScript and Flutter?">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad error distinctio beatae odio natus unde ratione,
+          veniam assumenda dolor inventore cum architecto velit, ducimus ab debitis aut. Deserunt, atque enim vel
+          consectetur tenetur qui illo.
         </WAccordionItem>
       </WAccordion>
-    </div> -->
+    </div>
     <!-- <div class="w-96">
       <WAlert :is-visible="show" variant="warning-light" transition="fade" title="Alert" closable @close="handleClose">
         <template #leading>
