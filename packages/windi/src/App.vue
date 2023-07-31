@@ -1,10 +1,40 @@
 <script setup lang='ts'>
+function handle() {
+  // eslint-disable-next-line no-console
+  return console.log('Hello there')
+}
 </script>
 
 <template>
   <div class="grid place-items-center w-full min-h-screen">
-    <WKbd>M</WKbd>
-    <WKbd>M</WKbd>
+    <!-- <div class="w-96">
+      <WAlert
+        :is-visible="true" :variant="['warning-light']" transition="fade" title="Alert" closable
+      >
+        <template #leading>
+          <WIcon name="ph:sun" size="2xl" />
+        </template>
+        <WAlertDescription>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis, sint!
+        </WAlertDescription>
+      </WAlert>
+    </div> -->
+    <WButton
+      :variants="{
+        'my-variant': {
+          root: 'bg-black hover:bg-gray-800 disabled:hover:bg-black',
+          buttonLoading: '!bg-red-500',
+        },
+      }" :variant="['danger-ghost']" @click="handle()"
+    >
+      Button
+    </WButton>
+
+    <!-- <button @click="handle()">
+      Button
+    </button> -->
+    <!-- <WKbd>M</WKbd>
+    <WKbd>M</WKbd> -->
     <!-- <WBadge position="top-right" value="100" :max-value="99" color="lime">
       <WIcon name="ph:bell" size="3xl" />
     </WBadge> -->

@@ -1,1 +1,12 @@
-module.exports = require('@windi-ui/tailwind-config/tailwind.config')
+// module.exports = require('@windi-ui/tailwind-config/tailwind.config')
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}', 'node_modules/windi-ui/dist/theme/*.{js,ts,json}'],
+  theme: {
+    extend: {
+      backgroundColor: ['disabled'],
+      textColor: ['disabled'],
+    },
+  },
+  plugins: [require('@windi-ui/tailwind-config/tailwind.config')],
+}
