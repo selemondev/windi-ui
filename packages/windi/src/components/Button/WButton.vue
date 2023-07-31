@@ -20,6 +20,11 @@ const props = defineProps({
     default: 'button',
   },
 
+  link: {
+    type: Boolean,
+    default: false,
+  },
+
   to: {
     type: [String, Object] as PropType<string | RouteLocationRaw>,
     default: null,
@@ -120,6 +125,7 @@ const buttonBlock = computed(() => {
 
 const buttonWrapperClass = computed(() => {
   return classNames(
+    props.link && variant.value.buttonLink,
     (props.to) && 'hover:underline',
     variant.value.root,
     variant.value.buttonFlex,

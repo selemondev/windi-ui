@@ -1,8 +1,7 @@
 <script setup lang='ts'>
-function handle() {
-  // eslint-disable-next-line no-console
-  return console.log('Hello there')
-}
+import { ref } from 'vue'
+
+const value = ref('')
 </script>
 
 <template>
@@ -19,17 +18,14 @@ function handle() {
         </WAlertDescription>
       </WAlert>
     </div> -->
-    <WButton
-      :variants="{
-        'my-variant': {
-          root: 'bg-black hover:bg-gray-800 disabled:hover:bg-black',
-          buttonLoading: '!bg-red-500',
-        },
-      }" :variant="['danger-ghost']" @click="handle()"
-    >
-      Button
-    </WButton>
-
+    <!-- <WButton link @click="handle()">
+      <WIcon name="ph:x" />
+    </WButton> -->
+    <div class="w-96">
+      <WInput
+        v-model="value" label="Email" type="email" help="You have to enter your email to proceed" placeholder="Search" size="xl" :variant="['my-variant']"
+      />
+    </div>
     <!-- <button @click="handle()">
       Button
     </button> -->

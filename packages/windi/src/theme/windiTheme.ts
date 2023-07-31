@@ -250,6 +250,7 @@ export default {
       buttonLoading: '!bg-opacity-50 pointer-events-none !cursor-not-allowed !hover:bg-opacity-50 inline-flex items-center',
       buttonFull: 'w-full flex justify-center items-center',
       buttonDisabled: '!shadow-none !cursor-not-allowed bg-opacity-100',
+      buttonLink: '!bg-transparent !text-black !p-0',
       buttonSize: {
         'xs': 'text-xs',
         'sm': 'text-sm',
@@ -401,6 +402,99 @@ export default {
         root: [
           'border border-dashed border-red-500 text-red-800 hover:enabled:bg-red-800 hover:enabled:text-white duration-200 ease-in',
         ],
+      },
+    },
+  },
+
+  WInput: {
+    base: {
+      root: 'relative',
+      inputWrapper: 'relative shadow-sm bg-transparent text-gray-900 dark:text-white ring-1 ring-inset ring-gray-300 dark:ring-gray-400 focus:ring-2 focus:ring-green-500 dark:focus:ring-green-400 block w-full disabled:cursor-not-allowed disabled:opacity-75 focus:outline-none rounded-md',
+      inputPlaceholder: 'placeholder-gray-400 dark:placeholder-gray-500',
+      inputLabel: 'flex mb-1 dark:text-white',
+      inputHelp: 'flex mt-1 text-sm text-gray-400 dark:text-gray-900',
+      inputRequiredDisplay: 'relative flex items-start',
+      inputRequired: 'text-red-500',
+      inputSize: {
+        xs: 'text-xs',
+        sm: 'text-sm',
+        md: 'text-sm',
+        lg: 'text-sm',
+        xl: 'text-base',
+      },
+      inputGap: {
+        xs: 'gap-x-1.5',
+        sm: 'gap-x-2',
+        md: 'gap-x-2',
+        lg: 'gap-x-2',
+        xl: 'gap-x-2',
+      },
+
+      inputPadding: {
+        xs: 'px-2.5 py-1.5',
+        sm: 'px-2.5 py-1.5',
+        md: 'px-3 py-2',
+        lg: 'px-3.5 py-2.5',
+        xl: 'px-3.5 py-2.5',
+      },
+
+      inputLeadingPadding: {
+        xs: 'ps-8',
+        sm: 'ps-9',
+        md: 'ps-10',
+        lg: 'ps-11',
+        xl: 'ps-12',
+      },
+
+      inputTrailingPadding: {
+        xs: 'pe-8',
+        sm: 'pe-9',
+        md: 'pe-10',
+        lg: 'pe-11',
+        xl: 'pe-12',
+      },
+
+      inputIcon: 'flex-shrink-0 text-gray-400 dark:text-gray-500',
+      inputIconSize: {
+        xs: 'h-4 w-4',
+        sm: 'h-5 w-5',
+        md: 'h-5 w-5',
+        lg: 'h-5 w-5',
+        xl: 'h-6 w-6',
+      },
+
+      inputIconLeading: 'absolute inset-y-0 start-0 flex items-center pointer-events-none',
+
+      inputIconLeadingPadding: {
+        xs: 'ps-2.5',
+        sm: 'ps-2.5',
+        md: 'ps-3',
+        lg: 'ps-3.5',
+        xl: 'ps-3.5',
+      },
+
+      inputIconTrailing: 'absolute inset-y-0 end-0 flex items-center pointer-events-none',
+
+      inputIconTrailingPadding: {
+        xs: 'pe-2.5',
+        sm: 'pe-2.5',
+        md: 'pe-3',
+        lg: 'pe-3.5',
+        xl: 'pe-3.5',
+      },
+      inputLoadingIcon: 'svg-spinners:bars-rotate-fade',
+    },
+
+    variants: {
+      default: {
+        root: 'relative',
+        inputWrapper: 'relative shadow-sm bg-transparent text-gray-900 dark:text-white ring-1 ring-inset ring-gray-300 dark:ring-gray-400 focus:ring-2 focus:ring-green-500 dark:focus:ring-green-400 block w-full disabled:cursor-not-allowed disabled:opacity-75 focus:outline-none rounded-md',
+        inputPlaceholder: 'placeholder-gray-400 dark:placeholder-gray-500',
+        inputLabel: 'flex text-sm mb-1 dark:text-white',
+        inputHelp: 'flex mt-1 text-sm text-gray-400 dark:text-gray-900',
+        inputRequiredDisplay: 'relative flex items-start',
+        inputRequired: 'text-red-500',
+        inputLoadingIcon: 'svg-spinners:bars-rotate-fade',
       },
     },
   },
