@@ -10,5 +10,6 @@ export enum Components {
   WButton = 'WButton',
   WButtonGroup = 'WButtonGroup',
   WInput = 'WInput',
+  WCheckbox = 'WCheckbox',
   WKbd = 'WKbd',
 }
