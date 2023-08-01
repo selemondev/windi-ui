@@ -203,8 +203,8 @@ export default {
   WAvatar: {
     base: {
       'root': 'relative cursor-pointer inline-flex items-center justify-center bg-gray-100 rounded-full',
-      'rounded': 'rounded-full',
-      'placeholderClass': 'font-medium cursor-pointer text-gray-600 upperCase',
+      'avatarRounded': 'rounded-full',
+      'avatarPlaceholderClass': 'font-medium cursor-pointer text-gray-600 upperCase',
       'xs': 'h-6 w-6 text-[11px]',
       'sm': 'h-8 w-8 text-xs',
       'md': 'h-10 w-10 text-sm',
@@ -218,6 +218,15 @@ export default {
         'bottom-right': 'bottom-0 right-0',
         'top-left': 'top-0 left-0',
         'bottom-left': 'bottom-0 left-0',
+      },
+      'avatarIconSize': {
+        'xs': 'h-3 w-3',
+        'sm': 'h-4 w-4',
+        'md': 'h-6 w-6',
+        'lg': 'h-7 w-7',
+        'xl': 'h-8 w-8 ',
+        '2xl': 'h-10 w-10',
+        '3xl': 'h-12 w-12',
       },
       'avatarChipSize': {
         'xs': 'h-1.5 min-w-[0.375rem] text-[6px] p-px',
@@ -583,7 +592,7 @@ export default {
   },
   WAccordionItem: {
     base: {
-      root: 'bg-white border border-gray-300 transition duration-100 hover:bg-gray-100',
+      root: 'bg-white border border-gray-300 transition duration-500 hover:bg-gray-100',
       accordionItemActiveBackgroundColor: 'bg-gray-200',
       accordionItemRounded: 'first:rounded-t-lg last:rounded-b-lg',
       accordionItemTitle: 'font-medium text-black',
@@ -598,7 +607,7 @@ export default {
     },
     variants: {
       default: {
-        root: 'bg-white border border-gray-300 transition duration-100 hover:bg-gray-100',
+        root: 'bg-white border border-gray-300 transition duration-500 hover:bg-gray-100',
         accordionItemActiveBackgroundColor: 'bg-gray-200',
         accordionItemRounded: 'first:rounded-t-lg last:rounded-b-lg',
         accordionItemTitle: 'font-medium text-black',

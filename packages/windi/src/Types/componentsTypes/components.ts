@@ -21,14 +21,15 @@ export interface WIcon extends WComponentRoot {
 }
 
 export interface WAvatar extends WComponentRoot {
-  wrapper?: string
-  chipClass?: string
+  avatarWrapper?: string
+  avatarChipClass?: string
   avatarSize?: string
-  rounded?: string
+  avatarIconSize?: string
+  avatarRounded?: string
   avatarClass?: string
   avatarChipSize?: string
   avatarChipPosition?: string
-  placeholderClass?: string
+  avatarPlaceholderClass?: string
 }
 
 export interface WAvatarGroup extends WComponentRoot {
