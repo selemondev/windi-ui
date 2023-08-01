@@ -145,6 +145,19 @@ export interface WTag extends WComponentRoot {
   tagCloseIcon?: string
 }
 
+export interface WModal extends WComponentRoot {
+  modalWrapper?: string
+  modalContainer?: string
+  modalBase?: string
+  modalOverlayBase?: string
+  modalOverlayBackground?: string
+  modalOverlayTransition?: string
+  modalShadow?: string
+  modalWidth?: string
+  modalHeight?: string
+  modalTransition?: string
+}
+
 export type WAccordionVariant = WithVariantProps<WAccordion>
 
 export type WAccordionItemVariants = WithVariantProps<WAccordionItem>
@@ -176,3 +189,5 @@ export type WDividerVariants = WithVariantProps<WDivider>
 export type WSwitchVariants = WithVariantProps<WSwitch>
 
 export type WTagVariants = WithVariantProps<WTag>
+
+export type WModalVariants = WithVariantProps<WModal>

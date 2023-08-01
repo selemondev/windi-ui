@@ -18,6 +18,7 @@ import Divider from './components/Divider/WDivider.vue'
 import Switch from './components/Switch/WSwitch.vue'
 import Tag from './components/Tag/WTag.vue'
 import windiTheme from './theme/windiTheme'
+import Modal from './components/Modal/WModal.vue'
 
 const components: Record<string, ReturnType<typeof defineComponent>> = {
   Accordion,
@@ -36,6 +37,7 @@ const components: Record<string, ReturnType<typeof defineComponent>> = {
   Divider,
   Switch,
   Tag,
+  Modal,
 }
 
 function install(app: App, configuration: WindiUIConfiguration) {
@@ -62,3 +64,4 @@ export { default as Checkbox } from './components/Checkbox'
 export { default as Divider } from './components/Divider'
 export { default as Switch } from './components/Switch'
 export { default as Tag } from './components/Tag'
+export { default as Modal } from './components/Modal'
