@@ -86,6 +86,7 @@ export interface WKbd extends WComponentRoot {
 }
 
 export interface WInput extends WComponentRoot {
+  inputRounded?: string
   inputWrapper?: string
   inputPlaceholder?: string
   inputSize?: string
