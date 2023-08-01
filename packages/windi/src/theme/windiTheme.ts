@@ -250,6 +250,18 @@ export default {
 
   },
 
+  WDivider: {
+    base: {
+      root: 'w-full h-px',
+      dividerVertical: 'relative !w-px !h-4 !inline-block align-middle -top-0.5',
+    },
+    variants: {
+      default: {
+        root: 'bg-gray-200 dark:bg-zinc-600',
+      },
+    },
+  },
+
   WButton: {
     base: {
       root: 'focus:outline-none text-white block font-medium focus-visible:outline-0 rounded-md disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 transition-all duration-200 ease-in',
@@ -288,30 +300,30 @@ export default {
 
     variants: {
       'default': {
-        root: 'bg-yellow-500 not:disabled:hover:bg-yellow-600',
+        root: 'bg-yellow-500 hover:enabled:bg-yellow-600 !disabled:hover:bg-yellow-100',
       },
       'default-outline': {
         root: [
-          'border border-yellow-500 text-yellow-800 not:disabled:hover:bg-yellow-800 not:disabled:hover:text-white duration-200 ease-in',
+          'border border-yellow-500 text-yellow-800 hover:enabled:bg-yellow-800 hover:enabled:text-white duration-200 ease-in',
         ],
       },
       'default-light': {
         root: [
-          'border border-yellow-500 bg-yellow-100 text-yellow-800 not:disabled:hover:bg-yellow-800 not:disabled:hover:text-white duration-200 ease-in',
+          'border border-yellow-500 bg-yellow-100 text-yellow-800 hover:enabled:bg-yellow-800 hover:enabled:text-white duration-200 ease-in',
         ],
       },
       'default-dashed': {
         root: [
-          'border border-dashed border-yellow-500 text-yellow-800 not:disabled:hover:bg-yellow-800 not:disabled:hover:text-white duration-200 ease-in',
+          'border border-dashed border-yellow-500 text-yellow-800 hover:enabled:bg-yellow-800 hover:enabled:text-white duration-200 ease-in',
         ],
       },
       'default-ghost': {
         root: [
-          'text-yellow-500 not:disabled:hover:bg-yellow-100',
+          'text-yellow-500 hover:enabled:bg-yellow-100',
         ],
       },
       'primary': {
-        root: 'bg-blue-500 hover:enabled:bg-red-600 !disabled:hover:bg-blue-100',
+        root: 'bg-blue-500 hover:enabled:bg-blue-600 !disabled:hover:bg-blue-100',
       },
       'primary-light': {
         root: [
