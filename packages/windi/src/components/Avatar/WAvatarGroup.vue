@@ -41,7 +41,7 @@ export default defineComponent({
 
         vProps.class = node.props?.class || ''
         vProps.class += `${classNames(
-          windiTheme.WAvatarGroup.base.margin,
+          windiTheme.WAvatarGroup.base.avatarGroupMargin,
         )}`
 
         return cloneVNode(node, vProps)
