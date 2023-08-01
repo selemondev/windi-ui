@@ -806,6 +806,39 @@ export default {
     },
   },
 
+  WModal: {
+    base: {
+      root: 'relative z-50',
+      modalWrapper: 'fixed inset-0 overflow-y-auto',
+      modalContainer: 'flex min-h-full items-end justify-center text-center p-4 sm:p-0 sm:items-center',
+      modalBase: 'relative text-left rtl:text-right overflow-hidden sm:my-8 w-full flex flex-col',
+      modalShadow: 'shadow-xl',
+      modalWidth: 'sm:max-w-lg',
+      modalBackground: 'bg-background',
+      modalRing: '',
+      modalRounded: 'rounded-lg',
+      modalHeight: '',
+      modalOverlayBase: 'fixed inset-0 transition-opacity',
+      modalOverlayBackground: 'bg-gray-200/75 dark:bg-gray-800/75',
+      modalOverlayTransition: {
+        enter: 'ease-out duration-300',
+        enterFrom: 'opacity-0',
+        enterTo: 'opacity-100',
+        leave: 'ease-in duration-200',
+        leaveFrom: 'opacity-100',
+        leaveTo: 'opacity-0',
+      },
+      modalTransition: {
+        enter: 'ease-out duration-300',
+        enterFrom: 'opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95',
+        enterTo: 'opacity-100 translate-y-0 sm:scale-100',
+        leave: 'ease-in duration-200',
+        leaveFrom: 'opacity-100 translate-y-0 sm:scale-100',
+        leaveTo: 'opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95',
+      },
+    },
+  },
+
   transitions: {
     scale: {
       'enter-active-class': 'duration-200 ease-[cubic-bezier(0.175,0.885,0.32,1.475)]',
