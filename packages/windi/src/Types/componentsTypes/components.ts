@@ -107,12 +107,16 @@ export interface WInput extends WComponentRoot {
 }
 
 export interface WCheckbox extends WComponentRoot {
-  checkboxWrapper?: string
+  checkbox?: string
+  checkboxInput?: string
   checkboxLabel?: string
   checkboxRequired?: string
   checkboxHelp?: string
   checkIcon?: string
+  checkboxSpace?: string
   checkIconActive?: string
+  checkboxDisplay?: string
+  checkboxIconSize?: string
 }
 export type WAccordionVariant = WithVariantProps<WAccordion>
 

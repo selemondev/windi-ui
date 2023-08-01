@@ -162,6 +162,9 @@ importers:
       '@heroicons/vue':
         specifier: ^2.0.18
         version: 2.0.18(vue@3.3.4)
+      '@selemondev/windi-ui':
+        specifier: workspace:^
+        version: 'link:'
       classnames:
         specifier: ^2.3.2
         version: 2.3.2
