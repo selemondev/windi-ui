@@ -2,131 +2,131 @@ export default {
   WAlert: {
     base: {
       root: 'w-full relative overflow-hidden rounded-md px-3 py-2.5',
-      title: 'text-lg font-semibold',
-      flexBetween: 'flex justify-between items-center w-full',
-      body: 'text-sm leading-none mt-2.5',
-      closeIcon: 'w-6 h-6 block',
-      isLeading: 'space-x-2.5',
-      isNotLeading: 'space-x-2',
-      closeButtonClass: 'p-0.5 rounded-md -m-1 block transition duration-200 ease-in',
-      leadingClass: 'absolute left-2.5 cursor-pointer flex items-center overflow-hidden',
-      trailingClass: 'absolute right-4 inset-y-0 cursor-pointer flex items-center overflow-hidden',
+      alertTitle: 'text-lg font-semibold',
+      alertFlexBetween: 'flex justify-between items-center w-full',
+      alertBody: 'text-sm leading-none mt-2.5',
+      alertCloseIcon: 'w-6 h-6 block',
+      alertIsLeading: 'space-x-1',
+      alertIsNotLeading: 'space-x-2',
+      alertCloseButtonClass: 'p-0.5 rounded-md -m-1 block transition duration-200 ease-in',
+      alertLeadingClass: 'absolute left-2.5 inset-y-0 cursor-pointer flex items-center overflow-hidden',
+      alertTrailingClass: 'absolute right-4 inset-y-0 cursor-pointer flex items-center overflow-hidden',
     },
     variants: {
       'default': {
         root: 'bg-yellow-500 text-white w-full',
-        closeButtonClass: 'text-white py-1 px-1 hover:bg-yellow-800',
+        alertCloseButtonClass: 'text-white py-1 px-1 hover:bg-yellow-800',
       },
       'default-light': {
         root: [
           'border border-yellow-500 bg-yellow-100 text-yellow-800 hover:bg-yellow-800 hover:text-white duration-200 ease-in',
         ],
-        closeButtonClass: 'hover:text-white py-1 px-1 hover:bg-yellow-900 !active:text-white',
+        alertCloseButtonClass: 'hover:text-white py-1 px-1 hover:bg-yellow-900 !active:text-white',
       },
       'default-dashed': {
         root: [
           'border border-dashed border-yellow-500 text-yellow-800 hover:bg-yellow-800 hover:text-white duration-200 ease-in',
         ],
-        closeButtonClass: '!active:text-white hover:text-white py-1 px-1 hover:bg-yellow-900',
+        alertCloseButtonClass: '!active:text-white hover:text-white py-1 px-1 hover:bg-yellow-900',
       },
       'default-outline': {
         root: [
           'border border-yellow-500 text-yellow-800 hover:bg-yellow-800 hover:text-white duration-200 ease-in',
         ],
-        closeButtonClass: '!active:text-white hover:text-white py-1 px-1 hover:bg-yellow-900',
+        alertCloseButtonClass: '!active:text-white hover:text-white py-1 px-1 hover:bg-yellow-900',
       },
       'primary': {
         root: 'bg-blue-500 text-white',
-        closeButtonClass: 'text-white py-1 px-1 hover:bg-blue-800',
+        alertCloseButtonClass: 'text-white py-1 px-1 hover:bg-blue-800',
       },
       'primary-light': {
         root: [
           'border border-blue-500 bg-blue-100 text-blue-800 hover:bg-blue-800 hover:text-white duration-200 ease-in',
         ],
-        closeButtonClass: 'hover:text-white py-1 px-1 hover:bg-blue-900 !active:text-white',
+        alertCloseButtonClass: 'hover:text-white py-1 px-1 hover:bg-blue-900 !active:text-white',
       },
 
       'primary-outline': {
         root: [
           'border border-blue-500 text-blue-800 hover:bg-blue-800 hover:text-white duration-200 ease-in',
         ],
-        closeButtonClass: '!active:text-white hover:text-white py-1 px-1 hover:bg-blue-900',
+        alertCloseButtonClass: '!active:text-white hover:text-white py-1 px-1 hover:bg-blue-900',
       },
 
       'primary-dashed': {
         root: [
           'border border-dashed border-blue-500 text-blue-800 hover:bg-blue-800 hover:text-white duration-200 ease-in',
         ],
-        closeButtonClass: '!active:text-white hover:text-white py-1 px-1 hover:bg-blue-900',
+        alertCloseButtonClass: '!active:text-white hover:text-white py-1 px-1 hover:bg-blue-900',
       },
       'success': {
         root: 'bg-green-500 text-white',
-        closeButtonClass: 'text-white py-1 px-1 hover:bg-green-800',
+        alertCloseButtonClass: 'text-white py-1 px-1 hover:bg-green-800',
       },
 
       'success-light': {
         root: [
           'border border-green-500 bg-green-100 text-green-800 hover:bg-green-800 hover:text-white duration-200 ease-in',
         ],
-        closeButtonClass: '!active:text-white hover:text-white py-1 px-1 hover:bg-green-900',
+        alertCloseButtonClass: '!active:text-white hover:text-white py-1 px-1 hover:bg-green-900',
       },
 
       'success-outline': {
         root: [
           'border border-green-500 text-green-800 hover:bg-green-800 hover:text-white duration-200 ease-in',
         ],
-        closeButtonClass: '!active:text-white hover:text-white py-1 px-1 hover:bg-green-900',
+        alertCloseButtonClass: '!active:text-white hover:text-white py-1 px-1 hover:bg-green-900',
       },
 
       'success-dashed': {
         root: [
           'border border-dashed border-green-500 text-green-800 hover:bg-green-800 hover:text-white duration-200 ease-in',
         ],
-        closeButtonClass: '!active:text-white hover:text-white py-1 px-1 hover:bg-green-900',
+        alertCloseButtonClass: '!active:text-white hover:text-white py-1 px-1 hover:bg-green-900',
       },
       'warning': {
         root: 'bg-orange-500 text-white',
-        closeButtonClass: 'text-white hover:text-white py-1 px-1 hover:bg-orange-800',
+        alertCloseButtonClass: 'text-white hover:text-white py-1 px-1 hover:bg-orange-800',
       },
       'warning-light': {
         root: [
           'border border-orange-500 bg-orange-100 text-orange-800 hover:bg-orange-800 hover:text-white duration-200 ease-in',
         ],
-        closeButtonClass: '!active:text-white hover:text-white py-1 px-1 hover:bg-orange-900',
+        alertCloseButtonClass: '!active:text-white hover:text-white py-1 px-1 hover:bg-orange-900',
       },
       'warning-outline': {
         root: [
           'border border-orange-500 text-orange-800 hover:bg-orange-800 hover:text-white duration-200 ease-in',
         ],
-        closeButtonClass: '!active:text-white hover:text-white py-1 px-1 hover:bg-orange-900',
+        alertCloseButtonClass: '!active:text-white hover:text-white py-1 px-1 hover:bg-orange-900',
       },
       'warning-dashed': {
         root: [
           'border border-dashed border-orange-500 text-orange-800 hover:bg-orange-800 hover:text-white duration-200 ease-in',
         ],
-        closeButtonClass: '!active:text-white hover:text-white py-1 px-1 hover:bg-orange-900',
+        alertCloseButtonClass: '!active:text-white hover:text-white py-1 px-1 hover:bg-orange-900',
       },
       'danger': {
         root: 'bg-red-500 text-white',
-        closeButtonClass: 'text-white hover:text-white py-1 px-1 hover:bg-red-800',
+        alertCloseButtonClass: 'text-white hover:text-white py-1 px-1 hover:bg-red-800',
       },
       'danger-light': {
         root: [
           'border border-red-500 bg-red-100 text-red-800 hover:bg-red-800 hover:text-white duration-200 ease-in',
         ],
-        closeButtonClass: '!active:text-white hover:text-white py-1 px-1 hover:bg-red-900',
+        alertCloseButtonClass: '!active:text-white hover:text-white py-1 px-1 hover:bg-red-900',
       },
       'danger-outline': {
         root: [
           'border border-red-500 text-red-800 hover:bg-red-800 hover:text-white duration-200 ease-in',
         ],
-        closeButtonClass: '!active:text-white hover:text-white py-1 px-1 hover:bg-red-900',
+        alertCloseButtonClass: '!active:text-white hover:text-white py-1 px-1 hover:bg-red-900',
       },
       'danger-dashed': {
         root: [
           'border border-dashed border-red-500 text-red-800 hover:bg-red-800 hover:text-white duration-200 ease-in',
         ],
-        closeButtonClass: '!active:text-white hover:text-white py-1 px-1 hover:bg-red-900',
+        alertCloseButtonClass: '!active:text-white hover:text-white py-1 px-1 hover:bg-red-900',
       },
     },
   },

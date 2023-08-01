@@ -117,17 +117,17 @@ export default defineComponent({
 <template>
   <Transition v-bind="transition" mode="out-in">
     <div v-if="props.isVisible" :class="variant.root">
-      <div :class="variant.flexBetween">
-        <div :class="[$slots.leading || isLeading ? variant.isLeading : variant.isNotLeading]" class="flex items-center">
+      <div :class="variant.alertFlexBetween">
+        <div :class="[$slots.leading || isLeading ? variant.alertIsLeading : variant.alertIsNotLeading]" class="flex items-center">
           <div class="shrink-0">
-            <span v-if="(isLeading && leadingIconName) || $slots.leading" class="px-2">
+            <p v-if="(isLeading && leadingIconName) || $slots.leading" class="pr-1.5">
               <slot name="leading">
                 <Icon :icon="leadingIconName" class="text-2xl" />
               </slot>
-            </span>
+            </p>
           </div>
           <div>
-            <h2 v-if="props.title" :class="variant.title">
+            <h2 v-if="props.title" :class="variant.alertTitle">
               {{ props.title }}
             </h2>
             <div class="text-sm">
@@ -140,14 +140,14 @@ export default defineComponent({
           <div class="shrink-0">
             <button
               v-if="props.closable && !isTrailing && !$slots.trailing" :title="dismissLabel"
-              :aria-label="dismissLabel" :class="variant.closeButtonClass" @click="onDismiss()"
+              :aria-label="dismissLabel" :class="variant.alertCloseButtonClass" @click="onDismiss()"
             >
-              <XMarkIcon class="w-6 h-6 hover:text-white" :class="variant.closeIcon" />
+              <XMarkIcon class="w-6 h-6 hover:text-white" :class="variant.alertCloseIcon" />
             </button>
 
             <button
               v-if="props.trailing || isTrailing || $slots.trailing" :title="dismissLabel"
-              :aria-label="dismissLabel" :class="variant.trailingClass" @click="onDismiss()"
+              :aria-label="dismissLabel" :class="variant.alertTrailingClass" @click="onDismiss()"
             >
               <span v-if="(isTrailing && trailingIconName) || $slots.trailing">
                 <slot name="trailing">

@@ -10,11 +10,12 @@ function handleOpen() {
 
 <template>
   <div class="grid place-items-center w-full min-h-screen">
-    <button @click="handleOpen">
-      Open Modal
-    </button>
-    <WModal v-model="isActive">
-      hello there
-    </WModal>
+    <div class="w-96">
+      <WAlert :is-visible="true" title="Critical Error" closable variant="primary-light">
+        <WDescription>
+          <p>Hello there my friends how are you</p>
+        </WDescription>
+      </WAlert>
+    </div>
   </div>
 </template>
