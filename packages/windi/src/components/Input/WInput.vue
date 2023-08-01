@@ -18,6 +18,10 @@ const props = defineProps({
     type: [String, Number],
     default: '',
   },
+  rounded: {
+    type: String,
+    default: 'md',
+  },
   type: {
     type: String,
     default: 'text',
@@ -153,6 +157,7 @@ const inputLabelTextSize = computed(() => {
 
 const inputWrapperClass = computed(() => {
   return classNames(
+    windiTheme.WInput.base.inputRounded[props.rounded],
     variant.value.inputWrapper,
     variant.value.inputPlaceholder,
     windiTheme.WInput.base.inputSize && windiTheme.WInput.base.inputSize[props.size],

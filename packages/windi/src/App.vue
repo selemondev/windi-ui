@@ -6,6 +6,6 @@ const agree = ref('')
 
 <template>
   <div class="grid place-items-center mt-72">
-    <WCheckbox v-model="agree" icon="quill:checkmark-double" variant="warning" help="Please check the checkbox" label="Checkbox" required />
+    <WInput v-model="agree" icon="quill:checkmark-double" help="Please check the checkbox" label="Checkbox" required />
   </div>
 </template>
