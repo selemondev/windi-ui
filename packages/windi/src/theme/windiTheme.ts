@@ -660,6 +660,31 @@ export default {
       },
     },
   },
+
+  WSwitch: {
+    base: {
+      root: 'relative inline-flex h-5 w-9 focus-visible:ring-2 focus-visible:ring-green-500 dark:focus-visible:ring-green-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-gray-900 flex-shrink-0 border-2 border-transparent disabled:cursor-not-allowed disabled:opacity-50 focus:outline-none',
+      switchRounded: 'rounded-full',
+      switchActive: 'bg-green-500 dark:bg-green-400',
+      switchInActive: 'bg-gray-200 dark:bg-gray-700',
+      switchContainer: 'pointer-events-none relative inline-block h-4 w-4 rounded-full bg-white dark:bg-gray-900 shadow transform ring-0 transition ease-in-out duration-200',
+      switchContainerActive: 'translate-x-4 rtl:-translate-x-4',
+      switchContainerInActive: 'translate-x-0 rtl:-translate-x-0',
+      switchIcon: 'absolute inset-0 h-full w-full flex items-center justify-center transition-opacity',
+      switchIconActive: 'opacity-100 ease-in duration-200',
+      switchIconInActive: 'opacity-0 ease-out duration-100',
+      switchIconOn: 'h-3 w-3 text-green-500 dark:text-green-400',
+      switchIconOff: 'h-3 w-3 text-gray-400 dark:text-gray-500',
+    },
+
+    defaults: {
+      root: 'relative inline-flex h-5 w-9 focus-visible:ring-2 focus-visible:ring-green-500 dark:focus-visible:ring-green-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-gray-900 flex-shrink-0 border-2 border-transparent disabled:cursor-not-allowed disabled:opacity-50 focus:outline-none',
+      switchRounded: 'rounded-full',
+      switchActive: 'bg-green-500 dark:bg-green-400',
+      switchInActive: 'bg-gray-200 dark:bg-gray-700',
+    },
+  },
+
   transitions: {
     scale: {
       'enter-active-class': 'duration-200 ease-[cubic-bezier(0.175,0.885,0.32,1.475)]',

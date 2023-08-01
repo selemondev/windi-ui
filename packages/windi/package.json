@@ -47,6 +47,7 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@headlessui/vue": "^1.7.15",
     "@heroicons/vue": "^2.0.18",
     "@selemondev/windi-ui": "workspace:^",
     "classnames": "^2.3.2",

@@ -13,4 +13,5 @@ export enum Components {
   WCheckbox = 'WCheckbox',
   WKbd = 'WKbd',
   WDivider = 'WDivider',
+  WSwitch = 'WSwitch',
 }
