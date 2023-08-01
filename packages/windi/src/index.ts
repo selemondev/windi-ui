@@ -14,6 +14,7 @@ import AccordionItem from './components/Accordion/WAccordionItem.vue'
 import Kbd from './components/Kbd/WKbd.vue'
 import Input from './components/Input/WInput.vue'
 import Checkbox from './components/Checkbox/WCheckbox.vue'
+import Divider from './components/Divider/WDivider.vue'
 import windiTheme from './theme/windiTheme'
 
 const components: Record<string, ReturnType<typeof defineComponent>> = {
@@ -30,6 +31,7 @@ const components: Record<string, ReturnType<typeof defineComponent>> = {
   Kbd,
   Input,
   Checkbox,
+  Divider,
 }
 
 function install(app: App, configuration: WindiUIConfiguration) {
@@ -53,3 +55,4 @@ export { default as AccordionItem } from './components/Accordion'
 export { default as Kbd } from './components/Kbd'
 export { default as Input } from './components/Input'
 export { default as Checkbox } from './components/Checkbox'
+export { default as Divider } from './components/Divider'

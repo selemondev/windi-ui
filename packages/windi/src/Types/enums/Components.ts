@@ -12,4 +12,5 @@ export enum Components {
   WInput = 'WInput',
   WCheckbox = 'WCheckbox',
   WKbd = 'WKbd',
+  WDivider = 'WDivider',
 }

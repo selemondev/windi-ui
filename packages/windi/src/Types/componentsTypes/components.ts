@@ -120,6 +120,10 @@ export interface WCheckbox extends WComponentRoot {
   checkboxDisplay?: string
   checkboxIconSize?: string
 }
+
+export interface WDivider extends WComponentRoot {
+  dividerVertical?: string
+}
 export type WAccordionVariant = WithVariantProps<WAccordion>
 
 export type WAccordionItemVariants = WithVariantProps<WAccordionItem>
@@ -145,3 +149,5 @@ export type WKbdVariants = WithVariantProps<WKbd>
 export type WInputVariants = WithVariantProps<WInput>
 
 export type WCheckboxVariants = WithVariantProps<WCheckbox>
+
+export type WDividerVariants = WithVariantProps<WDivider>
