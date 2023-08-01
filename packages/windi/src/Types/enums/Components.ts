@@ -14,4 +14,5 @@ export enum Components {
   WKbd = 'WKbd',
   WDivider = 'WDivider',
   WSwitch = 'WSwitch',
+  WTag = 'WTag',
 }

@@ -1,11 +1,11 @@
 <script setup lang='ts'>
-import { ref } from 'vue'
-
-const selected = ref('')
+function handleClose() {
+  alert('Closing')
+}
 </script>
 
 <template>
   <div class="grid place-items-center w-full min-h-screen">
-    <WSwitch v-model="selected" on-icon="ph:sun" off-icon="ph:moon" class="text-xl" />
+    <WTag value="Success" variant="success-light" closable @close="handleClose" />
   </div>
 </template>

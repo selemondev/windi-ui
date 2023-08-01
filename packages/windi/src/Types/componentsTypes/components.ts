@@ -138,6 +138,13 @@ export interface WSwitch extends WComponentRoot {
   switchIconOn?: string
   switchIconOff?: string
 }
+
+export interface WTag extends WComponentRoot {
+  tagSize?: string
+  tagRounded?: string
+  tagCloseIcon?: string
+}
+
 export type WAccordionVariant = WithVariantProps<WAccordion>
 
 export type WAccordionItemVariants = WithVariantProps<WAccordionItem>
@@ -167,3 +174,5 @@ export type WCheckboxVariants = WithVariantProps<WCheckbox>
 export type WDividerVariants = WithVariantProps<WDivider>
 
 export type WSwitchVariants = WithVariantProps<WSwitch>
+
+export type WTagVariants = WithVariantProps<WTag>
