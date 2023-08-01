@@ -5,15 +5,15 @@ interface WComponentRoot extends Record<string, unknown> {
 };
 
 export interface WAlert extends WComponentRoot {
-  title?: string
-  closeButtonClass?: string
-  flexBetween?: string
-  body?: string
-  isLeading?: string
-  isNotLeading?: string
-  closeIcon?: string
-  trailingClass?: string
-  leadingClass?: string
+  alertTitle?: string
+  alertCloseButtonClass?: string
+  alertFlexBetween?: string
+  alertBody?: string
+  alertIsLeading?: string
+  alertIsNotLeading?: string
+  alertCloseIcon?: string
+  alertTrailingClass?: string
+  alertLeadingClass?: string
 }
 
 export interface WIcon extends WComponentRoot {
@@ -33,7 +33,7 @@ export interface WAvatar extends WComponentRoot {
 }
 
 export interface WAvatarGroup extends WComponentRoot {
-  margin?: string
+  avatarGroupMargin?: string
   reverse?: string
 }
 
