@@ -685,6 +685,127 @@ export default {
     },
   },
 
+  WTag: {
+    base: {
+      root: 'flex justify-between items-center text-xs px-2 space-x-3 cursor-pointer py-1 text-white',
+      tagCloseIcon: 'w-3 h-3 rounded-md block transition duration-200 ease-in',
+      tagRounded: {
+        'xs': 'rounded-xs',
+        'sm': 'rounded-sm',
+        'md': 'rounded-md',
+        'lg': 'rounded-lg',
+        'xl': 'rounded-xl',
+        '2xl': 'rounded-2xl',
+        'full': 'rounded-full',
+      },
+      tagSize: {
+        'xs': 'text-xs',
+        'sm': 'text-sm',
+        'md': 'text-sm',
+        'lg': 'text-sm',
+        'xl': 'text-base',
+        '2xl': 'text-lg',
+      },
+    },
+    variants: {
+      'default': {
+        root: 'bg-yellow-500 text-white',
+      },
+      'default-light': {
+        root: [
+          'border border-yellow-500 bg-yellow-100 text-yellow-800 duration-200 ease-in',
+        ],
+      },
+      'default-dashed': {
+        root: [
+          'border border-dashed border-yellow-500 text-yellow-800 duration-200 ease-in',
+        ],
+      },
+      'default-outline': {
+        root: [
+          'border border-yellow-500 text-yellow-800 duration-200 ease-in',
+        ],
+      },
+      'primary': {
+        root: 'bg-blue-500 text-white',
+      },
+      'primary-light': {
+        root: [
+          'border border-blue-500 bg-blue-100 text-blue-800 duration-200 ease-in',
+        ],
+      },
+
+      'primary-outline': {
+        root: [
+          'border border-blue-500 text-blue-800 duration-200 ease-in',
+        ],
+      },
+
+      'primary-dashed': {
+        root: [
+          'border border-dashed border-blue-500 text-blue-800 duration-200 ease-in',
+        ],
+      },
+      'success': {
+        root: 'bg-green-500 text-white',
+      },
+
+      'success-light': {
+        root: [
+          'border border-green-500 bg-green-100 text-green-800 duration-200 ease-in',
+        ],
+      },
+
+      'success-outline': {
+        root: [
+          'border border-green-500 text-green-800 duration-200 ease-in',
+        ],
+      },
+
+      'success-dashed': {
+        root: [
+          'border border-dashed border-green-500 text-green-800 duration-200 ease-in',
+        ],
+      },
+      'warning': {
+        root: 'bg-orange-500 text-white',
+      },
+      'warning-light': {
+        root: [
+          'border border-orange-500 bg-orange-100 text-orange-800 duration-200 ease-in',
+        ],
+      },
+      'warning-outline': {
+        root: [
+          'border border-orange-500 text-orange-800 duration-200 ease-in',
+        ],
+      },
+      'warning-dashed': {
+        root: [
+          'border border-dashed border-orange-500 text-orange-800 duration-200 ease-in',
+        ],
+      },
+      'danger': {
+        root: 'bg-red-500 text-white',
+      },
+      'danger-light': {
+        root: [
+          'border border-red-500 bg-red-100 text-red-800 duration-200 ease-in',
+        ],
+      },
+      'danger-outline': {
+        root: [
+          'border border-red-500 text-red-800 duration-200 ease-in',
+        ],
+      },
+      'danger-dashed': {
+        root: [
+          'border border-dashed border-red-500 text-red-800 duration-200 ease-in',
+        ],
+      },
+    },
+  },
+
   transitions: {
     scale: {
       'enter-active-class': 'duration-200 ease-[cubic-bezier(0.175,0.885,0.32,1.475)]',
