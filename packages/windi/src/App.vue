@@ -1,11 +1,8 @@
 <script setup lang='ts'>
-import { ref } from 'vue'
-
-const agree = ref('')
 </script>
 
 <template>
-  <div class="grid place-items-center mt-72">
-    <WInput v-model="agree" icon="quill:checkmark-double" help="Please check the checkbox" label="Checkbox" required />
+  <div class="grid place-items-center w-full min-h-screen">
+    <WAvatar src="https://github.com/selemondev.png" chip-text="Online" chip-color="green" name="Selemon" initials="SB" chip-position="top-right" size="xl" />
   </div>
 </template>

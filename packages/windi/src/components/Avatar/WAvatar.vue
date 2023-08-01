@@ -2,6 +2,7 @@
 import type { PropType } from 'vue'
 import { computed, defineComponent, ref, watchEffect } from 'vue'
 import classNames from 'classnames'
+import { Icon } from '@iconify/vue'
 import type { VariantJSWithClassesListProps } from '../../utils/getVariantProps'
 import { getVariantPropsWithClassesList } from '../../utils/getVariantProps'
 import type { WAvatar } from '../../Types/componentsTypes/components'
@@ -15,8 +16,7 @@ const props = defineProps({
   ...getVariantPropsWithClassesList<WAvatar>(),
   name: {
     type: String,
-    required: true,
-    default: '?',
+    required: false,
   },
   src: {
     type: String,
@@ -25,6 +25,11 @@ const props = defineProps({
   size: {
     type: String as PropType<AvatarSize>,
     default: 'md',
+  },
+
+  icon: {
+    type: String,
+    default: 'ic:round-star-border',
   },
 
   initials: {
@@ -66,7 +71,7 @@ watchEffect(() => {
 })
 
 const fallback = computed(() => {
-  return props.initials || props.name.charAt(0) || '?'
+  return props.initials || props.name?.charAt(0)
 })
 
 const variant = computed(() => {
@@ -94,7 +99,7 @@ const avatarClasses = computed(() => {
   }
   else {
     sizeClass += variant.value[props.size] || ''
-    return classNames(variant.value.rounded, sizeClass, variant.value.root)
+    return classNames(variant.value.avatarRounded, sizeClass, variant.value.root)
   }
 })
 
@@ -117,6 +122,12 @@ const avatarChipClass = computed(() => {
   )
 })
 
+const avatarIconSize = computed(() => {
+  return classNames(
+    windiTheme.WAvatar.base.avatarIconSize[props.size],
+  )
+})
+
 const avatarChipColorStyles = computed(() => ({
   'background-color': props.chipColor || '',
 }))
@@ -131,7 +142,8 @@ export default defineComponent({
 <template>
   <span :class="[avatarWrapperClasses, avatarClasses]" :title="props.name">
     <img v-if="avatarUrl" :class="avatarClasses" :src="avatarUrl" :alt="props.name">
-    <span v-else-if="!avatarUrl" :class="variant.placeholderClass">{{ fallback }}</span>
+    <span v-else-if="!avatarUrl" :class="variant.avatarPlaceholderClass">{{ fallback }}</span>
+    <Icon v-if="!avatarUrl && !fallback" :icon="props.icon" :class="avatarIconSize" />
     <span v-if="props.chipColor" :style="avatarChipColorStyles" :class="[avatarChipClass, avatarChipSize]">
       {{ chipText }}
     </span>
