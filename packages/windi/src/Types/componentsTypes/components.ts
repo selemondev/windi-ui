@@ -146,16 +146,20 @@ export interface WTag extends WComponentRoot {
 }
 
 export interface WModal extends WComponentRoot {
-  modalWrapper?: string
+  modalInner?: string
   modalContainer?: string
+  modalPadding?: string
   modalBase?: string
   modalOverlayBase?: string
   modalOverlayBackground?: string
   modalOverlayTransition?: string
   modalShadow?: string
   modalWidth?: string
+  modalBackground?: string
   modalHeight?: string
   modalTransition?: string
+  modalRing?: string
+  modalRounded?: string
 }
 
 export type WAccordionVariant = WithVariantProps<WAccordion>

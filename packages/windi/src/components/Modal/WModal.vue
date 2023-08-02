@@ -1,12 +1,12 @@
 <script setup lang='ts'>
 import { computed, defineComponent } from 'vue'
-import classNames from 'classnames'
 import { Dialog, DialogPanel, TransitionChild, TransitionRoot } from '@headlessui/vue'
 import type { VariantJSWithClassesListProps } from '../../utils/getVariantProps'
 import { getVariantPropsWithClassesList } from '../../utils/getVariantProps'
 import { useVariants } from '../../composables/useVariants'
 import type { WModal } from '../../Types/componentsTypes/components'
 import { Components } from '../../Types/enums/Components'
+import windiTheme from '@/theme/windiTheme'
 
 const props = defineProps({
   ...getVariantPropsWithClassesList<WModal>(),
@@ -54,7 +54,7 @@ const isOpen = computed({
   },
 
   set(value) {
-    return emit('update:modelValue', value)
+    emit('update:modelValue', value)
   },
 })
 
@@ -63,7 +63,7 @@ const transitionClassWrapper = computed(() => {
     return {}
 
   return {
-    ...variant.value.transitions,
+    ...windiTheme.WModal.base.modalOverlayTransition,
   }
 })
 
@@ -74,9 +74,9 @@ function close(value: boolean) {
 }
 
 const transitionOverlay = computed(() => {
-  return classNames(
-    variant.value.modalOverlayTransition,
-  )
+  return {
+    ...windiTheme.WModal.base.modalOverlayTransition,
+  }
 })
 </script>
 
@@ -88,15 +88,15 @@ export default defineComponent({
 
 <template>
   <TransitionRoot :appear="appear" :show="isOpen" as="template">
-    <Dialog :class="variant.root" @close="(e: boolean) => !props.disableClose && close(e)">
+    <Dialog :class="variant.root" @close="(e: boolean) => !disableClose && close(e)">
       <TransitionChild v-if="overlay" as="template" :appear="appear" v-bind="transitionOverlay">
         <div :class="[variant.modalOverlayBase, variant.modalOverlayBackground]" />
       </TransitionChild>
 
-      <div :class="variant.modalWrapper">
-        <div :class="variant.container">
+      <div :class="variant.modalInner">
+        <div :class="[variant.modalContainer]">
           <TransitionChild as="template" :appear="appear" v-bind="transitionClassWrapper">
-            <DialogPanel :class="[variant.modalBase, variant.modalHeight, variant.modalWidth, variant.modalShadow, variant.modalBackground, variant.modalRing, variant.modalRounded]">
+            <DialogPanel :class="[variant.modalPadding, variant.modalBase, variant.modalHeight, variant.modalWidth, variant.modalShadow, variant.modalBackground, variant.modalRing, variant.modalRounded]">
               <slot />
             </DialogPanel>
           </TransitionChild>

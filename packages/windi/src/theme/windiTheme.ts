@@ -809,17 +809,18 @@ export default {
   WModal: {
     base: {
       root: 'relative z-50',
-      modalWrapper: 'fixed inset-0 overflow-y-auto',
-      modalContainer: 'flex min-h-full items-end justify-center text-center p-4 sm:p-0 sm:items-center',
+      modalInner: 'fixed inset-0 overflow-y-auto',
+      modalContainer: 'flex min-h-full items-center justify-center text-center',
+      modalPadding: 'p-4',
       modalBase: 'relative text-left rtl:text-right overflow-hidden sm:my-8 w-full flex flex-col',
       modalShadow: 'shadow-xl',
       modalWidth: 'sm:max-w-lg',
-      modalBackground: 'bg-background',
+      modalBackground: 'bg-white border dark:border-gray-600/40 dark:bg-black',
       modalRing: '',
       modalRounded: 'rounded-lg',
-      modalHeight: '',
+      modalHeight: 'h-96',
       modalOverlayBase: 'fixed inset-0 transition-opacity',
-      modalOverlayBackground: 'bg-gray-200/75 dark:bg-gray-800/75',
+      modalOverlayBackground: 'bg-gray-200/75 dark:bg-[#09090B] dark:bg-opacity-90',
       modalOverlayTransition: {
         enter: 'ease-out duration-300',
         enterFrom: 'opacity-0',
@@ -835,6 +836,12 @@ export default {
         leave: 'ease-in duration-200',
         leaveFrom: 'opacity-100 translate-y-0 sm:scale-100',
         leaveTo: 'opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95',
+      },
+
+      variants: {
+        default: {
+          modalBackground: 'bg-white border dark:border-gray-600/40 dark:bg-black',
+        },
       },
     },
   },
