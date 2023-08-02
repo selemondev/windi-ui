@@ -143,7 +143,7 @@ export default {
   },
   WIcon: {
     base: {
-      'root': 'w-6 h-6 block',
+      'root': 'block cursor-pointer',
       'normal': 'text-base',
       'xs': 'text-xs',
       'sm': 'text-sm',
@@ -159,7 +159,7 @@ export default {
 
     variants: {
       default: {
-        root: 'text-base block',
+        root: 'block cursor-pointer',
       },
     },
   },
@@ -205,6 +205,7 @@ export default {
       'root': 'relative cursor-pointer inline-flex items-center justify-center bg-gray-100 rounded-full',
       'avatarRounded': 'rounded-full',
       'avatarPlaceholderClass': 'font-medium cursor-pointer text-gray-600 upperCase',
+      'avatarIconColor': 'text-black',
       'xs': 'h-6 w-6 text-[11px]',
       'sm': 'h-8 w-8 text-xs',
       'md': 'h-10 w-10 text-sm',
@@ -243,8 +244,9 @@ export default {
     variants: {
       default: {
         root: 'relative cursor-pointer inline-flex items-center justify-center bg-gray-100 rounded-full',
-        rounded: 'rounded-full',
-        placeholderClass: 'font-medium cursor-pointer text-gray-600 upperCase',
+        avatarRounded: 'rounded-full',
+        avatarPlaceholderClass: 'font-medium cursor-pointer text-gray-600 upperCase',
+        avatarIconColor: 'text-black',
       },
     },
 
@@ -253,11 +255,11 @@ export default {
   WDivider: {
     base: {
       root: 'w-full h-px',
-      dividerVertical: 'relative !w-px !h-4 !inline-block align-middle -top-0.5',
+      dividerVertical: 'relative !w-px !h-4 !inline-block',
     },
     variants: {
       default: {
-        root: 'bg-gray-200 dark:bg-zinc-600',
+        root: 'bg-gray-400 dark:bg-zinc-600',
       },
     },
   },
@@ -430,7 +432,7 @@ export default {
   WInput: {
     base: {
       root: 'relative',
-      inputWrapper: 'relative shadow-sm bg-transparent text-gray-900 dark:text-white ring-1 ring-inset ring-gray-300 dark:ring-gray-400 focus:ring-2 focus:ring-green-500 dark:focus:ring-green-400 block w-full disabled:cursor-not-allowed disabled:opacity-75 focus:outline-none',
+      inputWrapper: 'relative shadow-sm bg-transparent text-gray-900 dark:text-white ring-1 ring-inset ring-gray-300 dark:ring-gray-800 focus:ring-2 focus:ring-green-500 dark:focus:ring-green-400 block w-full disabled:cursor-not-allowed disabled:opacity-75 focus:outline-none',
       inputRounded: {
         sm: 'rounded-sm',
         md: 'rounded-md',
@@ -440,7 +442,7 @@ export default {
       },
       inputPlaceholder: 'placeholder-gray-400 dark:placeholder-gray-500',
       inputLabel: 'flex mb-1 dark:text-white',
-      inputHelp: 'flex mt-1 text-sm text-gray-400 dark:text-gray-900',
+      inputHelp: 'flex mt-1 text-sm text-gray-400 dark:text-gray-500',
       inputRequiredDisplay: 'relative flex items-start',
       inputRequired: 'text-red-500',
       inputSize: {
@@ -491,7 +493,7 @@ export default {
         xl: 'h-6 w-6',
       },
 
-      inputIconLeading: 'absolute inset-y-0 start-0 flex items-center pointer-events-none',
+      inputIconLeading: 'absolute inset-y-0 start-0 flex items-center',
 
       inputIconLeadingPadding: {
         xs: 'ps-2.5',
@@ -501,7 +503,7 @@ export default {
         xl: 'ps-3.5',
       },
 
-      inputIconTrailing: 'absolute inset-y-0 end-0 flex items-center pointer-events-none',
+      inputIconTrailing: 'absolute inset-y-0 end-0 flex items-center cursor-pointer',
 
       inputIconTrailingPadding: {
         xs: 'pe-2.5',
@@ -516,10 +518,10 @@ export default {
     variants: {
       default: {
         root: 'relative',
-        inputWrapper: 'relative shadow-sm bg-transparent text-gray-900 dark:text-white ring-1 ring-inset ring-gray-300 dark:ring-gray-400 focus:ring-2 focus:ring-green-500 dark:focus:ring-green-400 block w-full disabled:cursor-not-allowed disabled:opacity-75 focus:outline-none rounded-md',
+        inputWrapper: 'relative shadow-sm bg-transparent text-gray-900 dark:text-white ring-1 ring-inset ring-gray-300 dark:ring-gray-800 focus:ring-2 focus:ring-green-500 dark:focus:ring-green-400 block w-full disabled:cursor-not-allowed disabled:opacity-75 focus:outline-none rounded-md',
         inputPlaceholder: 'placeholder-gray-400 dark:placeholder-gray-500',
         inputLabel: 'flex text-sm mb-1 dark:text-white',
-        inputHelp: 'flex mt-1 text-sm text-gray-400 dark:text-gray-900',
+        inputHelp: 'flex mt-1 text-sm text-gray-400 dark:text-gray-500',
         inputRequiredDisplay: 'relative flex items-start',
         inputRequired: 'text-red-500',
         inputLoadingIcon: 'svg-spinners:bars-rotate-fade',
@@ -597,40 +599,40 @@ export default {
 
   WAccordion: {
     base: {
-      root: 'w-full flex flex-col',
+      root: 'w-full bg-white dark:bg-black dark:border-gray-900 rounded-md flex flex-col',
     },
 
     variants: {},
   },
   WAccordionItem: {
     base: {
-      root: 'bg-white border border-gray-300 transition duration-500 hover:bg-gray-100',
-      accordionItemActiveBackgroundColor: 'bg-gray-200',
+      root: 'bg-white border-b dark:bg-black border-gray-300 dark:border-gray-900 transition duration-500 hover:bg-gray-100',
+      accordionItemActiveBackgroundColor: 'bg-gray-200 dark:bg-gray-800',
       accordionItemRounded: 'first:rounded-t-lg last:rounded-b-lg',
-      accordionItemTitle: 'font-medium text-black',
-      accordionItemIcon: 'relative ml-auto h-5 w-5 text-black transition-transform duration-500 md:h-6 md:w-6',
+      accordionItemTitle: 'font-medium dark:text-white text-black',
+      accordionItemIcon: 'relative ml-auto dark:text-white h-5 w-5 text-black transition-transform duration-500 md:h-6 md:w-6',
       accordionItemButton: 'flex justify-between items-center cursor-pointer p-2',
       isLeading: 'space-x-2.5',
       isNotLeading: 'space-x-2',
       leadingClass: 'absolute left-2.5 cursor-pointer flex items-center overflow-hidden',
       trailingClass: 'absolute right-4 inset-y-0 cursor-pointer flex items-center overflow-hidden',
       accordionItembody: 'overflow-hidden px-5 transition-[height] duration-500 text-black will-change-[height] md:px-6',
-      accordionItemContent: 'py-2 font-light leading-relaxed tracking-wide text-black',
+      accordionItemContent: 'py-2 font-light leading-relaxed tracking-wide text-black dark:text-white',
     },
     variants: {
       default: {
-        root: 'bg-white border border-gray-300 transition duration-500 hover:bg-gray-100',
-        accordionItemActiveBackgroundColor: 'bg-gray-200',
+        root: 'bg-white border-b dark:bg-black border-gray-300 dark:border-gray-900 transition duration-500 hover:bg-gray-100',
+        accordionItemActiveBackgroundColor: 'bg-gray-200 dark:bg-gray-800',
         accordionItemRounded: 'first:rounded-t-lg last:rounded-b-lg',
-        accordionItemTitle: 'font-medium text-black',
-        accordionItemIcon: 'relative ml-auto',
+        accordionItemTitle: 'font-medium dark:text-white text-black',
+        accordionItemIcon: 'relative ml-auto dark:text-white h-5 w-5 text-black transition-transform duration-500 md:h-6 md:w-6',
         isLeading: 'space-x-2.5',
         isNotLeading: 'space-x-2',
         accordionItemButton: 'flex justify-between items-center cursor-pointer p-2',
         leadingClass: 'absolute left-2.5 cursor-pointer flex items-center overflow-hidden',
         trailingClass: 'absolute right-4 inset-y-0 cursor-pointer flex items-center overflow-hidden',
         accordionItembody: 'overflow-hidden px-5 transition-[height] duration-500 text-black will-change-[height] md:px-6',
-        accordionItemContent: 'py-2 font-light leading-relaxed tracking-wide text-black',
+        accordionItemContent: 'py-2 font-light leading-relaxed tracking-wide text-black dark:text-white',
       },
     },
   },

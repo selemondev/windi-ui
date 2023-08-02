@@ -143,7 +143,7 @@ export default defineComponent({
   <span :class="[avatarWrapperClasses, avatarClasses]" :title="props.name">
     <img v-if="avatarUrl" :class="avatarClasses" :src="avatarUrl" :alt="props.name">
     <span v-else-if="!avatarUrl" :class="variant.avatarPlaceholderClass">{{ fallback }}</span>
-    <Icon v-if="!avatarUrl && !fallback" :icon="props.icon" :class="avatarIconSize" />
+    <Icon v-if="!avatarUrl && !fallback" :icon="props.icon" :class="[avatarIconSize, variant.avatarIconColor]" />
     <span v-if="props.chipColor" :style="avatarChipColorStyles" :class="[avatarChipClass, avatarChipSize]">
       {{ chipText }}
     </span>

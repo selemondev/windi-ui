@@ -30,6 +30,7 @@ export interface WAvatar extends WComponentRoot {
   avatarChipSize?: string
   avatarChipPosition?: string
   avatarPlaceholderClass?: string
+  avatarIconColor?: string
 }
 
 export interface WAvatarGroup extends WComponentRoot {
