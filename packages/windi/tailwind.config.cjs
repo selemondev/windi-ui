@@ -2,7 +2,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}', 'node_modules/windi-ui/dist/theme/*.{js,ts,json}'],
-  dark: 'class',
+  darkMode: 'class',
   theme: {
     extend: {
       backgroundColor: ['disabled'],
