@@ -36,7 +36,7 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: 'Introduction', link: '/guide/getting-started/index.md' },
-            { text: 'Installation', link: '/api-examples' }
+            { text: 'Installation', link: '/guide/getting-started/installation.md' }
           ]
         }
       ],
