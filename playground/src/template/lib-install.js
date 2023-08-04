@@ -1,6 +1,6 @@
 import { getCurrentInstance } from 'vue'
 // import UnoUI from 'onu-ui'
-import install from '@selemondev/windi-ui'
+// import install from '@selemondev/windi-ui'
 
 let installed = false
 
@@ -9,7 +9,7 @@ export function libInstall() {
     return
   const instance = getCurrentInstance()
   
-  instance.appContext.app.use(install)
+  // instance.appContext.app.use(install)
   installed = true
 }
 

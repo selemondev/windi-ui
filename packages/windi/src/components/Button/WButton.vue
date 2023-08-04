@@ -152,7 +152,6 @@ export default defineComponent({
 </script>
 
 <template>
-  {{ variant }}
   <component :is="props.to ? 'a' : 'button'" :disabled="disabled" :class="buttonWrapperClass" v-bind="bind">
     <slot name="leading" :disabled="disabled" :loading="props.loading">
       <Icon v-if="isLeading && leadingIcon" :icon="leadingIcon" :style="iconSizeStyle" />
