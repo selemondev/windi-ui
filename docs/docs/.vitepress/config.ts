@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import { version } from '../../../packages/windi-ui/package.json'
+import { version } from '../../../package.json'
 import { SearchPlugin } from "vitepress-plugin-search";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -12,7 +12,7 @@ export default defineConfig({
       {
         rel: "icon",
         type: "image/svg+xml",
-        href: "../public/windi.png",
+        href: "/windi.png",
       },
     ],
     ["meta", { property: "og:type", content: "website" }],
@@ -29,15 +29,18 @@ export default defineConfig({
       { text: `v${version}`, link: ''}
     ],
 
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
-    ],
+    sidebar: {
+      '/guide/':[
+        {
+          text: 'Getting Started',
+          collapsed: true,
+          items: [
+            { text: 'Introduction', link: '/guide/getting-started/index.md' },
+            { text: 'Installation', link: '/api-examples' }
+          ]
+        }
+      ],
+    },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/selemondev/windi-ui' }
