@@ -1,5 +1,5 @@
 {
-  "name": "@selemondev/windi-ui",
+  "name": "@windi-ui/vue",
   "version": "0.0.6",
   "packageManager": "pnpm@8.6.10",
   "description": "Build Accessible Apps 10x faster",
@@ -22,15 +22,15 @@
   ],
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.umd.js",
-      "import": "./dist/index.es.js"
+      "types": "./dist/src/index.d.ts",
+      "require": "./dist/windi-ui.cjs",
+      "import": "./dist/windi-ui.mjs"
     },
     "./dist/theme/windiTheme": "./dist/theme/windiTheme"
   },
-  "main": "./dist/index.umd.js",
-  "module": "./dist/index.es.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/windi-ui.cjs",
+  "module": "./dist/windi-ui.mjs",
+  "types": "./dist/src/index.d.ts",
   "files": [
     "dist",
     "src"
@@ -38,7 +38,7 @@
   "scripts": {
     "build": "vite build && pnpm run build:theme",
     "build:watch": "vite build --watch",
-    "build:theme": "ts-node ./scripts/theme.ts",
+    "build:theme": "esno ./scripts/theme.ts",
     "dev": "vite",
     "play": "pnpm --filter playground dev",
     "prepublishOnly": "pnpm run build",
@@ -46,11 +46,15 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@headlessui/vue": "^1.7.15",
+    "vue": "^3.3.4"
+  },
+  "dependencies": {
     "@heroicons/vue": "^2.0.18",
-    "@selemondev/windi-ui": "workspace:^",
+    "@windi-ui/vue": "workspace:^",
     "classnames": "^2.3.2",
+    "esno": "^0.17.0",
     "tailwind-merge": "^1.14.0",
     "vue-router": "^4.2.4"
   },

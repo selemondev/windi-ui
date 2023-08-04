@@ -1,15 +1,15 @@
-import path, { resolve } from 'node:path'
+import { resolve } from 'node:path'
 import Vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
 
 // https://github.com/qmhc/vite-plugin-dts
 import dtsPlugin from 'vite-plugin-dts'
 
-// import * as pkg from './package.json'
+import * as pkg from './package.json'
 
-// const externals = [
-//   ...Object.keys(pkg.peerDependencies || {}),
-// ]
+const externals = [
+  ...Object.keys(pkg.peerDependencies || {}),
+]
 export default defineConfig({
   plugins: [
     Vue(),
@@ -24,13 +24,13 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/index.ts'),
-      formats: ['es', 'umd', 'cjs'],
+      entry: resolve(__dirname, './src/index.ts'),
+      formats: ['es', 'cjs'],
       name: 'windi-ui',
-      fileName: format => `index.${format}.js`,
+      fileName: format => format === 'cjs' ? 'windi-ui.cjs' : 'windi-ui.mjs',
     },
     rollupOptions: {
-      external: ['vue'],
+      external: externals,
       output: {
         format: 'esm',
         globals: {
