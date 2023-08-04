@@ -159,9 +159,6 @@ importers:
 
   packages/windi:
     dependencies:
-      '@headlessui/vue':
-        specifier: ^1.7.15
-        version: 1.7.15(vue@3.3.4)
       '@heroicons/vue':
         specifier: ^2.0.18
         version: 2.0.18(vue@3.3.4)
@@ -1183,15 +1180,6 @@ packages:
     resolution: {integrity: sha512-Ag+9YM4ocKQx9AarydN0KY2j0ErMHNIocPDrVo8zAE44xLTjEtz81OdR68/cydGtk6m6jDb5Za3r2useMzYmSw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
-
-  /@headlessui/vue@1.7.15(vue@3.3.4):
-    resolution: {integrity: sha512-3ozVEgQ8mw09nWvUPN+8S6C8l3SM0lVT1aEN/+oP5Y4LF0WNMM9UrVisVTN9LLQ06v/X3EFA0blyL/vg8XNZlg==}
-    engines: {node: '>=10'}
-    peerDependencies:
-      vue: ^3.2.0
-    dependencies:
-      vue: 3.3.4
-    dev: false
 
   /@heroicons/vue@2.0.18(vue@3.3.4):
     resolution: {integrity: sha512-BcTC9nq2TkwNSfQuqo96J7ehx4etezypc2YeTq7KsXWxrcrerhkgjLrxGRBnStN0wrXo0Gv4BInybqz5uBG6Cw==}
