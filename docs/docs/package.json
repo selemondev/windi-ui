@@ -11,5 +11,13 @@
     "dev": "vitepress dev --port 5555 --open --host",
     "build": "vitepress build",
     "serve": "vitepress serve"
+  },
+  "dependencies": {
+    "markdown-it": "^13.0.1",
+    "@windi-ui/vue": "workspace:^"
+  },
+  "devDependencies": {
+    "@types/markdown-it": "^12.2.3",
+    "postcss-prefix-selector": "^1.16.0"
   }
 }

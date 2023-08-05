@@ -8,7 +8,7 @@ Windi UI is built on top of powerful tools such as [TailwindCss](https://tailwin
 
 Windi UI is fully customizable thus meaning you can either choose to modify the existing theme or create your own theme and shape the UI components according to your needs. 
 
-Check out the [features]() section to learn more about the [theming]() options.
+Check out the [theme](/guide/getting-started/theme.md) section to learn more about the [theming]() options.
 
 
 ## Why Windi UI

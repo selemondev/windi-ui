@@ -3,9 +3,13 @@ import { h, watch } from 'vue'
 import Theme from 'vitepress/theme'
 // import './style.css'
 import './overrides.css'
+import DemoBlock from '../components/demo-block'
 import "./rainbow.css"
-import './style.css'
+import "./style.css"
+import './tailwind.css'
 import 'uno.css'
+import windiTheme from '@windi-ui/vue/dist/theme/windiTheme'
+import WindiUI from '@windi-ui/vue'
 let homePageStyle: HTMLStyleElement | undefined
 export default {
   extend: Theme,
@@ -15,6 +19,8 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
+    app.component('Demo', DemoBlock)
+    app.use(WindiUI, windiTheme)
     if (typeof window === 'undefined')
       return
 

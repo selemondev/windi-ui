@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import { version } from '../../../package.json'
 import { SearchPlugin } from "vitepress-plugin-search";
+import { applyPlugins } from './plugins/code'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   vite: { plugins: [SearchPlugin()] },
@@ -36,7 +37,8 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: 'Introduction', link: '/guide/getting-started/index.md' },
-            { text: 'Installation', link: '/guide/getting-started/installation.md' }
+            { text: 'Installation', link: '/guide/getting-started/installation.md' },
+            { text: 'Theme', link: '/guide/getting-started/theme.md' }
           ]
         }
       ],
@@ -49,5 +51,14 @@ export default defineConfig({
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2023-PRESENT Selemon Brahanu',
     },
-  }
+  },
+  markdown: {
+    config: (md) => {
+      applyPlugins(md)
+    },
+    theme: {
+      light: 'vitesse-light',
+      dark: 'vitesse-dark',
+    },
+  },
 })
