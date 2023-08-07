@@ -15,7 +15,7 @@ const [value, toggle] = useToggle()
 <template>
   <ClientOnly>
     <div v-bind="$attrs" class="mt-6">
-      <div class="p-8 c-#282f38  border border-light-700 rounded-sm dark:bg-dark-700 dark:border-#4C4D4F flex [&:o-button-base]:!c-context vp-raw bg">
+      <div class="p-8 c-#282f38  border border-light-700 rounded-sm dark:bg-[#000000] dark:border-#4C4D4F flex [&:o-button-base]:!c-context vp-raw bg">
         <slot />
       </div>
       <div class="relative">

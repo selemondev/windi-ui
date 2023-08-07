@@ -17,6 +17,10 @@ export default defineConfig({
       },
     ],
     ["meta", { property: "og:type", content: "website" }],
+    [
+      'link',
+      { href: 'https://fonts.googleapis.com/css2?family=Roboto&display=swap', rel: 'stylesheet' }
+    ]
   ],
   themeConfig: {
     logo: '../public/windi.png',
@@ -33,12 +37,20 @@ export default defineConfig({
     sidebar: {
       '/guide/':[
         {
-          text: 'Getting Started',
+          text: '✨&nbsp;&nbsp; Getting Started',
           collapsed: true,
           items: [
             { text: 'Introduction', link: '/guide/getting-started/index.md' },
             { text: 'Installation', link: '/guide/getting-started/installation.md' },
             { text: 'Theme', link: '/guide/getting-started/theme.md' }
+          ]
+        },
+
+        {
+          text: "📦&nbsp;&nbsp; Components",
+          collapsed: true,
+          items: [
+            { text: 'Accordion', link: '/guide/components/accordion.md'}
           ]
         }
       ],

@@ -16,9 +16,9 @@ const props = defineProps({
     default: null,
   },
 
-  active: {
-    type: String,
-    default: null,
+  disabled: {
+    type: Boolean,
+    default: false,
   },
 
   rounded: {
@@ -51,7 +51,10 @@ const { height: targetHeight } = useElementSize(contents, undefined, {
 
 const height = computed(() => (show.value ? targetHeight.value : 0))
 
-const toggle = () => (show.value = !show.value)
+function toggle() {
+  if (!props.disabled)
+    show.value = !show.value
+}
 
 const variant = computed(() => {
   return useVariants<WAccordionItem>(
@@ -62,7 +65,7 @@ const variant = computed(() => {
 
 const accordionItem = computed(() => {
   return classNames(
-    show.value ? [variant.value.accordionItemActiveBackgroundColor, variant.value.accordionItemButton] : variant.value.accordionItemButton,
+    show.value ? [variant.value.accordionItemActiveBackgroundColor, variant.value.accordionItemActiveTitleColor, variant.value.accordionItemButton] : variant.value.accordionItemButton,
   )
 })
 
@@ -81,6 +84,12 @@ const trailingIcon = computed(() => {
 const isTrailing = computed(() => {
   return (props.icon && props.trailing) || props.trailing
 })
+
+const isDisabled = computed(() => {
+  return classNames(
+    props.disabled && variant.value.accordionIsDisabled,
+  )
+})
 </script>
 
 <script lang="ts">
@@ -92,35 +101,39 @@ export default defineComponent({
 <template>
   <div>
     <div :class="[variant.root, props.rounded && variant.accordionItemRounded]">
-      <div :class="accordionItem" :aria-expanded="show" @click="toggle">
+      <div :class="[accordionItem, isDisabled]" :aria-expanded="show" @click="toggle">
         <div
-          :class="[$slots.leading || isLeading ? variant.isLeading : variant.isNotLeading]"
+          :class="[$slots.leading || isLeading ? variant.accordionItemIconIsLeading : variant.accordionItemIconIsNotLeading]"
           class="flex items-center"
         >
           <div class="shrink-0">
             <span v-if="(isLeading || $slots.leading)" class="space-x-2">
               <slot name="leading">
-                <Icon :icon="leadingIcon" class="text-2xl" />
+                <Icon :icon="leadingIcon" :class="variant.accordionItemActiveLeadingIconColor" />
               </slot>
             </span>
           </div>
           <div>
             <div>
               <div :class="variant.accordionItemTitle">
-                <h2>{{ props.title }}</h2>
+                <h2 :class="[show ? variant.accordionItemActiveTitleColor : isDisabled]">
+                  {{ props.title }}
+                </h2>
               </div>
             </div>
           </div>
         </div>
 
         <div v-if="!isTrailing && !$slots.trailing" :class="variant.accordionItemIcon">
-          <WIcon
-            name="material-symbols:keyboard-arrow-down" :class="[show ? `rotate-180 ${variant.accordionItemIcon}` : `rotate-65 ${variant.accordionItemIcon}`]"
+          <Icon
+            icon="material-symbols:keyboard-arrow-down" :class="[
+              show ? `${variant.accordionItemActiveTitleColor} rotate-180 ${variant.accordionItemIcon}` : `${variant.accordionItemIcon}`,
+              props.disabled ? variant.accordionItemIconIsDisabled : '']"
           />
         </div>
         <div v-if="(isTrailing || $slots.trailing)">
           <slot name="trailing" :active="show">
-            <Icon :icon="trailingIcon" class="text-2xl" />
+            <Icon :icon="trailingIcon" :class="variant.accordionItemActiveTrailingIconColor" />
           </slot>
         </div>
       </div>
