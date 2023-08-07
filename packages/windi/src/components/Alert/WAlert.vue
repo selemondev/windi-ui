@@ -120,7 +120,7 @@ export default defineComponent({
       <div :class="variant.alertFlexBetween">
         <div :class="[$slots.leading || isLeading ? variant.alertIsLeading : variant.alertIsNotLeading]" class="flex items-center">
           <div class="shrink-0">
-            <p v-if="(isLeading && leadingIconName) || $slots.leading" class="pr-1.5">
+            <p v-if="(isLeading && leadingIconName) || $slots.leading" :class="variant.alertIconIsLeading">
               <slot name="leading">
                 <Icon :icon="leadingIconName" class="text-2xl" />
               </slot>

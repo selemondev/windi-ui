@@ -1,3 +1,7 @@
+---
+title: Accordion
+lang: en-US
+---
 # Accordion
 
 An Accordion displays a list of high-level options that can expand or collapse to reveal more information about a subject or item.

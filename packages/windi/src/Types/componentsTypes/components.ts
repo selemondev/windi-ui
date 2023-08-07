@@ -12,6 +12,7 @@ export interface WAlert extends WComponentRoot {
   alertIsLeading?: string
   alertIsNotLeading?: string
   alertCloseIcon?: string
+  alertIconIsLeading?: string
   alertTrailingClass?: string
   alertLeadingClass?: string
 }

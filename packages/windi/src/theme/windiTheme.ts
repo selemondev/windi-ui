@@ -7,10 +7,9 @@ export default {
       alertBody: 'text-sm leading-none mt-2.5',
       alertCloseIcon: 'w-6 h-6 block',
       alertIsLeading: 'space-x-1',
+      alertIconIsLeading: 'pr-1.5',
       alertIsNotLeading: 'space-x-2',
       alertCloseButtonClass: 'p-0.5 rounded-md -m-1 block transition duration-200 ease-in',
-      alertLeadingClass: 'absolute left-2.5 inset-y-0 cursor-pointer flex items-center overflow-hidden',
-      alertTrailingClass: 'absolute right-4 inset-y-0 cursor-pointer flex items-center overflow-hidden',
     },
     variants: {
       'default': {
@@ -19,7 +18,7 @@ export default {
       },
       'default-light': {
         root: [
-          'border border-yellow-500 bg-yellow-100 text-yellow-800 hover:bg-yellow-800 hover:text-white duration-200 ease-in',
+          'border border-yellow-500 bg-yellow-100 text-yellow-800 dark:bg-yellow-500/20 dark:text-yellow-500 hover:bg-yellow-800 hover:text-white duration-200 ease-in dark:hover:bg-yellow-800 dark:hover:text-white',
         ],
         alertCloseButtonClass: 'hover:text-white py-1 px-1 hover:bg-yellow-900 !active:text-white',
       },
@@ -41,7 +40,7 @@ export default {
       },
       'primary-light': {
         root: [
-          'border border-blue-500 bg-blue-100 text-blue-800 hover:bg-blue-800 hover:text-white duration-200 ease-in',
+          'border border-blue-500 bg-blue-100 text-blue-800 dark:bg-blue-500/20 dark:text-blue-500 hover:bg-blue-800 hover:text-white duration-200 ease-in dark:hover:bg-blue-800 dark:hover:text-white',
         ],
         alertCloseButtonClass: 'hover:text-white py-1 px-1 hover:bg-blue-900 !active:text-white',
       },
@@ -66,7 +65,7 @@ export default {
 
       'success-light': {
         root: [
-          'border border-green-500 bg-green-100 text-green-800 hover:bg-green-800 hover:text-white duration-200 ease-in',
+          'border border-green-500 bg-green-100 text-green-800 dark:bg-green-500/20 dark:text-[#0CC57D] hover:bg-green-800 hover:text-white duration-200 ease-in dark:hover:bg-green-800 dark:hover:text-white',
         ],
         alertCloseButtonClass: '!active:text-white hover:text-white py-1 px-1 hover:bg-green-900',
       },
@@ -90,7 +89,7 @@ export default {
       },
       'warning-light': {
         root: [
-          'border border-orange-500 bg-orange-100 text-orange-800 hover:bg-orange-800 hover:text-white duration-200 ease-in',
+          'border border-orange-500 bg-orange-100 text-orange-800 dark:bg-[#362C1E] dark:text-[#F5A525] hover:bg-orange-800 hover:text-white duration-200 ease-in dark:hover:bg-orange-800 dark:hover:text-white',
         ],
         alertCloseButtonClass: '!active:text-white hover:text-white py-1 px-1 hover:bg-orange-900',
       },
@@ -112,7 +111,7 @@ export default {
       },
       'danger-light': {
         root: [
-          'border border-red-500 bg-red-100 text-red-800 hover:bg-red-800 hover:text-white duration-200 ease-in',
+          'border border-red-500 bg-red-100 text-red-800 dark:bg-red-500/20 dark:text-red-500 hover:bg-red-800 dark:hover:bg-red-800 dark:hover:text-white hover:text-white duration-200 ease-in',
         ],
         alertCloseButtonClass: '!active:text-white hover:text-white py-1 px-1 hover:bg-red-900',
       },

@@ -1,20 +1,14 @@
 <script setup lang='ts'>
 import { ref } from 'vue'
-import { useDark, useToggle } from '@vueuse/core'
-
-const isDark = useDark()
-
-const toggle = useToggle(isDark)
 
 const isActive = ref(true)
+const handleCloseAlert = () => {
+    return isActive.value = false
+}
 </script>
 
 <template>
-  <div class="grid place-items-center dark:bg-black w-full min-h-screen">
-    <button class="dark:text-white" @click="toggle()">
-      Theme
-    </button>
-    <div class="w-96">
+    <div class="w-full">
       <WAlert
         icon="noto:alembic"
         :variants="{
@@ -22,12 +16,11 @@ const isActive = ref(true)
             root: 'bg-white dark:bg-transparent border border-neutral-300 dark:text-white dark:border-neutral-800',
             alertCloseButtonClass: 'hover:bg-gray-500 dark:hover:bg-gray-800',
           },
-        }" :variant="['my-variant']" closable :is-visible="isActive" title="Custom Alert"
+        }" transition="fade" :variant="['my-variant']" closable :is-visible="isActive" title="Custom Alert" @close="handleCloseAlert"
       >
         <WAlertDescription>
           <p>This is a custom alert description.</p>
         </WAlertDescription>
       </WAlert>
     </div>
-  </div>
 </template>
