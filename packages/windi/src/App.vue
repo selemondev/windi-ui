@@ -12,31 +12,19 @@ const toggle = useToggle(isDark)
       Theme
     </button>
     <div>
-      <div class="flex space-x-3">
-        <WAvatar
-          src="https://github.com/selemondev.png" name="Selemondev" chip-color="green" chip-text="online"
-          chip-position="top-right" size="lg"
-        />
-        <WAvatar
-          src="https://github.com/Ryggs.png" name="Ryan Giggs" chip-color="green" chip-text="online"
-          chip-position="top-left" size="lg"
-        />
-        <WAvatar
-          src="https://github.com/atinux.png" name="Sebastian Chopin" chip-color="green" chip-text="online"
-          chip-position="bottom-right" size="lg"
-        />
-        <WAvatar
-          src="https://github.com/yyx990803.png" name="Evan You" chip-color="green" chip-text="online"
-          chip-position="bottom-left" size="lg"
-        />
-
-        <WAvatar src="https://github.com/danielroe.png" name="Daniel Roe" chip-color="red" size="lg" />
-        <WAvatar src="https://github.com/baroshem.png" name="Jakub Andrzejewski" chip-color="yellow" size="lg" />
-        <WAvatar src="https://github.com/posva.png" name="Eduardo" chip-color="orange" size="lg" />
-        <WAvatar src="https://github.com/pi0.png" name="Pooya Parsa" chip-color="purple" size="lg" />
-        <WAvatar src="https://github.com/alvarosabu.png" name="Alvaro" chip-color="blue" size="lg" />
-        <WAvatar src="https://github.com/webfansplz.png" name="Webfansplz" chip-color="green" size="lg" />
-        <WAvatar src="https://github.com/danielkellyio.png" name="Daniel Kelly" chip-color="violet" size="lg" />
+      <div class="flex space-x-12">
+        <WBadge value="online" variant="primary">
+          <WButton label="Primary" variant="primary" />
+        </WBadge>
+        <WBadge value="online" variant="success">
+          <WButton label="Success" variant="success" />
+        </WBadge>
+        <WBadge value="online" variant="warning">
+          <WButton label="Warning" variant="warning" />
+        </WBadge>
+        <WBadge value="online" variant="danger">
+          <WButton label="Danger" variant="danger" />
+        </WBadge>
       </div>
     </div>
   </div>
