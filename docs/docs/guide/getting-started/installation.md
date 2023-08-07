@@ -58,7 +58,7 @@ Be warned. By doing this, you are importing all the components that are provided
 
 ### Individual Components with Tree Shaking
 
-- Probably you might not want to globally register all the components but instead only import the components that you need. You can achieve this by doing the following: 
+Probably you might not want to globally register all the components but instead only import the components that you need. You can achieve this by doing the following: 
 
 1. Import the `createWindiUI` option as well as the components you need as shown below:
 

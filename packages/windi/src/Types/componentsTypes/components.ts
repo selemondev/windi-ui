@@ -71,12 +71,17 @@ export interface WAccordionItem extends WComponentRoot {
   accordionItemTitle?: string
   accordionItemIcon?: string
   accordionItemButton?: string
-  isLeading?: string
-  isNotLeading?: string
-  leadingClass?: string
-  trailingClass?: string
+  accordionItemActiveTitleColor?: string
+  accordionItemActiveLeadingIconColor?: string
+  accordionItemActiveTrailingIconColor?: string
+  accordionItemIconIsDisabled?: string
+  accordionItemIconIsLeading?: string
+  accordionItemIconIsNotLeading?: string
+  accordionItemLeadingClass?: string
+  accordionItemTrailingClass?: string
   accordionItemBody?: string
   accordionItemContent?: string
+  accordionIsDisabled?: string
 }
 
 export interface WKbd extends WComponentRoot {

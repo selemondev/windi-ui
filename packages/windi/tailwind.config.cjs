@@ -7,6 +7,9 @@ module.exports = {
     extend: {
       backgroundColor: ['disabled'],
       textColor: ['disabled'],
+      fontFamily: {
+        Roboto: 'Roboto',
+      },
     },
   },
   plugins: [require('@windi-ui/tailwind-config/tailwind.config')],
