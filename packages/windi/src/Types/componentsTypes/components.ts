@@ -41,10 +41,10 @@ export interface WAvatarGroup extends WComponentRoot {
 
 export interface WBadge extends WComponentRoot {
   default?: string
-  body?: string
-  chip?: string
+  badgeBody?: string
+  badgeChip?: string
   badgePosition?: string
-  square?: string
+  badgeSquare?: string
 }
 
 export interface WButton extends WComponentRoot {

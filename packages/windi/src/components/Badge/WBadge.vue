@@ -63,13 +63,13 @@ const badgePosition = computed(() => {
 
 const badgeChip = computed(() => {
   return classNames(
-    props.chip && variant.value.chip,
+    props.chip && variant.value.badgeChip,
   )
 })
 
 const badgeSquare = computed(() => {
   return classNames(
-    props.square && variant.value.square,
+    props.square && variant.value.badgeSquare,
   )
 })
 </script>
@@ -87,7 +87,7 @@ export default defineComponent({
       <Transition v-bind="variant.transitions?.fade">
         <span
           :class="[
-            variant.body, badgePosition, badgeChip, badgeSquare,
+            variant.badgeBody, badgePosition, badgeChip, badgeSquare,
           ]"
         >
           <slot name="badgeValue">{{ badgeValue }}</slot>

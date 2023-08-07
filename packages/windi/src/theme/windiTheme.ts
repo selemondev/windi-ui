@@ -220,9 +220,9 @@ export default {
     base: {
       root: 'flex items-center',
       default: 'relative',
-      body: 'text-xs text-white rounded-xl px-1.5 border !border-white dark:border-neutral-800 inline-block ',
-      chip: 'w-3 h-3 !p-0',
-      square: '!rounded-[5px]',
+      badgeBody: 'text-xs text-white rounded-xl px-1.5 border !border-white dark:border-neutral-800 inline-block ',
+      badgeChip: 'w-3 h-3 !p-0',
+      badgeSquare: '!rounded-[5px]',
       badgePosition: {
         'top-left': 'absolute top-0 left-0 -translate-x-[45%] -translate-y-[45%]',
         'top-right': 'absolute top-0 right-0 translate-x-[45%] -translate-y-[45%]',
@@ -235,19 +235,19 @@ export default {
 
     variants: {
       default: {
-        body: 'bg-yellow-500',
+        badgeBody: 'bg-yellow-500',
       },
       primary: {
-        body: 'bg-blue-500',
+        badgeBody: 'bg-blue-500',
       },
       success: {
-        body: 'bg-green-500',
+        badgeBody: 'bg-green-500',
       },
       warning: {
-        body: 'bg-orange-500',
+        badgeBody: 'bg-orange-500',
       },
       danger: {
-        body: 'bg-red-500',
+        badgeBody: 'bg-red-500',
       },
     },
   },
