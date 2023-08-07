@@ -1,12 +1,9 @@
 <script setup lang='ts'>
-import { ref } from 'vue'
 import { useDark, useToggle } from '@vueuse/core'
 
 const isDark = useDark()
 
 const toggle = useToggle(isDark)
-
-const isActive = ref(true)
 </script>
 
 <template>
@@ -14,20 +11,33 @@ const isActive = ref(true)
     <button class="dark:text-white" @click="toggle()">
       Theme
     </button>
-    <div class="w-96">
-      <WAlert
-        icon="noto:alembic"
-        :variants="{
-          'my-variant': {
-            root: 'bg-white dark:bg-transparent border border-neutral-300 dark:text-white dark:border-neutral-800',
-            alertCloseButtonClass: 'hover:bg-gray-500 dark:hover:bg-gray-800',
-          },
-        }" :variant="['my-variant']" closable :is-visible="isActive" title="Custom Alert"
-      >
-        <WAlertDescription>
-          <p>This is a custom alert description.</p>
-        </WAlertDescription>
-      </WAlert>
+    <div>
+      <div class="flex space-x-3">
+        <WAvatar
+          src="https://github.com/selemondev.png" name="Selemondev" chip-color="green" chip-text="online"
+          chip-position="top-right" size="lg"
+        />
+        <WAvatar
+          src="https://github.com/Ryggs.png" name="Ryan Giggs" chip-color="green" chip-text="online"
+          chip-position="top-left" size="lg"
+        />
+        <WAvatar
+          src="https://github.com/atinux.png" name="Sebastian Chopin" chip-color="green" chip-text="online"
+          chip-position="bottom-right" size="lg"
+        />
+        <WAvatar
+          src="https://github.com/yyx990803.png" name="Evan You" chip-color="green" chip-text="online"
+          chip-position="bottom-left" size="lg"
+        />
+
+        <WAvatar src="https://github.com/danielroe.png" name="Daniel Roe" chip-color="red" size="lg" />
+        <WAvatar src="https://github.com/baroshem.png" name="Jakub Andrzejewski" chip-color="yellow" size="lg" />
+        <WAvatar src="https://github.com/posva.png" name="Eduardo" chip-color="orange" size="lg" />
+        <WAvatar src="https://github.com/pi0.png" name="Pooya Parsa" chip-color="purple" size="lg" />
+        <WAvatar src="https://github.com/alvarosabu.png" name="Alvaro" chip-color="blue" size="lg" />
+        <WAvatar src="https://github.com/webfansplz.png" name="Webfansplz" chip-color="green" size="lg" />
+        <WAvatar src="https://github.com/danielkellyio.png" name="Daniel Kelly" chip-color="violet" size="lg" />
+      </div>
     </div>
   </div>
 </template>

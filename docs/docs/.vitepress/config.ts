@@ -52,6 +52,7 @@ export default defineConfig({
           items: [
             { text: 'Accordion', link: '/guide/components/accordion.md' },
             { text: 'Alert', link: '/guide/components/alert.md' },
+            { text: 'Avatar', link: '/guide/components/avatar.md'}
           ]
         }
       ],

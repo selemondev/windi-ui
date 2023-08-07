@@ -57,7 +57,7 @@ You can use the `accordionItembody` preset to set the transition of the `WAccord
 
 By default, the transition is set to `duration-500`
 
-## Presets
+## Preset
 
 ```js
   WAccordion: {
