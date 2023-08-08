@@ -11,13 +11,13 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /markdown-examples
+      link: /guide/getting-started/#introduction
     - theme: alt
       text: Why Windi?
       link: /guide/getting-started/#why-windi-ui
     - theme: alt
       text: View Components
-      link: /api-examples
+      link: /guide/components/accordion.html
 
 features:
   - icon: 🦾

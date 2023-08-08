@@ -1,4 +1,52 @@
 export default {
+
+  WAccordion: {
+    base: {
+      root: 'w-full bg-white dark:bg-black border border-gray-300 dark:border-gray-900 flex flex-col',
+    },
+
+    variants: {},
+  },
+
+  WAccordionItem: {
+    base: {
+      root: 'border-t dark:bg-black dark:border-gray-900 transition duration-500 hover:bg-gray-100 dark:hover:bg-gray-900',
+      accordionItemActiveBackgroundColor: 'bg-gray-200 dark:bg-gray-800',
+      accordionItemActiveTitleColor: 'text-black dark:text-white',
+      accordionItemActiveLeadingIconColor: 'text-xl text-black dark:text-white',
+      accordionItemActiveTrailingIconColor: 'text-xl text-black dark:text-white',
+      accordionItemRounded: 'first:rounded-t-lg last:rounded-b-lg',
+      accordionItemTitle: 'font-medium dark:text-white text-black',
+      accordionIsDisabled: 'bg-gray-100 dark:bg-gray-900 dark:text-gray-700',
+      accordionItemIcon: 'relative ml-auto dark:text-white h-5 w-5 text-black transition-transform duration-500 md:h-6 md:w-6',
+      accordionItemIconIsDisabled: 'dark:text-gray-800 text-gray-300',
+      accordionItemButton: 'flex justify-between items-center cursor-pointer p-2',
+      accordionItemIconIsLeading: 'space-x-2.5',
+      accordionItemIconIsNotLeading: 'space-x-2',
+      accordionItemLeadingClass: 'absolute left-2.5 cursor-pointer flex items-center overflow-hidden',
+      accordionItemTrailingClass: 'absolute right-4 inset-y-0 cursor-pointer flex items-center overflow-hidden',
+      accordionItembody: 'overflow-hidden px-5 transition-[height] duration-500 text-black will-change-[height] md:px-6',
+      accordionItemContent: 'py-2 font-light leading-relaxed tracking-wide text-black dark:text-white',
+    },
+    variants: {
+      default: {
+        root: 'border-b dark:bg-black border-gray-300 dark:border-gray-900 transition duration-500 hover:bg-gray-100 dark:hover:bg-gray-900',
+        accordionItemActiveBackgroundColor: 'bg-gray-200 dark:bg-gray-800',
+        accordionItemRounded: 'first:rounded-t-lg last:rounded-b-lg',
+        accordionItemTitle: 'font-medium dark:text-white text-black',
+        accordionIsDisabled: 'text-gray-400 bg-gray-100',
+        accordionItemIcon: 'relative ml-auto dark:text-white h-5 w-5 text-black transition-transform duration-500 md:h-6 md:w-6',
+        accordionItemIconIsLeading: 'space-x-2.5',
+        accordionItemIconIsNotLeading: 'space-x-2',
+        accordionItemButton: 'flex justify-between items-center cursor-pointer p-2',
+        accordionItemLeadingClass: 'absolute left-2.5 cursor-pointer flex items-center overflow-hidden',
+        accordionItemTrailingClass: 'absolute right-4 inset-y-0 cursor-pointer flex items-center overflow-hidden',
+        accordionItembody: 'overflow-hidden px-5 transition-[height] duration-500 text-black will-change-[height] md:px-6',
+        accordionItemContent: 'py-2 font-light leading-relaxed tracking-wide text-black dark:text-white',
+      },
+    },
+  },
+
   WAlert: {
     base: {
       root: 'w-full relative overflow-hidden rounded-md px-3 py-2.5',
@@ -193,28 +241,6 @@ export default {
       avatarGroupMargin: '-mx-2.5',
     },
   },
-  WIcon: {
-    base: {
-      'root': 'block cursor-pointer',
-      'normal': 'text-base',
-      'xs': 'text-xs',
-      'sm': 'text-sm',
-      'base': 'text-base',
-      'lg': 'text-lg',
-      'xl': 'text-xl',
-      '2xl': 'text-2xl',
-      '3xl': 'text-3xl',
-      '4xl': 'text-4xl',
-      '6xl': 'text-6xl',
-      '8xl': 'text-8xl',
-    },
-
-    variants: {
-      default: {
-        root: 'block cursor-pointer',
-      },
-    },
-  },
 
   WBadge: {
     base: {
@@ -248,18 +274,6 @@ export default {
       },
       danger: {
         badgeBody: 'bg-red-500',
-      },
-    },
-  },
-
-  WDivider: {
-    base: {
-      root: 'w-full h-px',
-      dividerVertical: 'relative !w-px !h-4 !inline-block',
-    },
-    variants: {
-      default: {
-        root: 'bg-gray-400 dark:bg-zinc-600',
       },
     },
   },
@@ -423,6 +437,7 @@ export default {
       },
     },
   },
+
   WButtonGroup: {
     base: {
       root: 'flex [&>:not(:first-child):not(:last-child)]:rounded-none',
@@ -433,6 +448,95 @@ export default {
       },
       vertical: {
         root: 'flex-col [&>:first-child]:rounded-b-none [&>:last-child]:rounded-t-none [&>*+*]:border-t-0 [&>:not(:last-child):not(:focus-visible)]:!shadow-none',
+      },
+    },
+  },
+
+  WCheckbox: {
+    base: {
+      root: 'relative flex items-start cursor-pointer',
+      checkbox: [
+        'relative dark:border-zinc-600 dark:bg-zinc-700 dark:hover:bg-zinc-600 flex bg-white items-center justify-center transition-all select-none !h-4 !w-4 overflow-hidden border shadow-sm shadow-slate-600/10 border-slate-300 rounded',
+        'active:peer-checked:pt-1.5 peer-focus-visible:shadow-[0_1px_1px_0,0_0_0_3px]',
+      ],
+      checkboxIconSize: 'text-sm',
+      checkboxDisplay: 'flex items-center h-5',
+      checkboxInput: 'peer absolute inset-0 m-0 h-full w-full cursor-pointer !opacity-0',
+      checkboxSpace: 'ms-2 text-sm',
+      checkIcon: 'flex justify-center items-center opacity-0 h-full w-full',
+      checkIconActive: '!mt-0 opacity-100 text-blue-600 drop-shadow-sm [text-shadow:0_1px_0_rgba(0,0,0,0.07)]',
+      checkboxLabel: 'font-medium text-gray-700 dark:text-gray-200',
+      checkboxRequired: 'text-red-500 dark:text-red-400',
+      checkboxHelp: 'text-gray-500 dark:text-gray-400',
+      checkboxHelpDisabled: 'text-gray-300 dark:text-gray-700',
+    },
+    variants: {
+      default: {
+        checkbox:
+          'hover:!border-yellow-600 active:!bg-yellow-600/30 peer-checked:!bg-yellow-600 peer-checked:border-yellow-600 active:peer-checked:bg-yellow-600 peer-focus-visible:border-yellow-600 peer-focus-visible:shadow-yellow-600/30',
+        checkIcon: '!text-white',
+      },
+      primary: {
+        checkbox:
+          'hover:!border-blue-600 active:!bg-blue-600/30 peer-checked:!bg-blue-600 peer-checked:border-blue-600 active:peer-checked:bg-blue-600 peer-focus-visible:border-blue-600 peer-focus-visible:shadow-blue-600/30',
+        checkIcon: '!text-white',
+      },
+      success: {
+        checkbox:
+          'active:!bg-green-500/30 active:!border-green-500 hover:!border-green-500 active:peer-checked:bg-green-500 peer-checked:!bg-green-500 peer-checked:border-green-500 peer-focus-visible:border-green-500 peer-focus-visible:shadow-green-500/30',
+        checkIcon: '!text-white',
+      },
+      warning: {
+        checkbox:
+          'active:!bg-orange-500/30 active:!border-orange-500 hover:!border-orange-500 active:peer-checked:bg-orange-500 peer-checked:!bg-orange-500 peer-checked:border-orange-500 peer-focus-visible:border-orange-500 peer-focus-visible:shadow-orange-500/30',
+        checkIcon: '!text-white',
+      },
+      danger: {
+        checkbox:
+          'active:!bg-red-500/30 active:!border-red-500 hover:!border-red-500 peer-checked:!bg-red-500 active:peer-checked:bg-red-500 peer-checked:border-red-500 peer-focus-visible:border-red-500 peer-focus-visible:shadow-red-500/30',
+        checkIcon: '!text-white',
+      },
+      disabled: {
+        checkbox:
+          'cursor-not-allowed !border-gray-300 active:!border-gray-300 !bg-gray-100 active:!bg-gray-100 peer-checked:!border-gray-300 hover:!border-gray-300 active:!pt-0 dark:!text-zinc-500 dark:!bg-neutral-700 dark:!border-neutral-700 peer-checked:!bg-gray-100 dark:peer-checked:!bg-neutral-700 dark:peer-checked:!border-gray-700',
+        checkIcon: '!text-gray-300 dark:!text-gray-500 [text-shadow:none]',
+        checkboxLabel: 'text-gray-300 dark:text-gray-500',
+        checkboxRequired: 'pointer-events-none text-red-100',
+      },
+    },
+  },
+
+  WDivider: {
+    base: {
+      root: 'w-full h-px',
+      dividerVertical: 'relative !w-px !h-4 !inline-block',
+    },
+    variants: {
+      default: {
+        root: 'bg-gray-400 dark:bg-zinc-600',
+      },
+    },
+  },
+
+  WIcon: {
+    base: {
+      'root': 'block cursor-pointer',
+      'normal': 'text-base',
+      'xs': 'text-xs',
+      'sm': 'text-sm',
+      'base': 'text-base',
+      'lg': 'text-lg',
+      'xl': 'text-xl',
+      '2xl': 'text-2xl',
+      '3xl': 'text-3xl',
+      '4xl': 'text-4xl',
+      '6xl': 'text-6xl',
+      '8xl': 'text-8xl',
+    },
+
+    variants: {
+      default: {
+        root: 'block cursor-pointer',
       },
     },
   },
@@ -536,104 +640,6 @@ export default {
     },
   },
 
-  WCheckbox: {
-    base: {
-      root: 'relative flex items-start cursor-pointer',
-      checkbox: [
-        'relative dark:border-zinc-600 dark:bg-zinc-700 dark:hover:bg-zinc-600 flex bg-white items-center justify-center transition-all select-none !h-4 !w-4 overflow-hidden border shadow-sm shadow-slate-600/10 border-slate-300 rounded',
-        'active:peer-checked:pt-1.5 peer-focus-visible:shadow-[0_1px_1px_0,0_0_0_3px]',
-      ],
-      checkboxIconSize: 'text-sm',
-      checkboxDisplay: 'flex items-center h-5',
-      checkboxInput: 'peer absolute inset-0 m-0 h-full w-full cursor-pointer !opacity-0',
-      checkboxSpace: 'ms-2 text-sm',
-      checkIcon: 'flex justify-center items-center opacity-0 h-full w-full',
-      checkIconActive: '!mt-0 opacity-100 text-blue-600 drop-shadow-sm [text-shadow:0_1px_0_rgba(0,0,0,0.07)]',
-      checkboxLabel: 'font-medium text-gray-700 dark:text-gray-200',
-      checkboxRequired: 'text-red-500 dark:text-red-400',
-      checkboxHelp: 'text-gray-500 dark:text-gray-400',
-      checkboxHelpDisabled: 'text-gray-300 dark:text-gray-700',
-    },
-    variants: {
-      default: {
-        checkbox:
-          'hover:!border-yellow-600 active:!bg-yellow-600/30 peer-checked:!bg-yellow-600 peer-checked:border-yellow-600 active:peer-checked:bg-yellow-600 peer-focus-visible:border-yellow-600 peer-focus-visible:shadow-yellow-600/30',
-        checkIcon: '!text-white',
-      },
-      primary: {
-        checkbox:
-          'hover:!border-blue-600 active:!bg-blue-600/30 peer-checked:!bg-blue-600 peer-checked:border-blue-600 active:peer-checked:bg-blue-600 peer-focus-visible:border-blue-600 peer-focus-visible:shadow-blue-600/30',
-        checkIcon: '!text-white',
-      },
-      success: {
-        checkbox:
-          'active:!bg-green-500/30 active:!border-green-500 hover:!border-green-500 active:peer-checked:bg-green-500 peer-checked:!bg-green-500 peer-checked:border-green-500 peer-focus-visible:border-green-500 peer-focus-visible:shadow-green-500/30',
-        checkIcon: '!text-white',
-      },
-      warning: {
-        checkbox:
-          'active:!bg-orange-500/30 active:!border-orange-500 hover:!border-orange-500 active:peer-checked:bg-orange-500 peer-checked:!bg-orange-500 peer-checked:border-orange-500 peer-focus-visible:border-orange-500 peer-focus-visible:shadow-orange-500/30',
-        checkIcon: '!text-white',
-      },
-      danger: {
-        checkbox:
-          'active:!bg-red-500/30 active:!border-red-500 hover:!border-red-500 peer-checked:!bg-red-500 active:peer-checked:bg-red-500 peer-checked:border-red-500 peer-focus-visible:border-red-500 peer-focus-visible:shadow-red-500/30',
-        checkIcon: '!text-white',
-      },
-      disabled: {
-        checkbox:
-          'cursor-not-allowed !border-gray-300 active:!border-gray-300 !bg-gray-100 active:!bg-gray-100 peer-checked:!border-gray-300 hover:!border-gray-300 active:!pt-0 dark:!text-zinc-500 dark:!bg-neutral-700 dark:!border-neutral-700 peer-checked:!bg-gray-100 dark:peer-checked:!bg-neutral-700 dark:peer-checked:!border-gray-700',
-        checkIcon: '!text-gray-300 dark:!text-gray-500 [text-shadow:none]',
-        checkboxLabel: 'text-gray-300 dark:text-gray-500',
-        checkboxRequired: 'pointer-events-none text-red-100',
-      },
-    },
-  },
-  WAccordion: {
-    base: {
-      root: 'w-full bg-white dark:bg-black border border-gray-300 dark:border-gray-900 flex flex-col',
-    },
-
-    variants: {},
-  },
-  WAccordionItem: {
-    base: {
-      root: 'border-t dark:bg-black dark:border-gray-900 transition duration-500 hover:bg-gray-100 dark:hover:bg-gray-900',
-      accordionItemActiveBackgroundColor: 'bg-gray-200 dark:bg-gray-800',
-      accordionItemActiveTitleColor: 'text-black dark:text-white',
-      accordionItemActiveLeadingIconColor: 'text-xl text-black dark:text-white',
-      accordionItemActiveTrailingIconColor: 'text-xl text-black dark:text-white',
-      accordionItemRounded: 'first:rounded-t-lg last:rounded-b-lg',
-      accordionItemTitle: 'font-medium dark:text-white text-black',
-      accordionIsDisabled: 'bg-gray-100 dark:bg-gray-900 dark:text-gray-700',
-      accordionItemIcon: 'relative ml-auto dark:text-white h-5 w-5 text-black transition-transform duration-500 md:h-6 md:w-6',
-      accordionItemIconIsDisabled: 'dark:text-gray-800 text-gray-300',
-      accordionItemButton: 'flex justify-between items-center cursor-pointer p-2',
-      accordionItemIconIsLeading: 'space-x-2.5',
-      accordionItemIconIsNotLeading: 'space-x-2',
-      accordionItemLeadingClass: 'absolute left-2.5 cursor-pointer flex items-center overflow-hidden',
-      accordionItemTrailingClass: 'absolute right-4 inset-y-0 cursor-pointer flex items-center overflow-hidden',
-      accordionItembody: 'overflow-hidden px-5 transition-[height] duration-500 text-black will-change-[height] md:px-6',
-      accordionItemContent: 'py-2 font-light leading-relaxed tracking-wide text-black dark:text-white',
-    },
-    variants: {
-      default: {
-        root: 'border-b dark:bg-black border-gray-300 dark:border-gray-900 transition duration-500 hover:bg-gray-100 dark:hover:bg-gray-900',
-        accordionItemActiveBackgroundColor: 'bg-gray-200 dark:bg-gray-800',
-        accordionItemRounded: 'first:rounded-t-lg last:rounded-b-lg',
-        accordionItemTitle: 'font-medium dark:text-white text-black',
-        accordionIsDisabled: 'text-gray-400 bg-gray-100',
-        accordionItemIcon: 'relative ml-auto dark:text-white h-5 w-5 text-black transition-transform duration-500 md:h-6 md:w-6',
-        accordionItemIconIsLeading: 'space-x-2.5',
-        accordionItemIconIsNotLeading: 'space-x-2',
-        accordionItemButton: 'flex justify-between items-center cursor-pointer p-2',
-        accordionItemLeadingClass: 'absolute left-2.5 cursor-pointer flex items-center overflow-hidden',
-        accordionItemTrailingClass: 'absolute right-4 inset-y-0 cursor-pointer flex items-center overflow-hidden',
-        accordionItembody: 'overflow-hidden px-5 transition-[height] duration-500 text-black will-change-[height] md:px-6',
-        accordionItemContent: 'py-2 font-light leading-relaxed tracking-wide text-black dark:text-white',
-      },
-    },
-  },
   WKbd: {
     base: {
       root: 'inline-flex items-center justify-center text-gray-900 px-1 dark:text-white',
@@ -657,6 +663,46 @@ export default {
         KbdFont: 'font-medium',
         KbdBackground: 'bg-gray-100 dark:bg-gray-800',
         KbdRing: 'ring-1 ring-gray-300 ring-inset dark:ring-gray-700',
+      },
+    },
+  },
+
+  WModal: {
+    base: {
+      root: 'relative z-50',
+      modalInner: 'fixed inset-0 overflow-y-auto',
+      modalContainer: 'flex min-h-full items-center justify-center text-center',
+      modalPadding: 'p-4',
+      modalBase: 'relative text-left rtl:text-right overflow-hidden sm:my-8 w-full flex flex-col',
+      modalShadow: 'shadow-xl',
+      modalWidth: 'sm:max-w-lg',
+      modalBackground: 'bg-white border dark:border-gray-600/40 dark:bg-black',
+      modalRing: '',
+      modalRounded: 'rounded-lg',
+      modalHeight: 'h-96',
+      modalOverlayBase: 'fixed inset-0 transition-opacity',
+      modalOverlayBackground: 'bg-gray-200/75 dark:bg-[#09090B] dark:bg-opacity-90',
+      modalOverlayTransition: {
+        enter: 'ease-out duration-300',
+        enterFrom: 'opacity-0',
+        enterTo: 'opacity-100',
+        leave: 'ease-in duration-200',
+        leaveFrom: 'opacity-100',
+        leaveTo: 'opacity-0',
+      },
+      modalTransition: {
+        enter: 'ease-out duration-300',
+        enterFrom: 'opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95',
+        enterTo: 'opacity-100 translate-y-0 sm:scale-100',
+        leave: 'ease-in duration-200',
+        leaveFrom: 'opacity-100 translate-y-0 sm:scale-100',
+        leaveTo: 'opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95',
+      },
+
+      variants: {
+        default: {
+          modalBackground: 'bg-white border dark:border-gray-600/40 dark:bg-black',
+        },
       },
     },
   },
@@ -794,46 +840,6 @@ export default {
         root: [
           'border border-dashed border-red-500 text-red-500 duration-200 ease-in',
         ],
-      },
-    },
-  },
-
-  WModal: {
-    base: {
-      root: 'relative z-50',
-      modalInner: 'fixed inset-0 overflow-y-auto',
-      modalContainer: 'flex min-h-full items-center justify-center text-center',
-      modalPadding: 'p-4',
-      modalBase: 'relative text-left rtl:text-right overflow-hidden sm:my-8 w-full flex flex-col',
-      modalShadow: 'shadow-xl',
-      modalWidth: 'sm:max-w-lg',
-      modalBackground: 'bg-white border dark:border-gray-600/40 dark:bg-black',
-      modalRing: '',
-      modalRounded: 'rounded-lg',
-      modalHeight: 'h-96',
-      modalOverlayBase: 'fixed inset-0 transition-opacity',
-      modalOverlayBackground: 'bg-gray-200/75 dark:bg-[#09090B] dark:bg-opacity-90',
-      modalOverlayTransition: {
-        enter: 'ease-out duration-300',
-        enterFrom: 'opacity-0',
-        enterTo: 'opacity-100',
-        leave: 'ease-in duration-200',
-        leaveFrom: 'opacity-100',
-        leaveTo: 'opacity-0',
-      },
-      modalTransition: {
-        enter: 'ease-out duration-300',
-        enterFrom: 'opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95',
-        enterTo: 'opacity-100 translate-y-0 sm:scale-100',
-        leave: 'ease-in duration-200',
-        leaveFrom: 'opacity-100 translate-y-0 sm:scale-100',
-        leaveTo: 'opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95',
-      },
-
-      variants: {
-        default: {
-          modalBackground: 'bg-white border dark:border-gray-600/40 dark:bg-black',
-        },
       },
     },
   },
