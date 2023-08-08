@@ -1,0 +1,7 @@
+[build.environment]
+  NETLIFY_USE_PNPM = "true"
+  NODE_VERSION = "16"
+
+[build]
+  publish = "docs/docs/.vitepress/dist"
+  command = "pnpm install && pnpm -w run deploy"

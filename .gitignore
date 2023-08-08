@@ -18,3 +18,5 @@ node_modules
 packages/windi/*.css
 docs/.vitepress/cache/
 docs/public/play
+# Local Netlify folder
+.netlify
