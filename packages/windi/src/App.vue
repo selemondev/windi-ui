@@ -1,16 +1,9 @@
 <script setup lang='ts'>
 import { useDark, useToggle } from '@vueuse/core'
-import { ref } from 'vue'
 
 const isDark = useDark()
 
 const toggle = useToggle(isDark)
-
-const searchTerm = ref('')
-
-function clearSearchTerm() {
-  return searchTerm.value = ''
-}
 </script>
 
 <template>
@@ -20,11 +13,7 @@ function clearSearchTerm() {
     </button>
     <div>
       <div class="space-y-6">
-        <WInput v-model="searchTerm" icon="carbon:search" placeholder="Search">
-          <template v-if="searchTerm !== ''" #trailing>
-            <WIcon name="heroicons:x-mark-20-solid" class="text-gray-500" @click="clearSearchTerm()" />
-          </template>
-        </WInput>
+        <WKbd>K</WKbd>
       </div>
     </div>
   </div>

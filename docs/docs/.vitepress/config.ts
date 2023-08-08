@@ -59,6 +59,7 @@ export default defineConfig({
             { text: 'Divider', link: '/guide/components/divider.md'},
             { text: 'Icon', link: '/guide/components/icon.md'},
             { text: 'Input', link: '/guide/components/input.md'},
+            { text: 'Kbd', link: '/guide/components/kbd.md'}
           ]
         }
       ],
