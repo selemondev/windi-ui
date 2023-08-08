@@ -56,6 +56,7 @@ export default defineConfig({
             { text: 'Badge', link: '/guide/components/badge.md'},
             { text: 'Button', link: '/guide/components/button.md'},
             { text: 'Checkbox', link: '/guide/components/checkbox.md'},
+            { text: 'Divider', link: '/guide/components/divider.md'}
           ]
         }
       ],
