@@ -440,13 +440,12 @@ export default {
   WInput: {
     base: {
       root: 'relative',
-      inputWrapper: 'relative shadow-sm bg-transparent text-gray-900 dark:text-white ring-1 ring-inset ring-gray-300 dark:ring-gray-800 focus:ring-2 focus:ring-green-500 dark:focus:ring-green-400 block w-full disabled:cursor-not-allowed disabled:opacity-75 focus:outline-none',
+      inputWrapper: 'relative shadow-sm bg-transparent text-gray-900 dark:text-white focus:ring-2 focus:ring-green-500 dark:focus:ring-green-400 block w-full disabled:cursor-not-allowed disabled:opacity-75 focus:outline-none',
       inputRounded: {
         sm: 'rounded-sm',
         md: 'rounded-md',
         lg: 'rounded-lg',
         xl: 'rounded-xl',
-        full: 'rounded-full',
       },
       inputPlaceholder: 'placeholder-gray-400 dark:placeholder-gray-500',
       inputLabel: 'flex mb-1 dark:text-white',

@@ -6,7 +6,11 @@ const isDark = useDark()
 
 const toggle = useToggle(isDark)
 
-const checked = ref(false)
+const searchTerm = ref('')
+
+function clearSearchTerm() {
+  return searchTerm.value = ''
+}
 </script>
 
 <template>
@@ -15,7 +19,13 @@ const checked = ref(false)
       Theme
     </button>
     <div>
-      <WCheckbox v-model="checked" disabled label="Agree" help="Please mark the checkbox." required />
+      <div class="space-y-6">
+        <WInput v-model="searchTerm" icon="carbon:search" placeholder="Search">
+          <template v-if="searchTerm !== ''" #trailing>
+            <WIcon name="heroicons:x-mark-20-solid" class="text-gray-500" @click="clearSearchTerm()" />
+          </template>
+        </WInput>
+      </div>
     </div>
   </div>
 </template>

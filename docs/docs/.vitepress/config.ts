@@ -58,6 +58,7 @@ export default defineConfig({
             { text: 'Checkbox', link: '/guide/components/checkbox.md'},
             { text: 'Divider', link: '/guide/components/divider.md'},
             { text: 'Icon', link: '/guide/components/icon.md'},
+            { text: 'Input', link: '/guide/components/input.md'},
           ]
         }
       ],

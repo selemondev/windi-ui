@@ -10,7 +10,7 @@ import windiTheme from '../../theme/windiTheme'
 import { Components } from '../../Types/enums/Components'
 import { useVariants } from '../../composables/useVariants'
 
-export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl'
+export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 
 const props = defineProps({
   ...getVariantPropsWithClassesList<WInput>(),
