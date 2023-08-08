@@ -148,7 +148,6 @@ export interface WSwitch extends WComponentRoot {
 }
 
 export interface WTag extends WComponentRoot {
-  tagSize?: string
   tagRounded?: string
   tagCloseIcon?: string
 }

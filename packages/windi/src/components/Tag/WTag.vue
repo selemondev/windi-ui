@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-import { computed, defineComponent, ref } from 'vue'
+import { computed, defineComponent } from 'vue'
 import { Icon } from '@iconify/vue'
 import classNames from 'classnames'
 import { getVariantPropsWithClassesList } from '../../utils/getVariantProps'
@@ -16,12 +16,12 @@ const props = defineProps({
     default: false,
   },
 
-  rounded: {
-    type: String,
-    default: 'md',
+  isActive: {
+    type: Boolean,
+    default: true,
   },
 
-  size: {
+  rounded: {
     type: String,
     default: 'md',
   },
@@ -41,8 +41,6 @@ const emit = defineEmits<{
   (event: 'close'): void
 }>()
 
-const isActive = ref(true)
-
 const variant = computed(() => {
   const customProps = {
     ...props,
@@ -59,12 +57,10 @@ const tagWrapperClass = computed(() => {
   return classNames(
     variant.value.root,
     windiTheme.WTag.base.tagRounded[props.rounded],
-    windiTheme.WTag.base.tagSize[props.size],
   )
 })
 function onDismiss() {
   emit('close')
-  return isActive.value = false
 }
 </script>
 
@@ -75,7 +71,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <div v-if="isActive" :class="tagWrapperClass">
+  <div v-if="props.isActive" :class="tagWrapperClass">
     <p>{{ props.value }}</p>
     <p v-if="props.closable">
       <Icon icon="ph:x-bold" :aria-label="dismissLabel" :class="variant.tagCloseIcon" @click="onDismiss()" />

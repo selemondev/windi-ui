@@ -698,14 +698,6 @@ export default {
         '2xl': 'rounded-2xl',
         'full': 'rounded-full',
       },
-      tagSize: {
-        'xs': 'text-xs',
-        'sm': 'text-sm',
-        'md': 'text-sm',
-        'lg': 'text-sm',
-        'xl': 'text-base',
-        '2xl': 'text-lg',
-      },
     },
     variants: {
       'default': {
@@ -713,17 +705,17 @@ export default {
       },
       'default-light': {
         root: [
-          'border border-yellow-500 bg-yellow-100 text-yellow-800 duration-200 ease-in',
+          'bg-yellow-100 dark:bg-yellow-500/20 dark:text-yellow-500 text-yellow-800 duration-200 ease-in',
         ],
       },
       'default-dashed': {
         root: [
-          'border border-dashed border-yellow-500 text-yellow-800 duration-200 ease-in',
+          'border border-dashed border-yellow-500 text-yellow-500 duration-200 ease-in',
         ],
       },
       'default-outline': {
         root: [
-          'border border-yellow-500 text-yellow-800 duration-200 ease-in',
+          'border border-yellow-500 text-yellow-500 duration-200 ease-in',
         ],
       },
       'primary': {
@@ -731,19 +723,19 @@ export default {
       },
       'primary-light': {
         root: [
-          'border border-blue-500 bg-blue-100 text-blue-800 duration-200 ease-in',
+          'bg-blue-100 dark:bg-blue-500/20 dark:text-blue-500 text-blue-800 duration-200 ease-in',
         ],
       },
 
       'primary-outline': {
         root: [
-          'border border-blue-500 text-blue-800 duration-200 ease-in',
+          'border border-blue-500 text-blue-500 duration-200 ease-in',
         ],
       },
 
       'primary-dashed': {
         root: [
-          'border border-dashed border-blue-500 text-blue-800 duration-200 ease-in',
+          'border border-dashed border-blue-500 text-blue-500 duration-200 ease-in',
         ],
       },
       'success': {
@@ -752,19 +744,19 @@ export default {
 
       'success-light': {
         root: [
-          'border border-green-500 bg-green-100 text-green-800 duration-200 ease-in',
+          'bg-green-100 dark:bg-green-500/20 dark:text-green-500 text-green-800 duration-200 ease-in',
         ],
       },
 
       'success-outline': {
         root: [
-          'border border-green-500 text-green-800 duration-200 ease-in',
+          'border border-green-500 text-green-500 duration-200 ease-in',
         ],
       },
 
       'success-dashed': {
         root: [
-          'border border-dashed border-green-500 text-green-800 duration-200 ease-in',
+          'border border-dashed border-green-500 text-green-500 duration-200 ease-in',
         ],
       },
       'warning': {
@@ -772,17 +764,17 @@ export default {
       },
       'warning-light': {
         root: [
-          'border border-orange-500 bg-orange-100 text-orange-800 duration-200 ease-in',
+          'bg-orange-100 dark:bg-orange-500/20 dark:text-orange-500 text-orange-800 duration-200 ease-in',
         ],
       },
       'warning-outline': {
         root: [
-          'border border-orange-500 text-orange-800 duration-200 ease-in',
+          'border border-orange-500 text-orange-500 duration-200 ease-in',
         ],
       },
       'warning-dashed': {
         root: [
-          'border border-dashed border-orange-500 text-orange-800 duration-200 ease-in',
+          'border border-dashed border-orange-500 text-orange-500 duration-200 ease-in',
         ],
       },
       'danger': {
@@ -790,17 +782,17 @@ export default {
       },
       'danger-light': {
         root: [
-          'border border-red-500 bg-red-100 text-red-800 duration-200 ease-in',
+          'bg-red-100 dark:bg-red-500/20 dark:text-red-500 text-red-800 duration-200 ease-in',
         ],
       },
       'danger-outline': {
         root: [
-          'border border-red-500 text-red-800 duration-200 ease-in',
+          'border border-red-500 text-red-500 duration-200 ease-in',
         ],
       },
       'danger-dashed': {
         root: [
-          'border border-dashed border-red-500 text-red-800 duration-200 ease-in',
+          'border border-dashed border-red-500 text-red-500 duration-200 ease-in',
         ],
       },
     },

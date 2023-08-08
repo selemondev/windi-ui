@@ -62,6 +62,7 @@ export default defineConfig({
             { text: 'Kbd', link: '/guide/components/kbd.md'},
             { text: 'Modal', link: '/guide/components/modal.md'},
             { text: 'Switch', link: '/guide/components/switch.md'},
+            { text: 'Tag', link: '/guide/components/tag.md'},
           ]
         }
       ],

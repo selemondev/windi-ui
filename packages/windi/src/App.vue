@@ -5,7 +5,12 @@ import { ref } from 'vue'
 const isDark = useDark()
 
 const toggle = useToggle(isDark)
-const toggleSwitch = ref(false)
+
+const isActive = ref(true)
+
+function handleCloseTag() {
+  return isActive.value = false
+}
 </script>
 
 <template>
@@ -13,47 +18,12 @@ const toggleSwitch = ref(false)
     <button class="dark:text-white" @click="toggle()">
       Theme
     </button>
-    <div class="flex space-x-4">
-      <WSwitch
-        v-model="toggleSwitch" :variants="{
-          'my-variant': {
-            switchActive: 'bg-yellow-500 dark:bg-yellow-400',
-            switchIconOn: 'text-yellow-500 dark:text-yellow-400',
-          },
-        }" :variant="['my-variant']" on-icon="ph:moon" off-icon="ph:sun"
-      />
-      <WSwitch
-        v-model="toggleSwitch" :variants="{
-          'my-variant': {
-            switchActive: 'bg-blue-500 dark:bg-blue-400',
-            switchIconOn: 'text-blue-500 dark:text-blue-400',
-          },
-        }" :variant="['my-variant']" on-icon="ph:moon" off-icon="ph:sun"
-      />
-      <WSwitch
-        v-model="toggleSwitch" :variants="{
-          'my-variant': {
-            switchActive: 'bg-green-500 dark:bg-green-400',
-            switchIconOn: 'text-green-500 dark:text-green-400',
-          },
-        }" :variant="['my-variant']" on-icon="ph:moon" off-icon="ph:sun"
-      />
-      <WSwitch
-        v-model="toggleSwitch" :variants="{
-          'my-variant': {
-            switchActive: 'bg-orange-500 dark:bg-orange-400',
-            switchIconOn: 'text-orange-500 dark:text-orange-400',
-          },
-        }" :variant="['my-variant']" on-icon="ph:moon" off-icon="ph:sun"
-      />
-      <WSwitch
-        v-model="toggleSwitch" :variants="{
-          'my-variant': {
-            switchActive: 'bg-red-500 dark:bg-red-400',
-            switchIconOn: 'text-red-500 dark:text-red-400',
-          },
-        }" :variant="['my-variant']" on-icon="ph:moon" off-icon="ph:sun"
-      />
+    <div class="flex space-x-3">
+      <WTag :is-active="isActive" value="Search" closable @close="handleCloseTag" />
+      <WTag :is-active="isActive" value="Search" variant="primary" closable @close="handleCloseTag" />
+      <WTag :is-active="isActive" value="Search" variant="success" closable @close="handleCloseTag" />
+      <WTag :is-active="isActive" value="Search" variant="warning" closable @close="handleCloseTag" />
+      <WTag :is-active="isActive" value="Search" variant="danger" closable @close="handleCloseTag" />
     </div>
   </div>
 </template>
