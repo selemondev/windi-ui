@@ -11,20 +11,9 @@ const toggle = useToggle(isDark)
     <button class="dark:text-white" @click="toggle()">
       Theme
     </button>
-    <div>
-      <div class="flex space-x-12">
-        <WBadge value="online" variant="primary">
-          <WButton label="Primary" variant="primary" />
-        </WBadge>
-        <WBadge value="online" variant="success">
-          <WButton label="Success" variant="success" />
-        </WBadge>
-        <WBadge value="online" variant="warning">
-          <WButton label="Warning" variant="warning" />
-        </WBadge>
-        <WBadge value="online" variant="danger">
-          <WButton label="Danger" variant="danger" />
-        </WBadge>
+    <div class="flex items-center space-x-3">
+      <div>
+        <WButton to="https://github.com/selemondev" label="Selemondev" variant="primary" />
       </div>
     </div>
   </div>

@@ -19,6 +19,8 @@ You can use `size` prop to change the size of the Avatar.
 
 <demo src="../../components/Avatar/avatarSize.vue" />
 
+By defaut, the size is set to `md`.
+
 
 ## Chip
 

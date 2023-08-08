@@ -270,9 +270,9 @@ export default {
       buttonFlex: 'flex items-center',
       buttonLoadingIcon: 'svg-spinners:bars-rotate-fade',
       buttonPill: '!rounded-full',
-      buttonLoading: '!bg-opacity-50 pointer-events-none !cursor-not-allowed !hover:bg-opacity-50 inline-flex items-center',
+      buttonLoading: '!bg-opacity-50 opacity-40 pointer-events-none !cursor-not-allowed !hover:bg-opacity-50 inline-flex items-center',
       buttonFull: 'w-full flex justify-center items-center',
-      buttonDisabled: '!shadow-none !cursor-not-allowed bg-opacity-100',
+      buttonDisabled: '!shadow-none !cursor-not-allowed bg-opacity-40 dark:opacity-40',
       buttonLink: '!bg-transparent !text-black !p-0',
       buttonSize: {
         'xs': 'text-xs',
@@ -306,52 +306,47 @@ export default {
       },
       'default-outline': {
         root: [
-          'border border-yellow-500 text-yellow-800 hover:enabled:bg-yellow-800 hover:enabled:text-white duration-200 ease-in',
+          'border border-yellow-500 disabled:opacity-40 text-yellow-800 dark:text-yellow-500 hover:enabled:bg-yellow-800 hover:enabled:text-white duration-200 ease-in',
         ],
       },
       'default-light': {
         root: [
-          'border border-yellow-500 bg-yellow-100 text-yellow-800 hover:enabled:bg-yellow-800 hover:enabled:text-white duration-200 ease-in',
+          'border border-yellow-500 disabled:opacity-40 dark:bg-yellow-50 bg-yellow-100 dark:bg-yellow-500/20 dark:text-yellow-500 text-yellow-800 hover:enabled:bg-yellow-800 hover:enabled:text-white duration-200 ease-in',
         ],
       },
       'default-dashed': {
         root: [
-          'border border-dashed border-yellow-500 text-yellow-800 hover:enabled:bg-yellow-800 hover:enabled:text-white duration-200 ease-in',
+          'border border-dashed disabled:opacity-40 border-yellow-500 text-yellow-800 dark:text-yellow-500 hover:enabled:bg-yellow-800 hover:enabled:text-white duration-200 ease-in',
         ],
       },
       'default-ghost': {
         root: [
-          'text-yellow-500 hover:enabled:bg-yellow-100',
+          'text-yellow-500 disabled:opacity-40 dark:text-yellow-500 hover:enabled:bg-yellow-800 hover:enabled:text-white duration-200 ease-in',
         ],
       },
       'primary': {
-        root: 'bg-blue-500 hover:enabled:bg-blue-600 !disabled:hover:bg-blue-100',
+        root: 'bg-blue-500 hover:enabled:bg-blue-600',
       },
       'primary-light': {
         root: [
-          'border border-blue-500 bg-blue-100 text-blue-800 hover:enabled:bg-blue-800 hover:enabled:text-white duration-200 ease-in',
-        ],
-      },
-      'primary-loading': {
-        root: [
-          '!shadow-none !cursor-not-allowed bg-blue-100',
+          'border border-blue-500 bg-blue-100 disabled:opacity-40 dark:bg-blue-500/20 dark:text-blue-500 text-blue-800 hover:enabled:bg-blue-800 hover:enabled:text-white duration-200 ease-in',
         ],
       },
 
       'primary-outline': {
         root: [
-          'border border-blue-500 text-blue-800 hover:enabled:bg-blue-800 hover:enabled:text-white duration-200 ease-in',
+          'border border-blue-500 disabled:opacity-40 text-blue-800 dark:text-blue-500 hover:enabled:bg-blue-800 hover:enabled:text-white duration-200 ease-in',
         ],
       },
 
       'primary-dashed': {
         root: [
-          'border border-dashed border-blue-500 text-blue-800 hover:enabled:bg-blue-800 hover:enabled:text-white duration-200 ease-in',
+          'border border-dashed disabled:opacity-40 border-blue-500 dark:text-blue-500 text-blue-800 hover:enabled:bg-blue-800 hover:enabled:text-white duration-200 ease-in',
         ],
       },
       'primary-ghost': {
         root: [
-          'text-blue-500 hover:enabled:bg-blue-100',
+          'text-blue-500 disabled:opacity-40 dark:text-blue-500 hover:enabled:bg-blue-800 hover:enabled:text-white duration-200 ease-in',
         ],
       },
       'success': {
@@ -360,24 +355,24 @@ export default {
 
       'success-light': {
         root: [
-          'border border-green-500 bg-green-100 text-green-800 hover:enabled:bg-green-800 hover:enabled:text-white duration-200 ease-in',
+          'border border-green-500 bg-green-100 disabled:opacity-40 dark:bg-green-500/20 dark:text-green-500 text-green-800 hover:enabled:bg-green-800 hover:enabled:text-white duration-200 ease-in',
         ],
       },
 
       'success-outline': {
         root: [
-          'border border-green-500 text-green-800 hover:enabled:bg-green-800 hover:enabled:text-white duration-200 ease-in',
+          'border border-green-500 disabled:opacity-40 text-green-800 dark:text-green-500 hover:enabled:bg-green-800 hover:enabled:text-white duration-200 ease-in',
         ],
       },
 
       'success-dashed': {
         root: [
-          'border border-dashed border-green-500 text-green-800 hover:enabled:bg-green-800 hover:enabled:text-white duration-200 ease-in',
+          'border border-dashed disabled:opacity-40 border-green-500 dark:text-green-500 text-green-800 hover:enabled:bg-green-800 hover:enabled:text-white duration-200 ease-in',
         ],
       },
       'success-ghost': {
         root: [
-          'text-green-500 hover:enabled:bg-green-100',
+          'text-green-500 disabled:opacity-40 dark:text-green-500 hover:enabled:bg-green-800 hover:enabled:text-white duration-200 ease-in',
         ],
       },
       'warning': {
@@ -385,22 +380,22 @@ export default {
       },
       'warning-light': {
         root: [
-          'border border-orange-500 bg-orange-100 text-orange-800 hover:enabled:bg-orange-800 hover:enabled:text-white duration-200 ease-in',
+          'border border-orange-500 bg-orange-100 disabled:opacity-40 dark:bg-orange-500/20 dark:text-orange-500 text-orange-800 hover:enabled:bg-orange-800 hover:enabled:text-white duration-200 ease-in',
         ],
       },
       'warning-outline': {
         root: [
-          'border border-orange-500 text-orange-800 hover:enabled:bg-orange-800 hover:enabled:text-white duration-200 ease-in',
+          'border border-orange-500 disabled:opacity-40 text-orange-800 dark:text-orange-500 hover:enabled:bg-orange-800 hover:enabled:text-white duration-200 ease-in',
         ],
       },
       'warning-dashed': {
         root: [
-          'border border-dashed border-orange-500 text-orange-800 hover:enabled:bg-orange-800 hover:enabled:text-white duration-200 ease-in',
+          'border border-dashed disabled:opacity-40 border-orange-500 text-orange-800 dark:text-orange-500 hover:enabled:bg-orange-800 hover:enabled:text-white duration-200 ease-in',
         ],
       },
       'warning-ghost': {
         root: [
-          'text-orange-500 hover:enabled:bg-orange-100',
+          'text-orange-500 disabled:opacity-40 dark:text-orange-500 hover:enabled:bg-orange-800 hover:enabled:text-white duration-200 ease-in',
         ],
       },
       'danger': {
@@ -408,23 +403,36 @@ export default {
       },
       'danger-light': {
         root: [
-          'border border-red-500 bg-red-100 text-red-800 hover:enabled:bg-red-800 hover:enabled:text-white duration-200 ease-in',
+          'border border-red-500 bg-red-100 disabled:opacity-40 dark:bg-red-500/20 dark:text-red-500 text-red-800 hover:enabled:bg-red-800 hover:enabled:text-white duration-200 ease-in',
         ],
       },
       'danger-outline': {
         root: [
-          'border border-red-500 text-red-800 hover:enabled:bg-red-800 hover:enabled:text-white duration-200 ease-in',
+          'border border-red-500 disabled:opacity-40 text-red-800 dark:text-red-500 hover:enabled:bg-red-800 hover:enabled:text-white duration-200 ease-in',
         ],
       },
       'danger-ghost': {
         root: [
-          'text-red-500 hover:enabled:bg-red-100',
+          'text-red-500 disabled:opacity-40 dark:text-red-500 hover:enabled:bg-red-800 hover:enabled:text-white duration-200 ease-in',
         ],
       },
       'danger-dashed': {
         root: [
-          'border border-dashed border-red-500 text-red-800 hover:enabled:bg-red-800 hover:enabled:text-white duration-200 ease-in',
+          'border border-dashed disabled:opacity-40 border-red-500 text-red-800 dark:text-red-500 hover:enabled:bg-red-800 hover:enabled:text-white duration-200 ease-in',
         ],
+      },
+    },
+  },
+  WButtonGroup: {
+    base: {
+      root: 'flex [&>:not(:first-child):not(:last-child)]:rounded-none',
+    },
+    variants: {
+      horizontal: {
+        root: '[&>:first-child]:rounded-r-none [&>:last-child]:rounded-l-none [&>*+*]:border-l-0',
+      },
+      vertical: {
+        root: 'flex-col [&>:first-child]:rounded-b-none [&>:last-child]:rounded-t-none [&>*+*]:border-t-0 [&>:not(:last-child):not(:focus-visible)]:!shadow-none',
       },
     },
   },
@@ -581,22 +589,6 @@ export default {
       },
     },
   },
-
-  // chatgpt 😜
-  WButtonGroup: {
-    base: {
-      root: 'flex [&>:not(:first-child):not(:last-child)]:rounded-none',
-    },
-    variants: {
-      horizontal: {
-        root: '[&>:first-child]:rounded-r-none [&>:last-child]:rounded-l-none [&>*+*]:border-l-0',
-      },
-      vertical: {
-        root: 'flex-col [&>:first-child]:rounded-b-none [&>:last-child]:rounded-t-none [&>*+*]:border-t-0 [&>:not(:last-child):not(:focus-visible)]:!shadow-none',
-      },
-    },
-  },
-
   WAccordion: {
     base: {
       root: 'w-full bg-white dark:bg-black border border-gray-300 dark:border-gray-900 flex flex-col',

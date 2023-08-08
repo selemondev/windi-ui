@@ -89,7 +89,7 @@ If you need both the leading and trailing icons, you can use the leading and tra
 
 ## Avatar 
 
-You can use the `WAvatar` prop with the `WAlert` component as shown below:
+You can use the `WAvatar` component with the `WAlert` component as shown below:
 
 <demo src="../../components/Alert/alertAvatar.vue" />
 

@@ -53,7 +53,8 @@ export default defineConfig({
             { text: 'Accordion', link: '/guide/components/accordion.md' },
             { text: 'Alert', link: '/guide/components/alert.md' },
             { text: 'Avatar', link: '/guide/components/avatar.md'},
-            { text: 'Badge', link: '/guide/components/badge.md'}
+            { text: 'Badge', link: '/guide/components/badge.md'},
+            { text: 'Button', link: '/guide/components/button.md'}
           ]
         }
       ],
