@@ -35,10 +35,6 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
-  indeterminate: {
-    type: Boolean,
-    default: false,
-  },
   help: {
     type: String,
     default: null,
@@ -102,9 +98,7 @@ export default defineComponent({
     <div :class="variant.checkboxDisplay">
       <input
         :id="props.name" v-model="toggle" :name="props.name" :required="props.required" :value="props.value"
-        :disabled="props.disabled" :checked="props.checked" type="checkbox"
-        :class="checkboxWrapperClass"
-        v-bind="$attrs"
+        :disabled="props.disabled" :checked="props.checked" type="checkbox" :class="checkboxWrapperClass" v-bind="$attrs"
       >
       <span :class="variant.checkbox">
         <div
@@ -123,7 +117,7 @@ export default defineComponent({
         <slot name="label">{{ label }}</slot>
         <span v-if="required" :class="variant.checkboxRequired">*</span>
       </label>
-      <p v-if="help" :class="variant.checkboxHelp">
+      <p v-if="help" :class="[props.disabled ? variant.checkboxHelpDisabled : variant.checkboxHelp]">
         {{ help }}
       </p>
     </div>

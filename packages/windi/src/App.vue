@@ -1,9 +1,12 @@
 <script setup lang='ts'>
 import { useDark, useToggle } from '@vueuse/core'
+import { ref } from 'vue'
 
 const isDark = useDark()
 
 const toggle = useToggle(isDark)
+
+const checked = ref(false)
 </script>
 
 <template>
@@ -11,10 +14,8 @@ const toggle = useToggle(isDark)
     <button class="dark:text-white" @click="toggle()">
       Theme
     </button>
-    <div class="flex items-center space-x-3">
-      <div>
-        <WButton to="https://github.com/selemondev" label="Selemondev" variant="primary" />
-      </div>
+    <div>
+      <WCheckbox v-model="checked" disabled label="Agree" help="Please mark the checkbox." required />
     </div>
   </div>
 </template>

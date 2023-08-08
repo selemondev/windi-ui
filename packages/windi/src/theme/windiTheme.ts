@@ -553,6 +553,7 @@ export default {
       checkboxLabel: 'font-medium text-gray-700 dark:text-gray-200',
       checkboxRequired: 'text-red-500 dark:text-red-400',
       checkboxHelp: 'text-gray-500 dark:text-gray-400',
+      checkboxHelpDisabled: 'text-gray-300 dark:text-gray-700',
     },
     variants: {
       default: {

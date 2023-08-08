@@ -125,6 +125,7 @@ export interface WCheckbox extends WComponentRoot {
   checkboxSpace?: string
   checkIconActive?: string
   checkboxDisplay?: string
+  checkboxHelpDisabled?: string
   checkboxIconSize?: string
 }
 
