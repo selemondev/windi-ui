@@ -7,7 +7,7 @@
     "docs:dev": "vitepress dev docs/docs",
     "docs:build": "vitepress build docs/docs",
     "docs:preview": "vitepress preview docs/docs",
-    "build": "rimraf packages/*/{dist,es,lib} && nr -r -F \"./packages/{windi-ui}\" build",
+    "build": "rimraf packages/*/{dist,es,lib} && nr -r -F \"./packages/windi\" build",
     "play": "run-s build play:run",
     "play:run": "run-p dev play:dev",
     "play:dev": "npm -C playground run dev",
