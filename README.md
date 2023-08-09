@@ -49,11 +49,11 @@ module.exports = {
 
 ### Component registration
 
-- With Windi UI, you have the flexibility to register components precisely as you wish:
+With Windi UI, you have the flexibility to register components precisely as you wish:
 
 ### Import All Components
 
-- To import all the components provided by `Windi UI`, add `WindiUI` in your main entry file as shown below:
+To import all the components provided by `Windi UI`, add `WindiUI` in your main entry file as shown below:
 
 ```ts
 import { createApp } from 'vue'
@@ -106,18 +106,15 @@ app.mount('#app')
 </template>
 ```
 
-:::tip
 The `prefix` option is only available for individual component imports.
-:::
-
 
 ### Auto Imports with Tree Shaking
 
-- **Windi UI** comes with an intelligent resolver that automatically imports only used components.
+**Windi UI** comes with an intelligent resolver that automatically imports only used components.
 
-- This is made possible by leveraging a tool known as [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components) which lets you auto import components on demand thus omitting import statements and still get the benefits of tree shaking.
+This is made possible by leveraging a tool known as [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components) which lets you auto import components on demand thus omitting import statements and still get the benefits of tree shaking.
 
-- To achieve this you need to do the following: 
+To achieve this you need to do the following: 
 
 1. Install the `unplugin-vue-components` package by running one of the following commands:
 
@@ -188,9 +185,19 @@ export default defineConfig({
 
 🥳 Well done, you can now go ahead and build your web application with ease.
 
+## Contributions
+
+Contributions are welcome and encouraged! If you have any ideas or suggestions for new features, or if you encounter any bugs or issues, please open an issue or submit a pull request on the GitHub repository. 
+
+Developers interested in contributing should read the [Code of Conduct](./CODE_OF_CONDUCT.md) and the [Contributing Guide](./CONTRIBUTING.md).
+
 ## Credits
 
-[@headlessui/vue](https://headlessui.com)
-[@vueuse/core](https://vueuse.org)
-[TailwindCss](https://tailwindcss.com)
-[UnoCss](https://unocss.com) for the landing page rainbow animation.
+- [@headlessui/vue](https://headlessui.com)
+- [@vueuse/core](https://vueuse.org)
+- [TailwindCss](https://tailwindcss.com)
+- [UnoCss](https://unocss.com) for the landing page rainbow animation.
+
+## License
+
+[MIT](https://github.com/windi-ui/windi-ui/LICENSE) License © 2023 [Selemondev](https://github.com/selemondev)
