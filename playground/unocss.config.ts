@@ -7,7 +7,6 @@ import {
     transformerDirectives,
     transformerVariantGroup,
 } from 'unocss'
-// import { presetOnu } from 'onu-ui'
 
 export default defineConfig({
     presets: [

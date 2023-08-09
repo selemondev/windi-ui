@@ -1,6 +1,6 @@
 # Installation
 
-Add `Windi UI` to your project by running one of the following commands:
+Adding `Windi UI` to your project is relatively straightforward. Run one of the following commands in your terminal to get started:
 
 ::: code-group
   ```bash [pnpm]
@@ -34,11 +34,11 @@ module.exports = {
 
 ### Component registration
 
-- With Windi UI, you have the flexibility to register components precisely as you wish:
+With Windi UI, you have the flexibility to register components precisely as you wish:
 
 ### Import All Components
 
-- To import all the components provided by `Windi UI`, add `WindiUI` in your main entry file as shown below:
+To import all the components provided by `Windi UI`, add `WindiUI` in your main entry file as shown below:
 
 ```ts
 import { createApp } from 'vue'
@@ -104,11 +104,11 @@ The `prefix` option is only available for individual component imports.
 
 ### Auto Imports with Tree Shaking
 
-- **Windi UI** comes with an intelligent resolver that automatically imports only used components.
+ **Windi UI** comes with an intelligent resolver that automatically imports only used components.
 
-- This is made possible by leveraging a tool known as [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components) which lets you auto import components on demand thus omitting import statements and still get the benefits of tree shaking.
+This is made possible by leveraging a tool known as [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components) which lets you auto import components on demand thus omitting import statements and still get the benefits of tree shaking.
 
-- To achieve this you need to do the following: 
+To achieve this you need to do the following: 
 
 1. Install the `unplugin-vue-components` package by running one of the following commands:
 

@@ -14,7 +14,7 @@
     "jsx": "preserve",
     "types": ["node", "vite/client"],
     "paths": {
-      "windi-ui": ["./packages/onu-ui/src/index.ts"],
+      "windi-ui": ["./packages/windi-ui/src/index.ts"],
       "@windi-ui/docs": ["./docs/*"]
     }
   },

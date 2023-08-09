@@ -3,7 +3,7 @@ import type { ExtractPropTypes } from 'vue'
 export const demoProps = {
   github: {
     type: String,
-    default: 'https://github.com/onu-ui/onu-ui',
+    default: 'https://github.com/selemondev/windi-ui',
   },
   codeSandBox: {
     type: String,
@@ -35,4 +35,4 @@ export const demoProps = {
   },
 } as const
 
-export type ODemoProps = ExtractPropTypes<typeof demoProps>
+export type DemoProps = ExtractPropTypes<typeof demoProps>

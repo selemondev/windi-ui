@@ -1,9 +1,7 @@
 <script setup lang="ts">
-// import { OMessage as message } from 'onu-ui'
 import type { ComputedRef } from 'vue'
 import Logo from "../public/windi.png";
 import { Icon } from "@iconify/vue";
-// import type { OMessageProps } from 'onu-ui'
 import playConfig from '../../playground.config'
 import { getSupportVersions } from '~/utils/versions'
 import type { ReplStore, VersionKey } from '~/composables/store'

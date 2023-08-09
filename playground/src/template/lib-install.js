@@ -1,5 +1,4 @@
 import { getCurrentInstance } from 'vue'
-// import UnoUI from 'onu-ui'
 // import install from '@selemondev/windi-ui'
 
 let installed = false

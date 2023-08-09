@@ -2,6 +2,10 @@
 
 ![site-screenshot](./public/windi-ui-playground.png)
 
+## 🚧 WIP
+
+The Windi UI playground is in active development at the moment.
+
 
 ## Comes with:
 
