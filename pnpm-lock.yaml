@@ -123,6 +123,9 @@ importers:
         specifier: ^3.3.4
         version: 3.3.4
     devDependencies:
+      '@selemondev/windi-ui':
+        specifier: workspace:^
+        version: link:../packages/windi
       '@tsconfig/node18':
         specifier: ^18.2.0
         version: 18.2.0
@@ -138,9 +141,6 @@ importers:
       '@windi-ui/tailwind-config':
         specifier: workspace:^
         version: link:../packages/tailwind-config
-      '@windi-ui/vue':
-        specifier: workspace:^
-        version: link:../packages/windi
       npm-run-all:
         specifier: ^4.1.5
         version: 4.1.5
@@ -211,12 +211,12 @@ importers:
 
   playground:
     dependencies:
+      '@selemondev/windi-ui':
+        specifier: workspace:^
+        version: link:../packages/windi
       '@vue/repl':
         specifier: ^1.4.1
         version: 1.4.1(vue@3.3.4)
-      '@windi-ui/vue':
-        specifier: workspace:^
-        version: link:../packages/windi
       autoprefixer:
         specifier: ^10.4.14
         version: 10.4.14(postcss@8.4.27)
