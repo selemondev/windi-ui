@@ -1,6 +1,6 @@
 {
   "name": "@windi-ui/monorepo",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "private": true,
   "description": "Build Accessible Apps 10x faster",
   "scripts": {
