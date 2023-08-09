@@ -2,9 +2,9 @@
 
 ::: tip
 
-[Windi UI](https://github.com/selemondev/windi-ui) is presently under active development and isn't fully prepared for production use as of v0.0.1. Your support and feedback are invaluable as we diligently work towards making it ready for everyone and for production use. 
+[Windi UI](https://github.com/selemondev/windi-ui) is presently under active development and isn't fully prepared for production use as of **v0.0.1-beta**. Your support and feedback are invaluable as we diligently work towards making it ready for everyone and for production use. 
 
-There are still a number of components that are yet to be built, you can contribute by creating new components, improving the docs, fixing bugs and issues and by sharing valuable suggestions.
+There are still a number of components that are yet to be built, you can contribute by creating new components, improving the docs, fixing bugs and issues, and by sharing valuable suggestions.
 :::
 
 Windi UI is a Vue.js based TailwindCss UI library that offers a collection of prebuilt UI components to enable you to build your web applications with ease.
@@ -15,7 +15,7 @@ Windi UI is built on top of powerful tools such as [TailwindCss](https://tailwin
 
 Windi UI is fully customizable thus meaning you can either choose to modify the existing theme or create your own theme and shape the UI components according to your needs. 
 
-Check out the [theme](/guide/getting-started/theme.md) section to learn more about the [theming]() options.
+Check out the [theme](/guide/getting-started/theme.md) section to learn more about the [theming](/guide/getting-started/theme.md) options.
 
 
 ## Why Windi UI
