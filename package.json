@@ -1,7 +1,7 @@
 {
   "name": "@windi-ui/monorepo",
   "version": "0.0.1-beta",
-  "private": true,
+  "private": false,
   "description": "Build Accessible Apps 10x faster",
   "scripts": {
     "docs:dev": "vitepress dev docs/docs",
