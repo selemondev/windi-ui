@@ -48,7 +48,7 @@ export default defineConfig({
         { text: 'Theme', link: '/guide/getting-started/theme.md' }
       ] },
       { text: 'Components', items: components },
-      // { text: 'Windi UI', items: [] },
+      { text: 'UI', link: '/guide/windi-ui/index.md' },
       { text: 'Playground', link: '/guide/playground/index.md' },
       // { text: "Showcase", link: '' },
       { text: `v${version}`, link: ''},
