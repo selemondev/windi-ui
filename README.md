@@ -200,4 +200,4 @@ Developers interested in contributing should read the [Code of Conduct](./CODE_O
 
 ## License
 
-[MIT](https://github.com/windi-ui/windi-ui/LICENSE) License © 2023 [Selemondev](https://github.com/selemondev)
+[MIT](./LICENSE) License © 2023 [Selemondev](https://github.com/selemondev)
