@@ -17,7 +17,7 @@ node_modules
 # style copy with components build
 packages/windi/*.css
 docs/.vitepress/cache/
-.vitepress
+.vitepress/*
 .netlify
 docs/public/play
 # Local Netlify folder
