@@ -1,7 +1,7 @@
 # Changelog
 
 
-## v0.0.1-beta
+## v0.0.1-beta.4
 
 
 ### 🚀 Enhancements
@@ -189,5 +189,5 @@
 
 ### ❤️  Contributors
 
-- Selemondev <selemondev@Selemondevs-MacBook-Pro.local>
+- [Selemondev](https://github.com/selemondev)
 
