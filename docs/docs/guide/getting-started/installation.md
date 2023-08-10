@@ -187,4 +187,19 @@ export default defineConfig({
 </template>
 ```
 
+## Troubleshooting TypeScript Error
+
+If you're encountering the TypeScript error: **Cannot find module 'windi-vue/dist/theme/windiTheme' or its corresponding type declarations**, you can follow these steps to resolve it:
+
+1. Create a `windi-vue.d.ts` declaration file in your `src` directory and inside it paste the following code:
+
+```ts
+declare module 'windi-vue/dist/theme/windiTheme'
+```
+
+The error should now be resolved.
+
+This issue is set to be fixed in the next release of **Windi UI v0.0.1 Alpha**
+
+
 🥳 Well done, you can now go ahead and build your web application with ease.
