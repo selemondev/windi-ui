@@ -68,7 +68,6 @@ app.mount('#app')
 
 **By doing this, you are importing all the components that are provided by Windi UI and in your final bundle all the components including the ones you didn't use will be bundled. Use method of component registration if you are confident that you will use all the components.**
 
-
 ### Individual Components with Tree Shaking
 
 Probably you might not want to globally register all the components but instead only import the components that you need. You can achieve this by doing the following: 
@@ -130,7 +129,6 @@ yarn add -D unplugin-vue-components
 npm i -D unplugin-vue-components
 
 ```
-:::
 
 2. Head over to your `main.ts` or `main.js` file and set `registerComponents` to `false` as shown below:
 
@@ -182,6 +180,21 @@ export default defineConfig({
   </div>
 </template>
 ```
+
+## Troubleshooting TypeScript Error
+
+If you're encountering the TypeScript error: **Cannot find module 'windi-vue/dist/theme/windiTheme' or its corresponding type declarations**, you can follow these steps to resolve it:
+
+1. Create a `windi-vue.d.ts` declaration file in your `src` directory and inside it paste the following code:
+
+```ts
+declare module 'windi-vue/dist/theme/windiTheme'
+```
+
+The error should now be resolved.
+
+This issue is set to be fixed in the next release of **Windi UI v0.0.1 Alpha**
+
 
 🥳 Well done, you can now go ahead and build your web application with ease.
 
