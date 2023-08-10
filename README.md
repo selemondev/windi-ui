@@ -66,7 +66,7 @@ app.use(WindiUI, windiTheme)
 app.mount('#app')
 ```
 
-**By doing this, you are importing all the components that are provided by Windi UI and in your final bundle all the components including the ones you didn't use will be bundled. Use method of component registration if you are confident that you will use all the components.**
+**By doing this, you are importing all the components that are provided by Windi UI and in your final bundle all the components including the ones you didn't use will be bundled. Use this method of component registration if you are confident that you will use all the components.**
 
 ### Individual Components with Tree Shaking
 
