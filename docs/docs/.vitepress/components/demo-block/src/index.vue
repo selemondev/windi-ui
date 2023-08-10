@@ -5,8 +5,6 @@ import { demoProps } from './index'
 
 const props = defineProps(demoProps)
 
-const github = 'https://github.com/selemondev/windi-ui'
-
 const decodedHighlightedCode = computed(() =>
   decodeURIComponent(props.highlightedCode),
 )
