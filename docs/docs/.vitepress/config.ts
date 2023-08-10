@@ -39,7 +39,7 @@ export default defineConfig({
     ]
   ],
   themeConfig: {
-    logo: '../public/windi.png',
+    logo: '../windi.png',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Guide', items: [
