@@ -20,13 +20,13 @@ Add `Windi UI` to your project by running one of the following commands:
 ```bash
 
 # pnpm
-pnpm add @windi/ui-vue
+pnpm add windi-vue
 
 # yarn
-yarn add @windi/ui-vue
+yarn add windi-vue
 
 # npm
-npm install @windi/ui-vue
+npm install windi-vue
 
 ```
 
@@ -37,7 +37,7 @@ npm install @windi/ui-vue
 ```ts
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}', 'node_modules/@windi/ui-vue/dist/theme/*.{js,jsx,ts,tsx,vue}'],
+  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}', 'node_modules/windi-vue/dist/theme/*.{js,jsx,ts,tsx,vue}'],
   darkMode: 'class',
   theme: {
     extend: {},
@@ -57,8 +57,8 @@ To import all the components provided by `Windi UI`, add `WindiUI` in your main 
 
 ```ts
 import { createApp } from 'vue'
-import windiTheme from '@windi/ui-vue/dist/theme/windiTheme'
-import WindiUI from '@windi/ui-vue'
+import windiTheme from 'windi-vue/dist/theme/windiTheme'
+import WindiUI from 'windi-vue'
 import App from './App.vue'
 
 const app = createApp(App)
@@ -78,9 +78,9 @@ Probably you might not want to globally register all the components but instead 
 ```ts
 import { createApp } from 'vue'
 import './style.css'
-import windiTheme from '@windi/ui-vue/dist/theme/windiTheme'
+import windiTheme from 'windi-vue/dist/theme/windiTheme'
 
-import { WKbd, createWindiUI } from '@windi/ui-vue'
+import { WKbd, createWindiUI } from 'windi-vue'
 
 import App from './App.vue'
 
@@ -137,9 +137,9 @@ npm i -D unplugin-vue-components
 ```ts
 import { createApp } from 'vue'
 import './style.css'
-import windiTheme from '@windi/ui-vue/dist/theme/windiTheme'
+import windiTheme from 'windi-vue/dist/theme/windiTheme'
 
-import { createWindiUI } from '@windi/ui-vue'
+import { createWindiUI } from 'windi-vue'
 
 import App from './App.vue'
 
@@ -158,7 +158,7 @@ app.mount('#app')
 
 ```ts
 // other imports
-import { WindiUIComponentResolver } from '@windi/ui-vue'
+import { WindiUIComponentResolver } from 'windi-vue'
 import Components from 'unplugin-vue-components/vite'
 
 export default defineConfig({

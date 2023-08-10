@@ -1,5 +1,5 @@
 import { getCurrentInstance } from 'vue'
-// import install from '@windi/ui-vue'
+// import install from 'windi-vue'
 
 let installed = false
 

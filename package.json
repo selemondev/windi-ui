@@ -20,7 +20,7 @@
     "test": "vitest",
     "test:update": "vitest -u",
     "test:coverage": "vitest --coverage",
-    "windi-ui": "pnpm --filter @windi/ui-vue",
+    "windi-ui": "pnpm --filter windi-vue",
     "postinstall": "npx simple-git-hooks",
     "major": "taze minor -wIr"
   },

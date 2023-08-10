@@ -8,8 +8,8 @@ import "./rainbow.css"
 import "./style.css"
 import './tailwind.css'
 import 'uno.css'
-import windiTheme from '@windi/ui-vue/dist/theme/windiTheme'
-import WindiUI from '@windi/ui-vue'
+import windiTheme from 'windi-vue/dist/theme/windiTheme'
+import WindiUI from 'windi-vue'
 let homePageStyle: HTMLStyleElement | undefined
 export default {
   extend: Theme,
