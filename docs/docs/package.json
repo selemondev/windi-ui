@@ -13,7 +13,7 @@
     "serve": "vitepress serve"
   },
   "dependencies": {
-    "@selemondev/windi-ui": "workspace:^",
+    "@windi/ui-vue": "workspace:^",
     "markdown-it": "^13.0.1"
   },
   "devDependencies": {

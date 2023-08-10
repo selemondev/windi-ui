@@ -4,13 +4,13 @@ Adding `Windi UI` to your project is relatively straightforward. Run one of the 
 
 ::: code-group
   ```bash [pnpm]
-  pnpm add @selemondev/windi-ui
+  pnpm add @windi/ui-vue
   ```
   ```bash [yarn]
-  yarn add @selemondev/windi-ui
+  yarn add @windi/ui-vue
   ```
   ```bash [npm]
-  npm install @selemondev/windi-ui
+  npm install @windi/ui-vue
   ```
 :::
 
@@ -21,7 +21,7 @@ Adding `Windi UI` to your project is relatively straightforward. Run one of the 
 ```ts
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}", "node_modules/@selemondev/windi-ui/dist/theme/*.{js,jsx,ts,tsx,vue}"],
+  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}", "node_modules/@windi/ui-vue/dist/theme/*.{js,jsx,ts,tsx,vue}"],
   darkMode: "class",
   theme: {
     extend: {},
@@ -43,8 +43,8 @@ To import all the components provided by `Windi UI`, add `WindiUI` in your main 
 ```ts
 import { createApp } from 'vue'
 import App from './App.vue'
-import windiTheme from '@selemondev/windi-ui/dist/theme/windiTheme'
-import WindiUI from '@selemondev/windi-ui'
+import windiTheme from '@windi/ui-vue/dist/theme/windiTheme'
+import WindiUI from '@windi/ui-vue'
 
 const app = createApp(App)
 app.use(WindiUI, windiTheme)
@@ -66,11 +66,11 @@ Probably you might not want to globally register all the components but instead 
 import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
-import windiTheme from '@selemondev/windi-ui/dist/theme/windiTheme'
+import windiTheme from '@windi/ui-vue/dist/theme/windiTheme'
 
-import { WKbd, createWindiUI } from '@selemondev/windi-ui' // [!code ++]
+import { WKbd, createWindiUI } from '@windi/ui-vue' // [!code ++]
 
-import WindiUI from '@selemondev/windi-ui' // [!code --]
+import WindiUI from '@windi/ui-vue' // [!code --]
 
 const app = createApp(App)
 
@@ -130,13 +130,13 @@ To achieve this you need to do the following:
 import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
-import windiTheme from '@selemondev/windi-ui/dist/theme/windiTheme'
+import windiTheme from '@windi/ui-vue/dist/theme/windiTheme'
 
-import { WKbd, createWindiUI } from '@selemondev/windi-ui' // [!code --]
+import { WKbd, createWindiUI } from '@windi/ui-vue' // [!code --]
 
-import { createWindiUI } from '@selemondev/windi-ui' // [!code ++]
+import { createWindiUI } from '@windi/ui-vue' // [!code ++]
 
-import WindiUI from '@selemondev/windi-ui' // [!code --]
+import WindiUI from '@windi/ui-vue' // [!code --]
 
 const app = createApp(App)
 
@@ -161,7 +161,7 @@ app.mount('#app')
 
 ```ts
 // other imports
-import { WindiUIComponentResolver } from '@selemondev/windi-ui'
+import { WindiUIComponentResolver } from '@windi/ui-vue'
 import Components from "unplugin-vue-components/vite"
 
 export default defineConfig({

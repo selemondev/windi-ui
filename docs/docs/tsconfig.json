@@ -7,9 +7,6 @@
                 "./guide/*"
             ]
         },
-        "types": [
-            "./auto-imports"
-        ]
     },
     "exclude": [
         "**/dist/**"
