@@ -32,12 +32,12 @@ export default {
       path: '/dist/shared.esm-bundler.js',
       source: 'jsdelivr',
     },
-    // '@windi/ui-vue': {
-    //   pkg: '@windi/ui-vue',
+    // 'windi-vue': {
+    //   pkg: 'windi-vue',
     //   version: 'latest',
-    //   path: '/dist/@windi/ui-vue.js',
+    //   path: '/dist/windi-vue.js',
     //   source: 'jsdelivr',
-    //   cssPath: '@windi/ui-vue/dist/theme/windiTheme',
+    //   cssPath: 'windi-vue/dist/theme/windiTheme',
     // }
   } as Record<string, Dependency>,
   cdnUrl: {
@@ -45,7 +45,7 @@ export default {
     jsdelivr: 'https://cdn.jsdelivr.net/npm/',
   },
   devDeps: {
-    // '@windi/ui-vue': {
+    // 'windi-vue': {
     //   path: `${location.origin}/play/src/vue-ui-next-dev-proxy`,
     // },
     'vue': {
