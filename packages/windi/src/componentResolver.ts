@@ -5,7 +5,7 @@ export function WindiUIComponentResolver(): ComponentResolver {
     type: 'component',
     resolve: (name: string) => {
       if (name.match(/^W[A-Z]/))
-        return { name, from: '@selemondev/windi-ui' }
+        return { name, from: '@windi/ui-vue' }
     },
   }
 }
