@@ -1,6 +1,5 @@
 import { defineConfig } from 'vitepress'
 import { version } from '../../../package.json'
-import { SearchPlugin } from "vitepress-plugin-search";
 import { applyPlugins } from './plugins/code'
 
 const components = [
@@ -20,7 +19,7 @@ const components = [
 ]
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  vite: { plugins: [SearchPlugin()] },
+  vite: { plugins: [] },
   title: "Windi UI",
   description: "Build Accessible Apps 10x faster",
   head: [
@@ -39,6 +38,14 @@ export default defineConfig({
     ]
   ],
   themeConfig: {
+    search: {
+      provider: 'algolia',
+      options: {
+        appId: 'J80WVGDCRV',
+        apiKey: 'ca4b17a48a4b73178c772c805c02a211',
+        indexName: 'ui-windi'
+      }
+    },
     logo: '../windi.png',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
