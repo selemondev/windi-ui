@@ -5,7 +5,7 @@
             <WTag value="Search" variant="primary" rounded="md" />
             <WTag value="Search" variant="success" rounded="lg" />
             <WTag value="Search" variant="warning" rounded="xl" />
-            <WTag value="Search" variant="danger" size="xl" rounded="2xl" />
+            <WTag value="Search" variant="danger" rounded="2xl" />
         </div>
     </div>
 </template>
