@@ -1,9 +1,8 @@
 // https://vitepress.dev/guide/custom-theme
 import { h, watch } from 'vue'
 import Theme from 'vitepress/theme'
-// import './style.css'
-import './overrides.css'
 import DemoBlock from '../components/demo-block'
+import './overrides.css'
 import "./rainbow.css"
 import "./style.css"
 import './tailwind.css'
