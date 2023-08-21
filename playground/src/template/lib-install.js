@@ -1,5 +1,6 @@
 import { getCurrentInstance } from 'vue'
-// import install from 'windi-vue'
+import install from 'windi-vue'
+import windiTheme from 'windi-vue/dist/theme/windiTheme'
 
 let installed = false
 
@@ -8,7 +9,7 @@ export function libInstall() {
     return
   const instance = getCurrentInstance()
   
-  // instance.appContext.app.use(install)
+  instance.appContext.app.use(install, windiTheme)
   installed = true
 }
 

@@ -1,6 +1,6 @@
 <script lang='ts' setup name="demo-block">
 import { computed } from 'vue'
-import { isClient, useClipboard, useToggle } from '@vueuse/core'
+import { useClipboard, useToggle } from '@vueuse/core'
 import { demoProps } from './index'
 
 const props = defineProps(demoProps)
@@ -15,7 +15,7 @@ const [value, toggle] = useToggle()
 <template>
   <ClientOnly>
     <div v-bind="$attrs" class="mt-6">
-      <div class="p-8 c-#282f38  border border-light-700 rounded-sm dark:bg-[#000000] dark:border-#4C4D4F flex [&:o-button-base]:!c-context vp-raw bg">
+      <div class="p-8 c-#282f38 overflow-x-scroll  border border-light-700 rounded-sm dark:bg-[#000000] dark:border-#4C4D4F flex flex-wrap [&:o-button-base]:!c-context vp-raw bg">
         <slot />
       </div>
       <div class="relative">
