@@ -24,13 +24,13 @@
   },
   "homepage": "https://github.com/selemondev/windi-ui#readme",
   "dependencies": {
-    "windi-vue": "workspace:^",
     "@vue/repl": "^1.4.1",
     "autoprefixer": "^10.4.14",
     "compare-versions": "^4.1.4",
     "ohmyfetch": "^0.4.21",
     "postcss": "^8.4.27",
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.3.3",
+    "windi-vue": "workspace:0.0.1-beta.4"
   },
   "devDependencies": {
     "@types/prettier": "^2.7.3",

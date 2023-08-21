@@ -26,7 +26,10 @@
       "require": "./dist/windi-ui.cjs",
       "import": "./dist/windi-ui.mjs"
     },
-    "./dist/theme/windiTheme": "./dist/theme/windiTheme"
+    "./dist/theme/windiTheme": {
+      "require": "./dist/theme/windiTheme.ts",
+      "import": "./dist/theme/windiTheme.ts"
+    }
   },
   "main": "./dist/windi-ui.cjs",
   "module": "./dist/windi-ui.mjs",

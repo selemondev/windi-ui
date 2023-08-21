@@ -4,6 +4,6 @@
 
 <template>
   <div>
-    hello there
+    <WButton label="primary" variant="primary" />
   </div>
 </template>

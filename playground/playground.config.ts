@@ -32,13 +32,13 @@ export default {
       path: '/dist/shared.esm-bundler.js',
       source: 'jsdelivr',
     },
-    // 'windi-vue': {
-    //   pkg: 'windi-vue',
-    //   version: 'latest',
-    //   path: '/dist/windi-vue.js',
-    //   source: 'jsdelivr',
-    //   cssPath: 'windi-vue/dist/theme/windiTheme',
-    // }
+    'windi-vue': {
+      pkg: 'windi-vue',
+      version: 'latest',
+      path: '/dist/windi-vue.js',
+      source: 'skyPack',
+      cssPath: 'windi-vue/dist/theme/windiTheme',
+    }
   } as Record<string, Dependency>,
   cdnUrl: {
     skypack: 'https://cdn.skypack.dev/',

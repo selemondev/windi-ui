@@ -230,7 +230,7 @@ importers:
         specifier: ^3.3.3
         version: 3.3.3
       windi-vue:
-        specifier: workspace:^
+        specifier: workspace:0.0.1-beta.4
         version: link:../packages/windi
     devDependencies:
       '@types/prettier':
