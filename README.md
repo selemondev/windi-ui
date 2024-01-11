@@ -15,7 +15,7 @@
 
 ## Getting Started 
 
-Add `Windi UI` to your project by running one of the following commands:
+Add `Windi UI` to your project by running one of the following commands below:
 
 ```bash
 
