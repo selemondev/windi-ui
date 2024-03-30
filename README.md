@@ -1,7 +1,7 @@
 <p align="center">
 <img src="./docs/docs/public/windi.svg" style="width:100px;" />
 <h1 align="center">Windi UI 🚧</h1>
-<p align="center">Build Accessible Apps 10x faster</p>
+<p align="center">Build Accessible Apps 10x faster.</p>
 </p>
 
 ## Features
