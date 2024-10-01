@@ -1,6 +1,7 @@
 {
   "name": "@windi-ui/monorepo",
   "version": "0.0.1-beta",
+  "type": "module",
   "private": false,
   "description": "Build Accessible Apps 10x faster",
   "scripts": {
@@ -25,39 +26,43 @@
     "major": "taze minor -wIr"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.39.8",
-    "@iconify-json/carbon": "^1.1.16",
-    "@iconify-json/fluent-emoji": "^1.1.13",
-    "@iconify-json/logos": "^1.1.31",
-    "@iconify/vue": "^4.1.1",
-    "@types/node": "^20.4.5",
-    "@vitejs/plugin-vue": "^4.2.3",
+    "@antfu/eslint-config": "^3.7.3",
+    "@eslint/js": "^9.11.1",
+    "@iconify-json/carbon": "^1.2.1",
+    "@iconify-json/fluent-emoji": "^1.2.0",
+    "@iconify-json/logos": "^1.2.1",
+    "@iconify/vue": "^4.1.2",
+    "@types/node": "^20.16.10",
+    "@vitejs/plugin-vue": "^5.1.4",
     "@vitest/coverage-c8": "^0.33.0",
-    "@vitest/coverage-v8": "^0.33.0",
-    "@vitest/ui": "^0.33.0",
-    "@vue/test-utils": "^2.4.1",
-    "@vueuse/core": "^10.2.1",
-    "autoprefixer": "^10.4.14",
-    "bumpp": "^9.1.1",
+    "@vitest/coverage-v8": "^2.1.1",
+    "@vitest/ui": "^2.1.1",
+    "@vue/test-utils": "^2.4.6",
+    "@vueuse/core": "^11.1.0",
+    "autoprefixer": "^10.4.20",
+    "bumpp": "^9.6.1",
     "eslint": "8.45.0",
-    "flexsearch": "^0.7.31",
-    "jsdom": "^22.1.0",
-    "lint-staged": "^13.2.3",
-    "postcss": "^8.4.27",
-    "postcss-prefix-selector": "^1.16.0",
-    "rimraf": "^5.0.1",
-    "sass": "^1.64.1",
-    "simple-git-hooks": "^2.9.0",
-    "tailwindcss": "^3.3.3",
-    "taze": "^0.11.2",
-    "typescript": "^5.1.6",
-    "unocss": "^0.53.6",
-    "vite": "^4.4.7",
-    "vite-plugin-dts": "^3.3.1",
-    "vitepress": "1.0.0-beta.6",
-    "vitest": "^0.33.0",
-    "vue": "^3.3.4",
-    "vue-tsc": "^1.8.8"
+    "eslint-plugin-vue": "^9.28.0",
+    "flexsearch": "^0.7.43",
+    "globals": "^15.9.0",
+    "jsdom": "^25.0.1",
+    "lint-staged": "^15.2.10",
+    "postcss": "^8.4.47",
+    "postcss-prefix-selector": "^1.16.1",
+    "rimraf": "^5.0.10",
+    "sass": "^1.79.4",
+    "simple-git-hooks": "^2.11.1",
+    "tailwindcss": "^3.4.13",
+    "taze": "^0.17.2",
+    "typescript": "^5.6.2",
+    "typescript-eslint": "^8.8.0",
+    "unocss": "^0.63.1",
+    "vite": "^5.4.8",
+    "vite-plugin-dts": "^4.2.3",
+    "vitepress": "^1.3.4",
+    "vitest": "^2.1.1",
+    "vue": "^3.5.10",
+    "vue-tsc": "^2.1.6"
   },
   "pnpm": {
     "peerDependencyRules": {
@@ -74,5 +79,8 @@
     "*.{js,ts,tsx,vue,md}": [
       "pnpm lint:fix"
     ]
+  },
+  "dependencies": {
+    "vitepress-plugin-group-icons": "^1.2.4"
   }
 }

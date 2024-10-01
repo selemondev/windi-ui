@@ -2,23 +2,24 @@
   "name": "@windi-ui/docs",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "description": "Windi-UI docs",
   "keywords": [
     "windi-ui",
     "docs"
   ],
   "scripts": {
-    "dev": "vitepress dev --port 5555 --open --host",
+    "dev": "vitepress dev",
     "build": "vitepress build",
     "serve": "vitepress serve"
   },
   "dependencies": {
-    "windi-vue": "workspace:^",
-    "markdown-it": "^13.0.1"
+    "markdown-it": "^14.1.0"
   },
   "devDependencies": {
-    "@types/markdown-it": "^12.2.3",
-    "netlify-cli": "^15.11.0",
-    "postcss-prefix-selector": "^1.16.0"
+    "@types/markdown-it": "^13.0.9",
+    "netlify-cli": "^17.36.3",
+    "postcss-prefix-selector": "^1.16.1",
+    "vitepress-plugin-group-icons": "^1.2.4"
   }
 }
