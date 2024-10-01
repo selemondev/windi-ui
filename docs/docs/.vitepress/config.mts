@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import { version } from '../../../package.json'
 import { applyPlugins } from './plugins/code'
+import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 
 const components = [
   { text: 'Accordion', link: '/guide/components/accordion.md' },
@@ -19,7 +20,11 @@ const components = [
 ]
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  vite: { plugins: [] },
+  vite: {
+    plugins: [
+      groupIconVitePlugin()
+    ],
+  },
   title: "Windi UI",
   description: "Build Accessible Apps 10x faster",
   head: [
@@ -92,7 +97,8 @@ export default defineConfig({
   },
   markdown: {
     config: (md) => {
-      applyPlugins(md)
+      applyPlugins(md);
+      md.use(groupIconMdPlugin)
     },
     theme: {
       light: 'vitesse-light',

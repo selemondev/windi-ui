@@ -7,8 +7,8 @@ import "./rainbow.css"
 import "./style.css"
 import './tailwind.css'
 import 'uno.css'
-import windiTheme from 'windi-vue/dist/theme/windiTheme'
-import WindiUI from 'windi-vue'
+import 'virtual:group-icons.css'
+
 let homePageStyle: HTMLStyleElement | undefined
 export default {
   extend: Theme,
@@ -19,7 +19,6 @@ export default {
   },
   enhanceApp({ app, router, siteData }) {
     app.component('Demo', DemoBlock)
-    app.use(WindiUI, windiTheme)
     if (typeof window === 'undefined')
       return
 

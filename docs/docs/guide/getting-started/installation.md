@@ -3,13 +3,13 @@
 Adding `Windi UI` to your project is relatively straightforward. Run one of the following commands in your terminal to get started:
 
 ::: code-group
-  ```bash [pnpm]
+  ```sh [pnpm]
   pnpm add windi-vue
   ```
-  ```bash [yarn]
+  ```sh [yarn]
   yarn add windi-vue
   ```
-  ```bash [npm]
+  ```sh [npm]
   npm install windi-vue
   ```
 :::
